@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: task_backing_up_restoring.html 
+keywords: backing up, back up, backup, restore, restoring 
+summary: Mit Cloud Manager können Sie die Datenbank sichern und wiederherstellen, um Ihre Konfiguration zu schützen und Probleme zu beheben. 
+---
+= Backup und Wiederherstellung von Cloud Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Cloud Manager können Sie die Datenbank sichern und wiederherstellen, um Ihre Konfiguration zu schützen und Probleme zu beheben.
+
+
+
+== Backup von Cloud Manager
+
+Es empfiehlt sich, die Cloud Manager-Datenbank regelmäßig zu sichern. Bei Problemen können Sie Cloud Manager aus einem früheren Backup wiederherstellen.
+
+.Schritte
+. Klicken Sie oben rechts in der Cloud Manager-Konsole auf die Dropdown-Liste Task, und wählen Sie dann *Tools* aus.
+. Klicken Sie Auf *Backup*.
++
+image:screenshot_backup.gif["Screenshot: Zeigt die Schaltfläche \"Backup\" auf der Seite \"Tools\" an."]
+
+. Wenn Sie dazu aufgefordert werden, speichern Sie die Sicherungsdatei an einem sicheren Speicherort, damit Sie sie bei Bedarf abrufen können.
+
+
+
+
+== Wiederherstellen von Cloud Manager aus einem Backup
+
+Durch die Wiederherstellung von Cloud Manager aus einem Backup werden vorhandene Daten durch die Daten aus dem Backup ersetzt.
+
+.Schritte
+. Klicken Sie in der oberen rechten Ecke der Cloud Manager-Konsole auf die Dropdown-Liste Task und wählen Sie dann *Tools* aus.
+. Klicken Sie Auf *Wiederherstellen*.
+. Klicken Sie zur Bestätigung auf *OK*.
+. Wählen Sie das Backup aus.
+
+
+Cloud Manager stellt die Datenbank aus der Sicherungsdatei wieder her.

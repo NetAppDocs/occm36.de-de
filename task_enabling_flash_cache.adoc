@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task_enabling_flash_cache.html 
+keywords: cloud volumes ontap, aws, ec2, flash cache, read-intensive, read, random, databases, email, file services, c5d.4xlarge, c5d.9xlarge, r5d.2xlarge, compression, performance 
+summary: Einige EC2-Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als Flash Cache verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. 
+---
+= Aktivierung von Flash Cache für Cloud Volumes ONTAP in AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Einige EC2-Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services.
+
+
+NOTE: Cloud Volumes ONTAP unterstützt das Neustarten des Cache nicht, wenn ein Neustart nach einem Neustart erfolgen soll.
+
+.Schritte
+. Wählen Sie einen der folgenden EC2-Instanztypen aus, die mit den Premium- und BYOL-Lizenzen erhältlich sind:
++
+** C5d.4xlarge
+** C5d.9xlarge
+** R5d.2xlarge
+
+
+. Deaktivieren Sie die Komprimierung für alle Volumes.
++
+Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. Beim Erstellen eines Volumes aus Cloud Manager kann keine Storage-Effizienz gewählt werden. Alternativ können Sie ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
+
+

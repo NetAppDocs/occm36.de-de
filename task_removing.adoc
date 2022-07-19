@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: task_removing.html 
+keywords: working environments, removing, remove, rediscover 
+summary: Der Cloud Manager Admin kann eine Cloud Volumes ONTAP Arbeitsumgebung entfernen, um sie auf ein anderes System zu verschieben oder Erkennungsprobleme zu beheben. 
+---
+= Entfernen von Cloud Volumes ONTAP Arbeitsumgebungen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der Cloud Manager Admin kann eine Cloud Volumes ONTAP Arbeitsumgebung entfernen, um sie auf ein anderes System zu verschieben oder Erkennungsprobleme zu beheben.
+
+Durch das Entfernen einer Cloud Volumes ONTAP Arbeitsumgebung wird sie aus Cloud Manager entfernt. Das Cloud Volumes ONTAP System wird nicht gelöscht. Sie können die Arbeitsumgebung später neu entdecken.
+
+Durch das Entfernen einer Arbeitsumgebung aus Cloud Manager können Sie Folgendes tun:
+
+* Entdecken Sie es in einem anderen Mandanten erneut
+* Entdecken Sie es von einem anderen Cloud Manager-System neu
+* Entdecken Sie es erneut, wenn Sie während der ersten Erkennung Probleme hatten
+
+
+.Schritte
+. Klicken Sie in der oberen rechten Ecke der Cloud Manager-Konsole auf die Dropdown-Liste Task und wählen Sie dann *Tools* aus.
+. Klicken Sie auf der Seite Extras auf *Starten*.
+. Wählen Sie die Cloud Volumes ONTAP Arbeitsumgebung aus, die Sie entfernen möchten.
+. Klicken Sie auf der Seite „Prüfen und genehmigen“ auf *Los*.
+
+
+Cloud Manager entfernt die Arbeitsumgebung. Benutzer können diese Arbeitsumgebung jederzeit über die Seite Arbeitsumgebungen neu entdecken.

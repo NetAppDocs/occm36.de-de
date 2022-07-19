@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: concept_storage.html 
+keywords: storage, capacity, volumes, aggregates, raw capacity, usable capacity, aws, azure 
+summary: Wenn Sie verstehen, wie Cloud Volumes ONTAP Cloud Storage verwendet, können Sie Ihre Storage-Kosten besser verstehen. 
+---
+= Wie Cloud Volumes ONTAP Cloud Storage verwendet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie verstehen, wie Cloud Volumes ONTAP Cloud Storage verwendet, können Sie Ihre Storage-Kosten besser verstehen.
+
+
+
+== Überblick
+
+Cloud Volumes ONTAP verwendet AWS und Azure Volumes als Back-End Storage. Diese Volumes werden als Festplatten betrachtet und in einem oder mehreren Aggregaten gruppiert. Aggregate stellen Storage für ein oder mehrere Volumes bereit.
+
+image:diagram_storage.png["Diese Abbildung zeigt ein Aggregat, das aus EBS-Festplatten besteht, und die Daten-Volumes, die Cloud Volumes ONTAP Hosts zur Verfügung stellt."]
+
+Es werden mehrere Arten von Cloud-Festplatten unterstützt. Sie wählen beim Erstellen von Volumes den Festplattentyp und bei der Implementierung von Cloud Volumes ONTAP die Standardfestplattengröße aus.
+
+
+TIP: Der gesamte Storage, der von AWS oder Azure gekauft wird, ist die _Rohkapazität_. Die _nutzbare Kapazität_ ist geringer, da etwa 12 bis 14 Prozent der für die Verwendung durch Cloud Volumes ONTAP reservierte Overhead sind. Wenn Cloud Manager beispielsweise ein 500-GB-Aggregat erstellt, beträgt die nutzbare Kapazität 442,94 GB.
+
+
+
+== AWS Storage
+
+In AWS kann ein Aggregat bis zu 6 Festplatten enthalten, die jeweils gleich groß sind. Die maximale Festplattengröße beträgt 16 TB.
+
+Der zugrunde liegende EBS-Festplattentyp kann entweder eine Universal-SSD, eine bereitgestellte IOPS-SSD, eine für den Durchsatz optimierte Festplatte oder eine kalte Festplatte sein. Es ist auch möglich, eine EBS-Festplatte für zu koppeln link:concept_data_tiering.html["Daten-Tiering"].
+
+Die Unterschiede zwischen den EBS-Festplattentypen unterscheiden sich auf hohem Niveau wie folgt:
+
+* _Universal SSD_ Festplatten balancieren Kosten und Performance für ein breites Spektrum an Workloads aus. Die Performance wird in Bezug auf IOPS definiert.
+* _Bereitgestellte IOPS SSD_-Festplatten sind für kritische Applikationen geeignet, die höchste Performance zu höheren Kosten erfordern.
+* _Optimierte Festplatten mit hohem Durchsatz sind für häufig genutzte Workloads konzipiert, die einen schnellen und konsistenten Durchsatz zu einem niedrigeren Preis erfordern.
+* _Cold HDD_ Festplatten werden für Backups oder selten genutzte Daten gedacht, da die Performance nur sehr gering ist. Wie bei Festplatten mit Durchsatzoptimierung wird die Performance in Bezug auf den Durchsatz definiert.
+
+
+
+NOTE: Festplatten mit kalten Daten werden von HA-Konfigurationen und Daten-Tiering nicht unterstützt.
+
+Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
+
+link:task_planning_your_config.html#sizing-your-system-in-aws["Lesen Sie, wie Sie Festplattentypen und Festplattengrößen für Ihre Systeme in AWS auswählen"].
+
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Prüfen der Storage-Limits für Cloud Volumes ONTAP"].
+
+
+
+== Azure Storage
+
+In Azure kann ein Aggregat bis zu 12 Festplatten enthalten, die dieselbe Größe aufweisen. Der Festplattentyp und die maximale Festplattengröße hängen davon ab, ob Sie ein Single-Node-System oder ein HA-Paar verwenden:
+
+Systeme mit einzelnen Nodes:: Systeme mit einem Node können drei Typen von Azure Managed Disks verwenden:
++
+--
+* _Premium SSD Managed Disks_ bieten hohe Performance für I/O-intensive Workloads zu höheren Kosten.
+* _Standard SSD Managed Disks_ bieten konsistente Performance für Workloads, die niedrige IOPS erfordern.
+* _Standard HDD Managed Disks_ sind eine gute Wahl, wenn Sie keine hohen IOPS benötigen und Ihre Kosten senken möchten.
++
+Jeder verwaltete Festplattentyp hat eine maximale Festplattengröße von 32 TB.
+
++
+Sie können eine gemanagte Festplatte mit Azure Blob Storage für kombinieren link:concept_data_tiering.html["Daten-Tiering"].
+
+
+
+--
+HA-Paare:: HA-Paare verwenden Premium Page Blobs, die eine maximale Festplattengröße von 8 TB haben.
+
+
+Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter https://azure.microsoft.com/documentation/articles/storage-introduction/["Microsoft Azure-Dokumentation: Einführung in Microsoft Azure Storage"^].
+
+link:task_planning_your_config.html#sizing-your-system-in-azure["Erfahren Sie, wie Sie Festplattentypen und Festplattengrößen für Ihre Systeme in Azure auswählen"].
+
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Prüfen der Storage-Limits für Cloud Volumes ONTAP"].

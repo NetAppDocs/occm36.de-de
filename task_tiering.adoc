@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task_tiering.html 
+keywords: tier, tiering, cold data, hot data, storage tiering, data tiering, S3 tiering, fabricpool, fabric pool, s3 endpoint, endpoint, connection, performance tier, capacity tier, object store, azure tiering, blob tiering, azure blob, container, inactive 
+summary: Durch die Kombination einer SSD- oder HDD-Performance-Tier für häufig abgerufene Daten mit einem Objekt-Storage-Kapazitäts-Tier für inaktive Daten können Storage-Kosten in AWS und Azure gesenkt werden. 
+---
+= Tiering inaktiver Daten in kostengünstigen Objektspeicher
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Durch die Kombination einer SSD- oder HDD-Performance-Tier für häufig abgerufene Daten mit einem Objekt-Storage-Kapazitäts-Tier für inaktive Daten können Storage-Kosten in AWS und Azure gesenkt werden. Eine allgemeine Übersicht finden Sie unter link:concept_data_tiering.html["Data Tiering - Übersicht"].
+
+Zum Einrichten von Data Tiering müssen Sie lediglich Folgendes tun:
+
+image:diagram_tiering.gif["Ein Diagramm, das den Workflow zur Aktivierung von Tiering zeigt: Wählen Sie eine unterstützte Konfiguration aus, stellen Sie sicher, dass Konnektivität zwischen Tiers verfügbar ist, und wählen Sie dann eine Tiering Policy, wenn Sie ein Volume erstellen, ändern oder replizieren."]
+
+[NOTE]
+.Welche und#8217;s sind für das Daten-Tiering nicht erforderlich
+====
+* Sie müssen keine Funktionslizenz installieren, um Data Tiering zu aktivieren.
+* Sie müssen die Kapazitätsstufe nicht erstellen (entweder ein S3-Bucket oder ein Azure Blob Container). Cloud Manager macht das für Sie.
+
+
+====
+
+
+== Konfigurationen, die Daten-Tiering unterstützen
+
+Sie können das Daten-Tiering aktivieren, wenn Sie bestimmte Konfigurationen und Funktionen verwenden:
+
+* Data Tiering wird mit Cloud Volumes ONTAP Standard, Premium und Byol unterstützt, beginnend mit Version 9.2 in AWS und Version 9.4 in Microsoft Azure.
++
+** Daten-Tiering wird nicht mit HA-Paaren in Microsoft Azure unterstützt.
+** Data Tiering wird in Azure mit dem virtuellen Maschinentyp DS3_v2 nicht unterstützt.
+
+
+* In AWS kann es sich um allgemeine SSDs, bereitgestellte IOPS SSDs oder Throughput Optimized HDDs handeln.
+* In Azure kann die Performance-Tier Premium-Festplatten mit SSD-Management, von Standard-SSDs gemanagte Festplatten oder von Standard-HDDs gemanagte Festplatten sein.
+* Daten-Tiering wird durch Verschlüsselungstechnologien unterstützt.
+* Thin Provisioning muss auf Volumes aktiviert sein.
+
+
+
+
+== Anforderungen für Tiering von Daten in AWS
+
+Sie müssen sicherstellen, dass Cloud Volumes ONTAP eine Verbindung zu S3 hat. Die beste Möglichkeit, diese Verbindung bereitzustellen, besteht darin, einen VPC-Endpunkt für den S3-Dienst zu erstellen. Anweisungen hierzu finden Sie unter https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS Dokumentation: Erstellen eines Gateway-Endpunkts"^].
+
+Wenn Sie den VPC-Endpunkt erstellen, wählen Sie die Region, den VPC und die Routing-Tabelle aus, die der Cloud Volumes ONTAP Instanz entspricht. Sie müssen auch die Sicherheitsgruppe ändern, um eine ausgehende HTTPS-Regel hinzuzufügen, die Datenverkehr zum S3-Endpunkt ermöglicht. Andernfalls kann Cloud Volumes ONTAP keine Verbindung zum S3-Service herstellen.
+
+Informationen zu Problemen finden Sie unter https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Warum kann ich mich nicht über einen Gateway VPC Endpunkt mit einem S3-Bucket verbinden?"^].
+
+
+
+== Anforderungen für Tiering von Daten in Microsoft Azure
+
+Sie müssen keine Verbindung zwischen der Performance-Ebene und der Kapazitätsebene herstellen, solange Cloud Manager über die erforderlichen Berechtigungen verfügt. Cloud Manager aktiviert einen VNet Service-Endpunkt für Sie, wenn die Cloud Manager-Richtlinie über die entsprechende Berechtigung verfügt:
+
+[source, json]
+----
+"Microsoft.Network/virtualNetworks/subnets/write",
+"Microsoft.Network/routeTables/join/action",
+----
+Diese Berechtigungen sind in der neuesten enthalten https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager-Richtlinie"].
+
+
+
+== Tiering von Daten auf Lese-/Schreib-Volumes
+
+Cloud Volumes ONTAP kann inaktive Daten auf Volumes mit Lese- und Schreibvorgängen auf kostengünstigen Objekt-Storage verschieben und so den Performance-Tier für häufig abgerufene Daten freisetzen.
+
+.Schritte
+. Erstellen Sie in der Arbeitsumgebung ein neues Volume, oder ändern Sie den Tier eines vorhandenen Volumes:
++
+[cols="30,70"]
+|===
+| Aufgabe | Aktion 
+
+
+| Erstellen Sie ein neues Volume | Klicken Sie Auf *Neues Volume Hinzufügen*. 
+
+
+| Ändern Sie ein vorhandenes Volume | Wählen Sie das Volume aus und klicken Sie auf *Disk Type & Tiering Policy*. 
+|===
+. Wählen Sie die Richtlinie "Nur Snapshot" oder die Richtlinie "Auto" aus.
++
+Eine Beschreibung dieser Richtlinien finden Sie unter link:concept_data_tiering.html["Data Tiering - Übersicht"].
+
++
+*Beispiel*
+
++
+image:screenshot_tiered_storage.gif["Screenshot, der das Symbol zur Aktivierung von Tiering zu Objektspeicher zeigt."]
+
++
+Cloud Manager erstellt ein neues Aggregat für das Volume, wenn noch kein Daten Tiering-aktiviertes Aggregat vorhanden ist.
+
++
+
+TIP: Wenn Sie Aggregate selbst erstellen möchten, können Sie beim Erstellen von Aggregaten das Daten-Tiering aktivieren.
+
+
+
+
+
+== Tiering von Daten auf Data-Protection-Volumes
+
+Cloud Volumes ONTAP kann Daten von einem Daten-Protection-Volume auf eine Kapazitäts-Tier einstufen. Wenn Sie das Ziel-Volume aktivieren, werden die Daten beim Lesen schrittweise auf die Performance-Ebene verschoben.
+
+.Schritte
+. Wählen Sie auf der Seite Arbeitsumgebungen die Arbeitsumgebung aus, die das Quell-Volume enthält, und ziehen Sie es in die Arbeitsumgebung, in die Sie das Volume replizieren möchten.
+. Folgen Sie den Anweisungen, bis Sie die Seite Tiering aufrufen und Data Tiering für Objektspeicher aktivieren.
++
+*Beispiel*
+
++
+image:screenshot_replication_tiering.gif["Screenshot, der die S3-Tiering-Option beim Replizieren eines Volumes zeigt."]
+
++
+Unterstützung bei der Datenreplizierung finden Sie unter link:task_replicating_data.html["Replizierung von Daten in die und aus der Cloud"].
+
+
+
+
+
+== Ändern der Tiering Level
+
+Wenn Sie das Daten-Tiering aktivieren, schichtet Cloud Volumes ONTAP inaktive Daten in AWS in die S3 _Standard_ Storage-Klasse oder zum „_Hot_ Storage Tier in Azure“. Nach der Implementierung von Cloud Volumes ONTAP können Sie Ihre Storage-Kosten senken, indem Sie die Tiering-Ebene für inaktive Daten ändern, auf die seit 30 Tagen nicht mehr zugegriffen wurde. Die Zugriffskosten sind höher, wenn Sie auf die Daten zugreifen. Daher müssen Sie dies berücksichtigen, bevor Sie die Tiering Level ändern.
+
+Die Tiering Level sind systemweit - sie sind nicht pro Volume.
+
+In AWS können Sie die Tiering-Ebene ändern, sodass inaktive Daten nach 30 Tagen Inaktivität in eine der folgenden Storage-Klassen verschoben werden:
+
+* Intelligentes Tiering
+* Standardzugriff
+* Ein einmaliger Zugriff
+
+
+In Azure können Sie den Tiering-Level ändern, sodass inaktive Daten nach 30 Tagen Inaktivität in den Storage Tier „_cool_Storage“ verschoben werden.
+
+Weitere Informationen zur Funktionsweise von Tiering-Ebenen finden Sie unter link:concept_data_tiering.html["Data Tiering - Übersicht"].
+
+.Schritte
+. Klicken Sie in der Arbeitsumgebung auf das Menüsymbol und dann auf *Tiering Level*.
+. Wählen Sie die Tiering-Ebene und klicken Sie dann auf *Speichern*.
+

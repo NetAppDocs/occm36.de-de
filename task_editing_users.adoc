@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task_editing_users.html 
+keywords: editing, users, user accounts, modify, modifying, report, notification, password, notification report 
+summary: Sie können Benutzerkonten in Cloud Manager ändern, indem Sie den Benachrichtigungsbericht aktivieren und deaktivieren. 
+---
+= Bearbeiten von Benutzerkonten
+:hardbreaks:
+:allow-uri-read: 
+:backend-html5-doctype-book: 
+:basebackend-html-doctype-book: 
+:doctype-book: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzerkonten in Cloud Manager ändern, indem Sie den Benachrichtigungsbericht aktivieren und deaktivieren.
+
+Kennwort und Benutzerinformationen müssen in geändert werden https://cloud.netapp.com["NetApp Cloud Central"^].
+
+.Schritte
+. Klicken Sie oben rechts in der Cloud Manager-Konsole auf das Benutzersymbol und wählen Sie dann *Benutzer anzeigen* aus.
+. Wählen Sie das Menüsymbol am Ende der Zeile aus und klicken Sie auf *Benutzer bearbeiten*.
++
+image:screenshot_edit_user.gif["Screenshot: Zeigt das Menü zum Bearbeiten eines Benutzerkontos an. Das Menü befindet sich neben dem Benutzernamen."]
+
+. Ändern Sie auf der Seite Benutzereinstellungen das Benutzerkonto.
+

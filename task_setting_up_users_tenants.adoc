@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_setting_up_users_tenants.html 
+keywords: users, adding, creating, tenants 
+summary: Mit Cloud Manager können Sie Cloud Manager um weitere Cloud Central Benutzer erweitern und Arbeitsumgebungen durch die Verwendung von Mandanten isolieren. 
+---
+= Benutzer und Mandanten einrichten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Cloud Manager können Sie Cloud Manager um weitere Cloud Central Benutzer erweitern und Arbeitsumgebungen durch die Verwendung von Mandanten isolieren.
+
+
+
+== Hinzufügen von Benutzern zu Cloud Manager
+
+Wenn zusätzliche Benutzer Ihr Cloud Manager-System verwenden müssen, müssen sie sich bei NetApp Cloud Central registrieren. Sie können die Benutzer dann zu Cloud Manager hinzufügen.
+
+.Schritte
+. Wenn der Benutzer noch kein Konto in NetApp Cloud Central hat, senden Sie ihm einen Link zu Ihrem Cloud Manager-System, und lassen Sie ihn sich registrieren.
++
+Warten Sie, bis der Benutzer bestätigt, dass er sich für ein Konto angemeldet hat.
+
+. Klicken Sie in Cloud Manager auf das Benutzersymbol und dann auf *Benutzer anzeigen*.
+. Klicken Sie Auf *Neuer Benutzer*.
+. Geben Sie die dem Benutzerkonto zugeordnete E-Mail-Adresse ein, wählen Sie eine Rolle aus und klicken Sie auf *Hinzufügen*.
+
+
+Informieren Sie den Benutzer, dass er sich jetzt beim Cloud Manager-System anmelden kann.
+
+
+
+== Erstellen von Mandanten
+
+Mit Mandanten lassen sich Arbeitsumgebungen in separate Gruppen isolieren. Sie erstellen eine oder mehrere Arbeitsumgebungen innerhalb eines Mandanten. link:concept_storage_management.html#storage-isolation-using-tenants["Erfahren Sie mehr über Mandanten"].
+
+.Schritte
+. Klicken Sie auf das Mietersymbol und dann auf *Mieter hinzufügen*.
++
+image:screenshot_tenants_icon.gif["Screenshot: Zeigt das Mandantensymbol (einen Push-Pin) und die Schaltfläche Add Tenant (Mieter hinzufügen), die oben rechts in der Cloud Manager-Konsole verfügbar sind."]
+
+. Geben Sie ggf. einen Namen, eine Beschreibung und eine Kostenstelle ein.
+. Klicken Sie Auf *Speichern*.
+
+
+Sie können jetzt zu diesem neuen Mandanten wechseln und diesem Mandanten Mandantenadministratoren und Arbeitsumgebungsadministratoren hinzufügen.

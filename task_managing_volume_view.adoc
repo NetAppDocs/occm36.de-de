@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: task_managing_volume_view.html 
+keywords: NFS volumes, volume view, managing, cloning, clone, delete, deleting, access, disk 
+summary: Sie können NFS-Volumes managen, indem Sie sie klonen, den Datenzugriff managen, den zugrunde liegenden Festplattentyp ändern und vieles mehr. 
+---
+= Managen von NFS-Volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können NFS-Volumes managen, indem Sie sie klonen, den Datenzugriff managen, den zugrunde liegenden Festplattentyp ändern und vieles mehr.
+
+
+
+== Klonen von Volumes
+
+Wenn Sie eine sofortige Kopie Ihrer Daten benötigen, ohne viel Speicherplatz zu belegen, können Sie einen Klon eines vorhandenen Volumes erstellen.
+
+Das geklonte Volume ist eine beschreibbare Point-in-Time-Kopie, die platzsparend ist, da es einen geringen Speicherplatz für Metadaten verwendet und dann nur zusätzlichen Speicherplatz verbraucht, wenn Daten geändert oder hinzugefügt werden.
+
+.Schritte
+. Legen Sie auf der Registerkarte Volumes den Mauszeiger über die Lautstärke, wählen Sie das Menüsymbol und klicken Sie dann auf *Clone*.
+. Ändern Sie ggf. den Namen des geklonten Volumes und klicken Sie dann auf *Clone*.
+
+
+Cloud Manager erstellt ein neues Volume, das ein Klon eines vorhandenen Volumes ist.
+
+
+
+== Managen des Datenzugriffs auf Volumes
+
+Wenn Sie ein Volume erstellen, stellt Cloud Manager das Volume allen EC2-Instanzen in dem VPC zur Verfügung, in dem das Volume erstellt wurde. Sie können diesen Standardwert ändern, wenn Sie den Datenzugriff auf das Volume einschränken müssen.
+
+.Schritte
+. Legen Sie auf der Registerkarte Volumes den Mauszeiger über die Lautstärke, wählen Sie das Menüsymbol und klicken Sie dann auf *Zugriff verwalten*.
+. Ändern Sie die Zugriffsliste für die Lautstärke, und klicken Sie dann auf *Speichern*.
+
+
+
+
+== Ändern der zugrunde liegenden AWS-Festplatte für ein Volume
+
+Sie können die zugrunde liegende AWS-Festplatte ändern, die ein Volume zur Bereitstellung von Storage verwendet. Wenn beispielsweise eine höhere Performance erforderlich ist, können Sie von einer Throughput Optimized HDD zu einer General Purpose SSD wechseln.
+
+.Schritte
+. Legen Sie auf der Registerkarte Volumes den Mauszeiger über das Volumen, wählen Sie das Menüsymbol und klicken Sie dann auf *Datenträger ändern*.
+. Wählen Sie den AWS-Festplattentyp aus und klicken Sie auf *Ändern*.
+
+
+Cloud Manager verschiebt das Volume in ein vorhandenes Aggregat, das den ausgewählten Festplattentyp verwendet, oder erstellt ein neues Aggregat für das Volume.
+
+
+
+== Anzeigen und Ändern von AWS-Ressourcen
+
+Wenn Sie ein neues Volume erstellen, weist Cloud Manager die für dieses Volume erforderlichen AWS-Instanzen und EBS-Speicher zu. Bei Bedarf können Sie Details zu AWS-Instanzen und EBS-Storage anzeigen, Instanztypen ändern und Instanzen aus- und wieder einschalten.
+
+.Schritte
+. Klicken Sie auf *AWS Ressourcen*.
++
+Die Liste der AWS-Instanzen wird angezeigt. Sie können Details wie Instanztyp, AWS-Speicherort und die an die Instanz angehängten Volumes anzeigen.
+
+. Wählen Sie bei Bedarf das Menüsymbol neben der Spalte Status aus, und wählen Sie dann eine der verfügbaren Aktionen aus:
++
+image:screenshot_volume_view_resources.gif["Screenshot mit den verfügbaren Aktionen auf der Seite AWS-Ressourcen in der Volume-Ansicht."]
+
+
+
+
+
+== Volumes werden gelöscht
+
+Sie können Volumes löschen, die Sie nicht mehr benötigen.
+
+.Schritte
+. Legen Sie auf der Registerkarte Volumes den Mauszeiger über die Lautstärke, wählen Sie das Menüsymbol und klicken Sie dann auf *Löschen*.
+. Klicken Sie auf *Löschen*, um zu bestätigen, dass Sie das Volume löschen möchten.
+

@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: concept_accounts_and_permissions.html 
+keywords: cloud provider accounts, aws, azure, aws account, azure account, keys, service principal, multiple, permissions, policy, policies, json, subscriptions 
+summary: Mit Cloud Manager können Sie das Cloud-Provider-Konto auswählen, in dem Sie ein Cloud Volumes ONTAP System implementieren möchten. Vor dem Hinzufügen der Konten zu Cloud Manager sollten die Anforderungen für Berechtigungen bekannt sein. 
+---
+= Konten und Berechtigungen für Cloud-Provider
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Cloud Manager können Sie das _Cloud-Provider-Konto_ auswählen, in dem Sie ein Cloud Volumes ONTAP System implementieren möchten. Sie sollten die Berechtigungsanforderungen kennen, bevor Sie die Konten zu Cloud Manager hinzufügen.
+
+
+
+== AWS Konten und Berechtigungen
+
+Sie können alle Ihre Cloud Volumes ONTAP Systeme über das erste AWS Konto oder weitere Konten einrichten.
+
+
+
+=== Über das erste AWS Konto
+
+Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein AWS Konto mit Berechtigungen zum Starten der Cloud Manager Instanz verwenden. Die erforderlichen Berechtigungen werden im aufgeführt https://mysupport.netapp.com/cloudontap/iampolicies["NetApp Cloud Central-Richtlinie für AWS"^].
+
+Wenn Cloud Central die Cloud Manager Instanz in AWS startet, wird eine IAM-Rolle und ein Instanzprofil für die Instanz erstellt. Zudem wird eine Richtlinie angehängt, die Cloud Manager Berechtigungen für die Implementierung und das Management von Cloud Volumes ONTAP in diesem AWS-Konto bereitstellt. link:reference_permissions.html#what-cloud-manager-does-with-aws-permissions["Überprüfen Sie, wie Cloud Manager die Berechtigungen verwendet"].
+
+image:diagram_permissions_initial_aws.png["Ein Konzept-Image, das Cloud Central zeigt, das Cloud Manager in einem AWS Konto implementiert Eine IAM-Richtlinie wird einer IAM-Rolle zugewiesen, die mit der Cloud Manager-Instanz verbunden ist."]
+
+Cloud Manager wählt bei der Erstellung einer neuen Arbeitsumgebung standardmäßig dieses Cloud-Provider-Konto aus:
+
+image:screenshot_accounts_select_aws.gif["Ein Screenshot, in dem die Option Konto wechseln auf der Seite Details  Credentials angezeigt wird."]
+
+
+
+=== Weitere AWS Konten
+
+Wenn Sie Cloud Volumes ONTAP in verschiedenen AWS Accounts starten möchten, haben Sie eine der Möglichkeiten link:task_adding_cloud_accounts.html#setting-up-and-adding-aws-accounts-to-cloud-manager["AWS Schlüssel für einen IAM-Benutzer oder den ARN einer Rolle in einem vertrauenswürdigen Konto bereitstellen"]. Die folgende Abbildung zeigt zwei zusätzliche Konten: Eines mit Berechtigungen über eine IAM-Rolle in einem vertrauenswürdigen Konto und ein weiteres über die AWS Schlüssel eines IAM-Benutzers:
+
+image:diagram_permissions_multiple_aws.png["Ein Konzept-Image, das zwei zusätzliche Konten enthält. Jeder hat eine IAM-Richtlinie, eine ist mit dem IAM-Benutzer verbunden, die andere mit einer IAM-Rolle verbunden."]
+
+Das würden Sie dann tun link:task_adding_cloud_accounts.html#adding-aws-accounts-to-cloud-manager["Fügen Sie die Cloud-Provider-Konten zu Cloud Manager hinzu"] Indem Sie den Amazon Resource Name (ARN) der IAM-Rolle oder die AWS-Schlüssel für den IAM-Benutzer angeben.
+
+Nachdem Sie ein weiteres Konto hinzugefügt haben, können Sie zu diesem wechseln, wenn Sie eine neue Arbeitsumgebung erstellen:
+
+image:screenshot_accounts_switch_aws.gif["Ein Screenshot, in dem die Auswahl zwischen Cloud-Provider-Konten angezeigt wird, nachdem Sie auf der Seite Details  Credentials auf Switch Account geklickt haben."]
+
+
+
+== Azure-Konten und Berechtigungen
+
+Sie können alle Ihre Cloud Volumes ONTAP Systeme über das erste Azure Konto oder weitere Konten einrichten.
+
+
+
+=== Zunächst das Azure-Konto
+
+Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein Azure Konto verwenden, das über Berechtigungen zum Bereitstellen der Virtual Machine von Cloud Manager verfügt. Die erforderlichen Berechtigungen werden im aufgeführt https://mysupport.netapp.com/cloudontap/iampolicies["NetApp Cloud Central-Richtlinie für Azure"^].
+
+Wenn Cloud Central die Virtual Machine Cloud Manager in Azure implementiert, wird damit eine aktiviert https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Vom System zugewiesene verwaltete Identität"^] Erstellt auf der Cloud Manager Virtual Machine eine benutzerdefinierte Rolle und weist sie der Virtual Machine zu. Die Rolle bietet Cloud Manager Berechtigungen für die Implementierung und das Management von Cloud Volumes ONTAP in diesem Azure Abonnement. link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Überprüfen Sie, wie Cloud Manager die Berechtigungen verwendet"].
+
+image:diagram_permissions_initial_azure.png["Ein Konzept-Image, das Cloud Central zeigt, das Cloud Manager in einem Azure Konto und Abonnement bereitstellt. Eine vom System zugewiesene verwaltete Identität wird aktiviert und der virtuellen Maschine von Cloud Manager eine benutzerdefinierte Rolle zugewiesen."]
+
+Cloud Manager wählt bei der Erstellung einer neuen Arbeitsumgebung standardmäßig dieses Cloud-Provider-Konto aus:
+
+image:screenshot_accounts_select_azure.gif["Ein Screenshot, in dem die Option Konto wechseln auf der Seite Details  Credentials angezeigt wird."]
+
+
+
+=== Zusätzliche Azure-Abonnements für das Erstkonto
+
+Die verwaltete Identität ist mit dem Abonnement verknüpft, in dem Sie Cloud Manager gestartet haben. Wenn Sie ein anderes Azure Abonnement auswählen möchten, müssen Sie es ausführen link:task_adding_cloud_accounts.html#associating-additional-azure-subscriptions-with-a-managed-identity["Verknüpfen Sie die verwaltete Identität mit diesen Abonnements"].
+
+
+
+=== Zusätzliche Azure-Konten
+
+Wenn Sie Cloud Volumes ONTAP in verschiedenen Azure Accounts implementieren möchten, müssen Sie die erforderlichen Berechtigungen von erteilen link:task_adding_cloud_accounts.html#setting-up-and-adding-azure-accounts-to-cloud-manager["Erstellen und Einrichten eines Service Principal in Azure Active Directory"] Für jedes Azure Konto. Das folgende Bild zeigt zwei zusätzliche Konten, die jeweils mit einer Dienstprinzipal- und einer benutzerdefinierten Rolle eingerichtet sind, die Berechtigungen bereitstellt:
+
+image:diagram_permissions_multiple_azure.png["Ein konzeptionelles Image, das den ersten Azure Account zeigt und über eine benutzerdefinierte Rolle und gemanagte Identität Berechtigungen erhält, und zwei zusätzliche Konten, die über eine benutzerdefinierte Rolle und einen Serviceprincipal Berechtigungen erhalten."]
+
+Das würden Sie dann tun link:task_adding_cloud_accounts.html#adding-azure-accounts-to-cloud-manager["Fügen Sie die Cloud-Provider-Konten zu Cloud Manager hinzu"] Durch Angabe von Details zum AD-Dienstprinzipal.
+
+Nachdem Sie ein weiteres Konto hinzugefügt haben, können Sie zu diesem wechseln, wenn Sie eine neue Arbeitsumgebung erstellen:
+
+image:screenshot_accounts_switch_azure.gif["Ein Screenshot, in dem die Auswahl zwischen Cloud-Provider-Konten angezeigt wird, nachdem Sie auf der Seite Details  Credentials auf Switch Account geklickt haben."]
+
+.Wie sieht es mit Marketplace-Implementierungen und On-Premises-Implementierungen aus?
+****
+In den obigen Abschnitten wird die empfohlene Implementierungsmethode von NetApp Cloud Central beschrieben. Sie können Cloud Manager auch über die implementieren link:task_launching_aws_mktp.html["AWS Marketplace"], Das link:task_launching_azure_mktp.html["Azure Marketplace"], Und Sie können link:task_installing_linux.html["Installation von Cloud Manager vor Ort"].
+
+Wenn Sie einen der Marktplätze verwenden, werden Berechtigungen auf die gleiche Weise bereitgestellt. Sie müssen lediglich die IAM-Rolle oder die gemanagte Identität für Cloud Manager manuell erstellen und einrichten und dann die Berechtigungen für weitere Konten bereitstellen.
+
+Bei On-Premises-Implementierungen können Sie keine IAM-Rolle einrichten oder eine gemanagte Identität für das Cloud Manager System einrichten, Sie können jedoch Berechtigungen wie bei zusätzlichen Konten bereitstellen.
+
+****

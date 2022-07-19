@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task_provisioning_volume_view.html 
+keywords: NFS volumes, volume view, creating, mounting, provisioning, create, nfs volumes 
+summary: Sie können Cloud Manager verwenden, um NFS-Volumes zu erstellen, die Funktionen der Enterprise-Klasse auf AWS Storage bieten. 
+---
+= Erstellen und Mounten von NFS-Volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Cloud Manager verwenden, um NFS-Volumes zu erstellen, die Funktionen der Enterprise-Klasse auf AWS Storage bieten.
+
+
+
+== Erstellen von NFS-Volumes
+
+Sie können ein Volume erstellen, das mit einer einzelnen AWS-Instanz oder einer Instanz verbunden ist, die auf eine andere Instanz gespiegelt wird, um eine hohe Verfügbarkeit zu gewährleisten.
+
+.Schritte
+. Klicken Sie auf der Registerkarte Volumes auf *Neues Volume erstellen*.
+. Wählen Sie auf der Seite Neues Volume erstellen einen Volume-Typ aus:
++
+[cols="15,85"]
+|===
+| Option | Beschreibung 
+
+
+| Volume erstellen | Erstellt ein Volume, das mit einer einzelnen AWS-Instanz verbunden ist. 
+
+
+| Erstellen Sie ein HA-Volume | Erstellt ein Volume, das mit einer einzelnen AWS-Instanz verbunden und auf eine andere Instanz gespiegelt wird, um bei Ausfällen eine hohe Verfügbarkeit zu gewährleisten. Klicken Sie auf das Symbol Info, um weitere Details zu den für ein HA-Volume erforderlichen Instanzen anzuzeigen. 
+|===
+. Wenn Sie „Volume erstellen“ ausgewählt haben, geben Sie die Details für Ihr erstes Volume an, und klicken Sie dann auf „Create*“.
++
+In der folgenden Tabelle werden Felder beschrieben, für die Sie möglicherweise Hilfe benötigen:
+
++
+[cols="15,85"]
+|===
+| Feld | Beschreibung 
+
+
+| Größe | Die maximale Größe für das Volume hängt von der in vorhandenen Storage-Systemen verfügbaren Kapazität ab. Thin Provisioning wird automatisch auf dem Volume aktiviert, sodass Sie ein Volume erstellen können, das größer ist als der derzeit verfügbare physische Storage. Anstatt Speicherplatz vorab zuzuweisen, wird jedem Volume Speicherplatz zugewiesen, während Daten geschrieben werden. 
+
+
+| AWS-Festplattentyp  a| 
+Sie sollten die Festplatte auswählen, die Ihren Anforderungen hinsichtlich Performance und Kosten entspricht.
+
+** Universal SSD-Festplatten bieten ein ausgewogenes Verhältnis zwischen Kosten und Performance für eine breite Palette von Workloads. Die Performance wird in Bezug auf IOPS definiert.
+** Durchsatzoptimierte HDD-Festplatten eignen sich für Workloads, auf die häufig zugegriffen wird und die einen schnellen und konsistenten Durchsatz zu einem niedrigeren Preis erfordern.
+** Kalte Festplatten sind für Backups oder selten genutzte Daten gedacht, da die Performance sehr gering ist. Wie bei Festplatten mit Durchsatzoptimierung wird die Performance in Bezug auf den Durchsatz definiert.
+
+
+Weitere Informationen finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
+
+|===
++
+Die folgende Abbildung zeigt die ausgefüllte Seite "Volume erstellen":
+
++
+image:screenshot_volume_view_create.gif["Screenshot: Zeigt, dass die Seite \"Neues Volume erstellen\" ausgefüllt ist."]
+
+. Wenn Sie „HA-Volumen erstellen“ ausgewählt haben, geben Sie die Details für das Volume an, und klicken Sie dann auf *Erstellen*.
++
+In der folgenden Tabelle werden Felder beschrieben, für die Sie möglicherweise Hilfe benötigen:
+
++
+[cols="15,85"]
+|===
+| Feld | Beschreibung 
+
+
+| Größe | Die maximale Größe für das Volume hängt von der in vorhandenen Storage-Systemen verfügbaren Kapazität ab. Thin Provisioning wird automatisch auf dem Volume aktiviert, sodass Sie ein Volume erstellen können, das größer ist als der derzeit verfügbare physische Storage. Anstatt Speicherplatz vorab zuzuweisen, wird jedem Volume Speicherplatz zugewiesen, während Daten geschrieben werden. 
+
+
+| AWS-Festplattentyp  a| 
+Sie sollten die Festplatte auswählen, die Ihren Anforderungen hinsichtlich Performance und Kosten entspricht.
+
+** Universal SSD-Festplatten bieten ein ausgewogenes Verhältnis zwischen Kosten und Performance für eine breite Palette von Workloads. Die Performance wird in Bezug auf IOPS definiert.
+** Durchsatzoptimierte HDD-Festplatten eignen sich für Workloads, auf die häufig zugegriffen wird und die einen schnellen und konsistenten Durchsatz erfordern.
+
+
+Weitere Informationen finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
+
+
+
+| Standort | Sie sollten einen VPC wählen, der drei Subnetze in drei separaten Verfügbarkeitszonen enthält. 
+
+
+| Nodes und Mediator | Wenn möglich, wählt Cloud Manager für jede Instanz separate Verfügbarkeitszonen, da es sich um die unterstützte und optimale Konfiguration handelt. 
+
+
+| Floating-IP | Die IP-Adressen müssen für alle VPCs in der Region außerhalb des CIDR-Blocks liegen. 
+
+
+| Routentabelle | Wenn Sie mehr als eine Routentabelle haben, ist es sehr wichtig, die richtigen Routentabellen auszuwählen. Andernfalls haben einige Clients möglicherweise keinen Zugriff auf das HA-Paar. Weitere Informationen finden Sie unter  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS Documentation: Routingtabellen"^]. 
+|===
++
+Die folgende Abbildung zeigt die Seite Nodes and Mediator. Jede Instanz befindet sich in einer separaten Verfügbarkeitszone.
+
++
+image:screenshot_volume_view_ha_network.gif["Screenshot: Zeigt die Auswahl der AWS-Netzwerke für die beiden Cloud Volumes ONTAP Nodes und den Mediator. Jede Instanz befindet sich in einer separaten Verfügbarkeitszone und einem separaten Subnetz."]
+
+
+
+Cloud Manager erstellt das Volume auf einem vorhandenen System oder auf einem neuen System. Wenn ein neues System erforderlich ist, kann die Erstellung des Volumes ca. 25 Minuten dauern.
+
+
+
+== Mounten von Volumes auf Linux-Hosts
+
+Nachdem Sie ein Volume erstellt haben, sollten Sie es auf Ihren Hosts mounten, damit diese auf das Volume zugreifen können.
+
+.Schritte
+. Legen Sie auf der Registerkarte Volumes den Mauszeiger über die Lautstärke, wählen Sie das Menüsymbol und klicken Sie dann auf *Mount*.
+. Klicken Sie Auf *Kopieren*.
+. Ändern Sie auf Ihren Linux-Hosts den kopierten Text, indem Sie das Zielverzeichnis ändern, und geben Sie dann den Befehl zum Mounten des Volumes ein.
+

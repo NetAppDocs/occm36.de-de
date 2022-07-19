@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: reference_user_roles.html 
+keywords: user, role, task, permission, permissions, tasks, roles, admin, cloud manager admin, admin, tenant admin, working environment admin 
+summary: Jedem Cloud Manager-Benutzerkonto wird eine Rolle zugewiesen, die Berechtigungen definiert. 
+---
+= Benutzerrollen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Jedem Cloud Manager-Benutzerkonto wird eine Rolle zugewiesen, die Berechtigungen definiert.
+
+[cols="25,25,25,25"]
+|===
+| Aufgabe | Cloud Manager Admin | Mandantenverwaltung | Administrator der Arbeitsumgebung 
+
+
+| Verwalten von Mandanten | Ja. | Nein | Nein 
+
+
+| Verwalten von Arbeitsumgebungen | Ja. | Ja, für den zugewiesenen Mandanten | Ja, für zugewiesene Arbeitsumgebungen 
+
+
+| Integrieren Sie eine Arbeitsumgebung in Cloud Sync | Ja. | Ja. | Nein 
+
+
+| Anzeigen des Status der Datenreplizierung | Ja. | Ja, für den zugewiesenen Mandanten | Ja, für zugewiesene Arbeitsumgebungen 
+
+
+| Zeitachse anzeigen | Ja. | Ja. | Ja. 
+
+
+| Erstellen und Löschen von Benutzerkonten | Ja. | Ja, für den zugewiesenen Mandanten | Nein 
+
+
+| Benutzerkonten ändern | Ja. | Ja, für den zugewiesenen Mandanten | Ja, für ihren eigenen Account 
+
+
+| Kontoeinstellungen verwalten | Ja. | Nein | Nein 
+
+
+| Einrichtung Von Kubernetes | Ja. | Nein | Nein 
+
+
+| Wechseln Sie zwischen der Storage System View und der Volume View | Ja. | Nein | Nein 
+
+
+| Einstellungen ändern | Ja. | Nein | Nein 
+
+
+| Anzeigen und Verwalten des Support-Dashboards | Ja. | Nein | Nein 
+
+
+| Backup und Wiederherstellung von Cloud Manager | Ja. | Nein | Nein 
+
+
+| Entfernen Sie eine Arbeitsumgebung | Ja. | Nein | Nein 
+
+
+| Aktualisieren Sie Cloud Manager | Ja. | Nein | Nein 
+
+
+| Installieren Sie ein HTTPS-Zertifikat | Ja. | Nein | Nein 
+
+
+| Einrichten von Active Directory | Ja. | Nein | Nein 
+
+
+| Aktivieren Sie den Cloud Storage Automation Report | Ja. | Nein | Nein 
+|===

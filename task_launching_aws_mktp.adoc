@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task_launching_aws_mktp.html 
+keywords: install, installation, installing, marketplace, aws, launch, launching, ec2 console 
+summary: Am besten starten Sie Cloud Manager in AWS mithilfe von NetApp Cloud Central , aber Sie können ihn bei Bedarf über den AWS Marketplace starten. 
+---
+= Starten von Cloud Manager über den AWS Marketplace
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Am besten sollte Cloud Manager in AWS gestartet werden, indem verwendet wird https://cloud.netapp.com["NetApp Cloud Central"^], Sie können diese jedoch bei Bedarf über den AWS Marketplace starten.
+
+
+TIP: Wenn Sie Cloud Manager über den AWS Marketplace starten, ist Cloud Manager weiterhin in NetApp Cloud Central integriert. link:concept_cloud_central.html["Erfahren Sie mehr über die Integration"].
+
+In den folgenden Schritten wird beschrieben, wie die Instanz von der EC2-Konsole aus gestartet wird, da Sie über die Konsole eine IAM-Rolle an die Cloud Manager-Instanz anhängen können. Dies ist mit der 1-Klick-Option nicht möglich.
+
+.Schritte
+. IAM-Richtlinie und -Rolle für die EC2-Instanz erstellen:
++
+.. Laden Sie die Cloud Manager IAM-Richtlinie von folgendem Speicherort herunter:
++
+https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Manager: AWS- und Azure Policies"^]
+
+.. Erstellen Sie über die IAM-Konsole Ihre eigene Richtlinie, indem Sie den Text aus der Cloud Manager IAM-Richtlinie kopieren und einfügen.
+.. Erstellen Sie eine IAM-Rolle mit dem Rollentyp Amazon EC2, und hängen Sie die im vorherigen Schritt erstellte Richtlinie an die Rolle an.
+
+
+. Wechseln Sie zum https://aws.amazon.com/marketplace/pp/B018REK8QG["Seite zu Cloud Manager im AWS Marketplace"^].
+. Klicken Sie Auf *Weiter*.
+. Klicken Sie auf der Registerkarte Benutzerdefinierter Start auf *mit EC2-Konsole* für Ihre Region starten, und wählen Sie dann Ihre Auswahl aus:
++
+.. Wählen Sie je nach Verfügbarkeit der Region den Instanztyp t3.Medium (empfohlen), t2.Medium oder m4.Large aus.
+.. Wählen Sie eine VPC, ein Subnetz, eine IAM-Rolle und andere Konfigurationsoptionen aus, die Ihren Anforderungen entsprechen.
+.. Behalten Sie die Standardspeicheroptionen bei.
+.. Geben Sie bei Bedarf Tags für die Instanz ein.
+.. Geben Sie die erforderlichen Verbindungsmethoden für die Cloud Manager-Instanz an: SSH, HTTP und HTTPS.
+.. Klicken Sie Auf *Start*.
+
+
+
+
+AWS startet die Software mit den angegebenen Einstellungen. Die Cloud Manager-Instanz und -Software sollten in etwa fünf Minuten ausgeführt werden.
+
+Melden Sie sich bei Cloud Manager an, indem Sie die öffentliche IP-Adresse oder die private IP-Adresse in einem Webbrowser eingeben und anschließend den Setup-Assistenten ausführen.

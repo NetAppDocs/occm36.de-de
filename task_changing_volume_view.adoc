@@ -23,4 +23,5 @@ Weitere Informationen zur Volume-Ansicht finden Sie unter link:concept_storage_m
 . Wählen Sie auf der Ansichtsseite Auswahl die Option *Speichersystemansicht* aus und klicken Sie dann auf *Switch*.
 
 
+.Ergebnis
 Cloud Manager wechselt zur Volume-Ansicht.

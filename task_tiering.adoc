@@ -133,6 +133,7 @@ Unterstützung bei der Datenreplizierung finden Sie unter link:task_replicating_
 
 Wenn Sie das Daten-Tiering aktivieren, schichtet Cloud Volumes ONTAP inaktive Daten in AWS in die S3 _Standard_ Storage-Klasse oder zum „_Hot_ Storage Tier in Azure“. Nach der Implementierung von Cloud Volumes ONTAP können Sie Ihre Storage-Kosten senken, indem Sie die Tiering-Ebene für inaktive Daten ändern, auf die seit 30 Tagen nicht mehr zugegriffen wurde. Die Zugriffskosten sind höher, wenn Sie auf die Daten zugreifen. Daher müssen Sie dies berücksichtigen, bevor Sie die Tiering Level ändern.
 
+.Über diese Aufgabe
 Die Tiering Level sind systemweit - sie sind nicht pro Volume.
 
 In AWS können Sie die Tiering-Ebene ändern, sodass inaktive Daten nach 30 Tagen Inaktivität in eine der folgenden Storage-Klassen verschoben werden:

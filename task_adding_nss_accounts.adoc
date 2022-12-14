@@ -37,6 +37,7 @@ video::V2fLTyztqYQ[youtube,width=848,height=480]
 . Klicken Sie Auf *Konto Erstellen.*
 
 
+.Was kommt als Nächstes?
 Benutzer können jetzt das Konto beim Erstellen neuer Cloud Volumes ONTAP Systeme und bei der Registrierung vorhandener Systeme auswählen.
 
 * link:task_deploying_otc_aws.html["Starten von Cloud Volumes ONTAP in AWS"]

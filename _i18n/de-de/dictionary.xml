@@ -241,25 +241,20 @@
   <block id="665ca606ab3749b9f8d8f80733a0f879" category="summary">Sie können mit Cloud Volumes ONTAP in AWS beginnen, indem Sie einige kurze Schritte ausführen.</block>
   <block id="f7bba7b010fcf309ed99329ba3de1d34" category="doc">Erste Schritte mit Cloud Volumes ONTAP in AWS</block>
   <block id="25ede68d83d624c2021bf51edf7e10e0" category="paragraph">Die ersten Schritte mit Cloud Volumes ONTAP in AWS sind über NetApp Cloud Central möglich.</block>
-  <block id="4e85b7aafac6d2da235acd904c8d01ca" category="section-title">Richten Sie Ihr Netzwerk ein</block>
   <block id="a681991b631a5acb29733a0b7730e52d" category="list-text">Aktivieren Sie ausgehenden Internetzugriff vom Ziel-VPC aus, sodass Cloud Manager und Cloud Volumes ONTAP mit mehreren Endpunkten in Verbindung treten können.</block>
   <block id="315474a8ef79b74899073fc979f12da4" category="inline-link-macro">Cloud Manager</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="inline-link-macro">Cloud Volumes ONTAP</block>
   <block id="d5332076efde404a7834150e066ff876" category="paragraph">Dieser Schritt ist wichtig, da Cloud Manager Cloud Volumes ONTAP nicht ohne ausgehenden Internetzugang implementieren kann. Wenn Sie die ausgehende Verbindung begrenzen müssen, lesen Sie die Liste der Endpunkte für <block ref="258d0bfeed07e9f3f800353fd17d365f" category="inline-link-macro-rx"></block> Und <block ref="82273ff2b165ec558cf6885df6c1a399" category="inline-link-macro-rx"></block>.</block>
   <block id="c1540e16429791c7515c0322aad07fcf" category="list-text">Richten Sie einen VPC-Endpunkt für den S3-Dienst ein.</block>
   <block id="4274b83eccea8c2453ce00d6c7cde54e" category="paragraph">Ein VPC-Endpunkt ist erforderlich, wenn Sie kalte Daten von Cloud Volumes ONTAP auf kostengünstigen Objekt-Storage einstufen möchten.</block>
-  <block id="c5f19207f1daef0a6280f41fb14d4300" category="section-title">Abonnieren Sie Cloud Volumes ONTAP über den AWS Marketplace</block>
   <block id="c3db50cf0b4ffda7e5efdef5c6344f1a" category="inline-link">AWS Marketplace</block>
   <block id="78c36a87b6c0955bc0db78d44434a1a6" category="paragraph">Abonnieren von<block ref="4a4be2c5a933797a9af2d5ea70e24e84" category="inline-link-rx"></block> Ist zur Annahme der Softwarebedingungen erforderlich. Sie sollten sich nur über Marketplace anmelden. Starten von Cloud Volumes ONTAP von überall aus, Cloud Manager wird jedoch nicht unterstützt.</block>
-  <block id="fcb13a1250c0b335c18418ea431681f2" category="section-title">Stellen Sie die erforderlichen AWS-Berechtigungen bereit</block>
   <block id="b99486f44ccd43f06815851fcef5a3bc" category="paragraph">Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein AWS-Konto verwenden, das über die Berechtigung zum Bereitstellen der Instanz verfügt.</block>
   <block id="d44b2f7de3bd687b27cc738262b8bdf4" category="inline-link">NetApp Cloud Central-Richtlinie für AWS</block>
   <block id="f84694bd2204c771ef8e329f1ff15cd4" category="list-text">Gehen Sie zur AWS IAM-Konsole und erstellen Sie eine Richtlinie durch Kopieren und Einfügen der Inhalte des<block ref="467dbce35aa796ce72a03c7f71443016" category="inline-link-rx"></block>.</block>
   <block id="9680d60a8a185f9729b0b9df0caac646" category="list-text">Hängen Sie die Richtlinie an den IAM-Benutzer an.</block>
-  <block id="8a150b1735194cf0c703f98bd7de9682" category="section-title">Starten Sie Cloud Manager über NetApp Cloud Central</block>
   <block id="8ee8d65142a1b5ef6e397b75587b4e61" category="inline-link">Cloud Central</block>
   <block id="5cad3979e55c4e95947e4d99523e9d84" category="paragraph">Cloud Manager Software ist für die Implementierung und das Management von Cloud Volumes ONTAP erforderlich. Es dauert nur ein paar Minuten, um eine Cloud Manager Instanz von zu starten<block ref="dd2262940c431e31dfcd64b1f8a27d38" category="inline-link-rx"></block>.</block>
-  <block id="161814f2b49992da7596b7b7fc9f77ae" category="section-title">Starten Sie Cloud Volumes ONTAP mit Cloud Manager</block>
   <block id="0c9b88a5cd39fe8dd0bb21b293c156ba" category="paragraph">Wenn Cloud Manager fertig ist, klicken Sie einfach auf Erstellen, wählen Sie den Systemtyp aus, den Sie starten möchten, und führen Sie die Schritte im Assistenten aus. Nach 25 Minuten sollte Ihr erstes Cloud Volumes ONTAP System betriebsbereit sein.</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">Weiterführende Links</block>
   <block id="be64d9d97cf79e96941a831e40507ca5" category="inline-link-macro">Bewertung</block>
@@ -329,7 +324,6 @@
   <block id="28b05291adad7c873ac102ba84821b36" category="summary">Willkommen beim Dokumentationsportal für Cloud Manager und Cloud Volumes ONTAP.</block>
   <block id="684c574c7f4f96c8a8169a7ac2bda18e" category="doc">Cloud Manager und Cloud Volumes ONTAP Dokumentation</block>
   <block id="810113769d05692064780f2ea32d8f51" category="paragraph">Mit OnCommand Cloud Manager implementieren und managen Sie NetApp Cloud Volumes ONTAP – eine Datenmanagement-Lösung mit Schutz, Sichtbarkeit und Kontrolle für Ihre Cloud-basierten Workloads.</block>
-  <block id="1fde0727b387439572ade83eecff4f68" category="section-title">Entdecken Sie, was neu ist</block>
   <block id="dcc605ce865f82b52df30a38895a0a28" category="inline-link-macro">Neuerungen in Cloud Manager</block>
   <block id="edb072b4e9ed25ee40010488a956934f" category="list-text"><block ref="edb072b4e9ed25ee40010488a956934f" category="inline-link-macro-rx"></block></block>
   <block id="dd47c5ffc608943bbe951c1bc249e4a3" category="inline-link">Neuerungen in Cloud Volumes ONTAP</block>
@@ -877,21 +871,17 @@
   <block id="d4307938712bd86df3547821620fc208" category="paragraph">Cloud Manager kann die Implementierung von automatisieren<block ref="16b9ce8eda4ad967a3b6f9a1ad8a19fc" category="inline-link-rx"></block> Auf Kubernetes-Clustern zur Verwendung von Cloud Volumes ONTAP als persistenten Storage für Container Erste Schritte umfassen einige Schritte.</block>
   <block id="234670c6936863be5df76e89d43f6839" category="inline-link">NetApp Kubernetes Service</block>
   <block id="a14d72ed5dcd2af3c8de2d38e1cce7f4" category="paragraph">Bei der Implementierung von Kubernetes-Clustern mit dem<block ref="4039676aa53969da934d824de6b5ae64" category="inline-link-rx"></block>, Cloud Manager kann die Cluster automatisch aus Ihrem NetApp Cloud Central Konto erkennen. Wenn das der Fall ist, überspringen Sie die ersten beiden Schritte und beginnen Sie mit Schritt 3.</block>
-  <block id="66fd4a5928a9410b6d0484b91e95ec73" category="section-title">Netzwerk-Konnektivität prüfen</block>
   <block id="56309b04944f1b3ce20ec80954905f73" category="list-text">Zwischen Cloud Manager und den Kubernetes-Clustern und den Cloud Volumes ONTAP-Clustern muss eine Netzwerkverbindung verfügbar sein.</block>
   <block id="dcb9677328ce110eccce4861e794d6db" category="list-text">Bei der Installation von Trident ist eine ausgehende Internetverbindung erforderlich, um auf die folgenden Endpunkte zuzugreifen:</block>
   <block id="b5bf90cd586056ebba08ac4f2c2b2ca8" category="paragraph">\https://packages.cloud.google.com/yum \https://github.com/NetApp/trident/releases/download/</block>
   <block id="ca2f8a989dd9c49097cbd2a29eae79f4" category="paragraph">Cloud Manager installiert Trident auf einem Kubernetes-Cluster, wenn Sie eine Arbeitsumgebung mit dem Cluster verbinden.</block>
-  <block id="70c2574420ea451459b76abad35d0a96" category="section-title">Kubernetes-Konfigurationsdateien in Cloud Manager hochladen</block>
   <block id="a7b0342841b82435892e3e9533f860b2" category="paragraph">Für jeden Kubernetes-Cluster muss der Cloud Manager Administrator eine Konfigurationsdatei (kubeconfig) im YAML-Format hochladen. Nach dem Hochladen der Datei überprüft Cloud Manager die Verbindung zum Cluster und speichert eine verschlüsselte Kopie der kubeconfig-Datei.</block>
   <block id="08cbb53df36a11f3c34ff8bbf0a53284" category="paragraph">Klicken Sie auf *Kubernetes Clusters &gt; Entdecken &gt; Datei hochladen* und wählen Sie die kubeconfig-Datei aus.</block>
   <block id="d9729feb74992cc3482b350163a1a010" category="inline-image-macro">sdf</block>
   <block id="57e7f662c9343fc2ce6ad807abc95878" category="paragraph"><block ref="57e7f662c9343fc2ce6ad807abc95878" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cb14b279d631c8e74799c921cd2c867a" category="section-title">Verbinden Sie Ihre Arbeitsumgebungen mit Kubernetes-Clustern</block>
   <block id="6260b6f00c25b81f398ea0427309c5e4" category="paragraph">Klicken Sie in der Arbeitsumgebung auf das Kubernetes-Symbol und folgen Sie den Aufforderungen. Sie können verschiedene Cluster mit verschiedenen Cloud Volumes ONTAP Systemen und mehreren Clustern mit demselben Cloud Volumes ONTAP System verbinden.</block>
   <block id="5bbcb5b3d63f059941f597f11b771bf9" category="paragraph">Sie haben die Möglichkeit, die NetApp Storage-Klasse als Standard-Storage-Klasse für den Kubernetes Cluster einzustellen. Wenn ein Benutzer ein persistentes Volume erstellt, kann der Kubernetes-Cluster standardmäßig verbundene Cloud Volumes ONTAP-Systeme als Back-End-Storage verwenden.</block>
   <block id="bf86d28ed7dd3b7013a1f3d1356334b5" category="paragraph"><block ref="bf86d28ed7dd3b7013a1f3d1356334b5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3131838ab26e8cd5c452aaac1467f3b4" category="section-title">Starten Sie die Bereitstellung persistenter Volumes</block>
   <block id="c74f1b2bbbb9d945984f18230b2295c2" category="paragraph">Persistente Volumes können über native Kubernetes-Schnittstellen und -Konstrukte angefordert und gemanagt werden. Cloud Manager erstellt zwei Kubernetes-Storage-Klassen, die für die Provisionierung von persistenten Volumes genutzt werden können:</block>
   <block id="ce451b45e03dc0c6a3da1d6d1d3c7cc8" category="list-text">*netapp-File*: Zur Anbindung persistenter Volumes an Cloud Volumes ONTAP-Systeme mit einem Node</block>
   <block id="f3c76f378195d9822cb21ab7c901657e" category="list-text">*netapp-file-redundant*: Zur Anbindung persistenter Volumes an Cloud Volumes ONTAP HA-Paare</block>
@@ -2036,7 +2026,6 @@
   <block id="ad0c6c926ca87a9fb70108c550fccf0f" category="paragraph">Erste Schritte mit Cloud Volumes ONTAP in Azure sind über NetApp Cloud Central möglich. Für die Implementierung von Cloud Manager in stehen separate Anweisungen zur Verfügung <block ref="da7f489839113ef2991f8fcc148cc547" category="inline-link-macro-rx"></block> Und ein <block ref="1e349e6e8f72c1a1fe1f77ef3a422193" category="inline-link-macro-rx"></block>.</block>
   <block id="2166ecbf4859162bda081330f902ad53" category="paragraph">Aktivieren Sie ausgehenden Internetzugriff vom Ziel-VNet aus, sodass Cloud Manager und Cloud Volumes ONTAP mit mehreren Endpunkten in Verbindung treten können.</block>
   <block id="276a89edea106f206e74969bd2f976bb" category="paragraph">Dieser Schritt ist wichtig, da Cloud Manager Cloud Volumes ONTAP nicht ohne ausgehenden Internetzugang implementieren kann. Wenn Sie die ausgehende Verbindung begrenzen müssen, lesen Sie die Liste der Endpunkte für <block ref="258d0bfeed07e9f3f800353fd17d365f" category="inline-link-macro-rx"></block> Und <block ref="79a77371eaced9bdf59c560110560e49" category="inline-link-macro-rx"></block>.</block>
-  <block id="408bb88553711d2fd59ba113d098f8dd" category="section-title">Stellen Sie die erforderlichen Azure Berechtigungen bereit</block>
   <block id="3f19c3e0aa6f5f945c948f6796417dfc" category="paragraph">Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein Azure Konto verwenden, das über Berechtigungen zum Bereitstellen der Virtual Machine von Cloud Manager verfügt.</block>
   <block id="c4a2429a67db9d91e1319fb991f0f462" category="list-text">Laden Sie die herunter<block ref="b53bbbe2ee3ee99c628f8f7ef4fae3a1" category="inline-link-rx"></block>.</block>
   <block id="7933f6d359b0a3ae0e533f710648404c" category="list-text">Ändern Sie die JSON-Datei, indem Sie im Feld "AssignableScopes" Ihre Azure Abonnement-ID hinzufügen.</block>
@@ -3194,4 +3183,24 @@
   <block id="75396e001838965f1f26327de3cf6d73" category="sidebar">Unterstützte Konfigurationen für Cloud Volumes ONTAP</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="sidebar">Berechtigungen</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">Frühere Versionen</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
+  <block id="9b1146da7e8885b360bcba1784bf6d6c" category="inline-image-macro">Nummer 1</block>
+  <block id="1323d5a65678d7001c29460122ccc820" category="section-title"><block ref="dfda45ebcbf64ca08d06a80353e9cf6f" category="inline-image-macro-rx" type="image"></block> Netzwerk-Konnektivität prüfen</block>
+  <block id="6518735ebbb492ee2f8f5dfee52f3842" category="inline-image-macro">Nummer 2</block>
+  <block id="94ed2c35dc25a4c6a2f0ff7f42fbbee8" category="section-title"><block ref="b496ee93dbdd8d3b796a1af3fe777064" category="inline-image-macro-rx" type="image"></block> Kubernetes-Konfigurationsdateien in Cloud Manager hochladen</block>
+  <block id="a4c574c9c96d1cf8d9986e0d17dbe38b" category="inline-image-macro">Nummer 3</block>
+  <block id="5e661dcc3402ab309aa8ed30318888c7" category="section-title"><block ref="f99fa24d03c6ef96c556af7cdf23810f" category="inline-image-macro-rx" type="image"></block> Verbinden Sie Ihre Arbeitsumgebungen mit Kubernetes-Clustern</block>
+  <block id="fa8bdf405671f556729a131b30bab6af" category="inline-image-macro">Nummer 4</block>
+  <block id="a2a98c975ba9db610320c9f064248420" category="section-title"><block ref="d0f5cff2b8e0ecc91e360a74276cf2dd" category="inline-image-macro-rx" type="image"></block> Starten Sie die Bereitstellung persistenter Volumes</block>
+  <block id="492e5546e60705134bff8d7f80511a8d" category="section-title">Entdecken Sie die Neuigkeiten</block>
+  <block id="f744727b72c0e98e6caa53f045e617cd" category="section-title"><block ref="dfda45ebcbf64ca08d06a80353e9cf6f" category="inline-image-macro-rx" type="image"></block> Richten Sie Ihr Netzwerk ein</block>
+  <block id="b5d4d688d49de4d2cad68f577d8bae2f" category="section-title"><block ref="b496ee93dbdd8d3b796a1af3fe777064" category="inline-image-macro-rx" type="image"></block> Abonnieren Sie Cloud Volumes ONTAP über den AWS Marketplace</block>
+  <block id="a6b9de9663a4722a5c88412f9b6849d3" category="section-title"><block ref="f99fa24d03c6ef96c556af7cdf23810f" category="inline-image-macro-rx" type="image"></block> Stellen Sie die erforderlichen AWS-Berechtigungen bereit</block>
+  <block id="d32db7792895fcf20faa24c02cd968ad" category="section-title"><block ref="d0f5cff2b8e0ecc91e360a74276cf2dd" category="inline-image-macro-rx" type="image"></block> Starten Sie Cloud Manager über NetApp Cloud Central</block>
+  <block id="6a604e45dcab200406f10c70d639255a" category="inline-image-macro">Nummer 5</block>
+  <block id="67467aa7bd51d7bbe961339db94944ba" category="section-title"><block ref="c8b82927684b7195fa645497b5fcc719" category="inline-image-macro-rx" type="image"></block> Starten Sie Cloud Volumes ONTAP mit Cloud Manager</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Was kommt als Nächstes?</block>
+  <block id="832eb2addfeb7baf5b285a22aaeb4161" category="section-title"><block ref="b496ee93dbdd8d3b796a1af3fe777064" category="inline-image-macro-rx" type="image"></block> Stellen Sie die erforderlichen Azure Berechtigungen bereit</block>
+  <block id="55656479963c4d6faa53aa52af17bb58" category="section-title"><block ref="f99fa24d03c6ef96c556af7cdf23810f" category="inline-image-macro-rx" type="image"></block> Starten Sie Cloud Manager über NetApp Cloud Central</block>
+  <block id="fc6a1c4bfdea701c7028d4b2604689fb" category="section-title"><block ref="d0f5cff2b8e0ecc91e360a74276cf2dd" category="inline-image-macro-rx" type="image"></block> Starten Sie Cloud Volumes ONTAP mit Cloud Manager</block>
 </blocks>

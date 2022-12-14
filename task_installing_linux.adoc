@@ -94,6 +94,7 @@ _Port_ ist erforderlich, wenn Sie die Standard-HTTP (80)- oder HTTPS (443)-Ports
 . Geben Sie nach der Anmeldung einen Namen für dieses Cloud Manager-System ein.
 
 
+.Nachdem Sie fertig sind
 Richten Sie Berechtigungen für Ihre AWS und Azure Konten ein, damit Cloud Manager Cloud Volumes ONTAP implementieren kann:
 
 * Wenn Sie Cloud Volumes ONTAP in AWS implementieren möchten, link:task_adding_cloud_accounts.html["AWS Konto einrichten und dann zu Cloud Manager hinzufügen"].

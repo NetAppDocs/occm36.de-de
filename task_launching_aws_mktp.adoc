@@ -19,6 +19,7 @@ Am besten sollte Cloud Manager in AWS gestartet werden, indem verwendet wird htt
 
 TIP: Wenn Sie Cloud Manager über den AWS Marketplace starten, ist Cloud Manager weiterhin in NetApp Cloud Central integriert. link:concept_cloud_central.html["Erfahren Sie mehr über die Integration"].
 
+.Über diese Aufgabe
 In den folgenden Schritten wird beschrieben, wie die Instanz von der EC2-Konsole aus gestartet wird, da Sie über die Konsole eine IAM-Rolle an die Cloud Manager-Instanz anhängen können. Dies ist mit der 1-Klick-Option nicht möglich.
 
 .Schritte
@@ -46,6 +47,8 @@ https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Mana
 
 
 
+.Ergebnis
 AWS startet die Software mit den angegebenen Einstellungen. Die Cloud Manager-Instanz und -Software sollten in etwa fünf Minuten ausgeführt werden.
 
+.Nachdem Sie fertig sind
 Melden Sie sich bei Cloud Manager an, indem Sie die öffentliche IP-Adresse oder die private IP-Adresse in einem Webbrowser eingeben und anschließend den Setup-Assistenten ausführen.

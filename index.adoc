@@ -16,7 +16,7 @@ Mit OnCommand Cloud Manager implementieren und managen Sie NetApp Cloud Volumes 
 
 
 
-== Entdecken Sie, was neu ist
+== Entdecken Sie die Neuigkeiten
 
 * link:reference_new_occm.html["Neuerungen in Cloud Manager"]
 * https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Neuerungen in Cloud Volumes ONTAP"^]

@@ -22,6 +22,7 @@ Sie können NFS-Volumes managen, indem Sie sie klonen, den Datenzugriff managen,
 
 Wenn Sie eine sofortige Kopie Ihrer Daten benötigen, ohne viel Speicherplatz zu belegen, können Sie einen Klon eines vorhandenen Volumes erstellen.
 
+.Über diese Aufgabe
 Das geklonte Volume ist eine beschreibbare Point-in-Time-Kopie, die platzsparend ist, da es einen geringen Speicherplatz für Metadaten verwendet und dann nur zusätzlichen Speicherplatz verbraucht, wenn Daten geändert oder hinzugefügt werden.
 
 .Schritte
@@ -29,6 +30,7 @@ Das geklonte Volume ist eine beschreibbare Point-in-Time-Kopie, die platzsparend
 . Ändern Sie ggf. den Namen des geklonten Volumes und klicken Sie dann auf *Clone*.
 
 
+.Ergebnis
 Cloud Manager erstellt ein neues Volume, das ein Klon eines vorhandenen Volumes ist.
 
 
@@ -53,6 +55,7 @@ Sie können die zugrunde liegende AWS-Festplatte ändern, die ein Volume zur Ber
 . Wählen Sie den AWS-Festplattentyp aus und klicken Sie auf *Ändern*.
 
 
+.Ergebnis
 Cloud Manager verschiebt das Volume in ein vorhandenes Aggregat, das den ausgewählten Festplattentyp verwendet, oder erstellt ein neues Aggregat für das Volume.
 
 

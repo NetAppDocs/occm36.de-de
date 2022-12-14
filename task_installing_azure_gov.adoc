@@ -53,6 +53,7 @@ Wenn Sie sich anmelden, fügt Cloud Manager Ihr Benutzerkonto automatisch als Ad
 . Geben Sie nach der Anmeldung einen Namen für das Cloud Manager-System ein.
 
 
+.Ergebnis
 Cloud Manager ist jetzt installiert und eingerichtet. Sie müssen Azure Berechtigungen erteilen, bevor Benutzer Cloud Volumes ONTAP in Azure bereitstellen können.
 
 
@@ -115,4 +116,5 @@ NOTE: OnCommand Cloud Manager Operator ist der im angegebene Standardname https:
 
 
 
+.Ergebnis
 Cloud Manager verfügt jetzt über die Berechtigungen, die es für die Bereitstellung und das Management von Cloud Volumes ONTAP in Azure benötigt.

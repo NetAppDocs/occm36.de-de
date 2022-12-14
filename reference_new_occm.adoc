@@ -32,11 +32,11 @@ link:media/c2s.pdf["Quick Start Guide für die AWS Commercial Cloud Services-Umg
 
 == Cloud Manager 3.6.6 (1. Mai 2019)
 
-*  for 6 TB disks in AWS
-*  for new disk sizes with single node systems in Azure
-*  for Standard SSDs with single node systems in Azure
-*  discovery of Kubernetes clusters created with the NetApp Kubernetes Service
-*  to configure an NTP server
+* <<Unterstützung von 6-TB-Festplatten in AWS>>
+* <<Unterstützung neuer Festplattengrößen mit Single-Node-Systemen in Azure>>
+* <<Unterstützung von Standard-SSDs mit Single-Node-Systemen in Azure>>
+* <<Automatische Erkennung von Kubernetes-Clustern, die mit dem NetApp Kubernetes Service erstellt wurden>>
+* <<Möglichkeit zum Konfigurieren eines NTP-Servers>>
 
 
 
@@ -104,12 +104,12 @@ image:screenshot_configure_cifs.gif["Ein Screenshot, der den Bildschirm CIFS Set
 
 Cloud Manager 3.6.5 umfasst die folgenden Verbesserungen:
 
-*  enhancements
-*  Support Site accounts are now managed at the system level
-*  transit gateways can enable access to floating IP addresses
-*  resource groups are now locked
-*  4 and NFS 4.1 are now enabled by default
-*  new API enables you to delete ONTAP Snapshot copies
+* <<Kubernetes-Verbesserungen>>
+* <<Konten der NetApp Support Site werden jetzt auf Systemebene verwaltet>>
+* <<AWS Transit-Gateways können den Zugriff auf fließende IP-Adressen ermöglichen>>
+* <<Azure-Ressourcengruppen sind jetzt gesperrt>>
+* <<NFS 4 und NFS 4.1 sind nun standardmäßig aktiviert>>
+* <<Eine neue API ermöglicht das Löschen von ONTAP Snapshot Kopien>>
 
 
 
@@ -208,9 +208,9 @@ Siehe https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["V
 
 Cloud Manager 3.6.4 umfasst die folgenden Verbesserungen:
 
-*  encryption with a key from another account
-*  of failed disks
-*  storage accounts enabled for HTTPS when data tiering to Blob containers
+* <<Von AWS gemanagte Verschlüsselung mit einem Schlüssel von einem anderen Konto>>
+* <<Wiederherstellung ausgefallener Festplatten>>
+* <<Azure Storage-Konten für HTTPS aktiviert, wenn Daten-Tiering zu Blob Containern erfolgt>>
 
 
 
@@ -248,13 +248,13 @@ Wenn Sie ein Cloud Volumes ONTAP System für das Tiering inaktiver Daten zu eine
 
 Cloud Manager 3.6.3 umfasst die folgenden Verbesserungen:
 
-*  for Cloud Volumes ONTAP 9.5 GA
-*  TB capacity limit for all Premium and BYOL configurations
-*  for new AWS regions
-*  for S3 Intelligent-Tiering
-*  to disable data tiering on the initial aggregate
-*  EC2 instance type now t3.medium for Cloud Manager
-*  of scheduled shutdowns during data transfers
+* <<Unterstützung für Cloud Volumes ONTAP 9.5 GA>>
+* <<368 TB Kapazitätsgrenze für alle Premium- und BYOL-Konfigurationen>>
+* <<Unterstützung für neue AWS Regionen>>
+* <<Unterstützung für intelligentes S3-Tiering>>
+* <<Möglichkeit, Daten-Tiering auf dem ursprünglichen Aggregat zu deaktivieren>>
+* <<Empfohlener EC2-Instanztyp jetzt t3.Medium für Cloud Manager>>
+* <<Verschiebung geplanter Abschaltungen während der Datenübertragung>>
 
 
 
@@ -329,10 +329,10 @@ Wenn Sie ein automatisches Herunterfahren des Cloud Volumes ONTAP Systems geplan
 
 Cloud Manager 3.6.2 umfasst neue Funktionen und Verbesserungen.
 
-*  spread placement group for Cloud Volumes ONTAP HA in a single AZ
-*  protection
-*  data replication policies
-*  access control for Kubernetes
+* <<AWS Spread Placement Group für Cloud Volumes ONTAP HA in einer einzelnen Verfügbarkeitszone>>
+* <<Schutz durch Ransomware>>
+* <<Neue Datenreplizierungsrichtlinien>>
+* <<Volume-Zugriffssteuerung für Kubernetes>>
 
 
 
@@ -405,10 +405,10 @@ Sie können die Exportrichtlinie konfigurieren, wenn Sie eine Arbeitsumgebung mi
 
 Cloud Manager 3.6.1 umfasst neue Funktionen und Verbesserungen.
 
-*  for Cloud Volumes ONTAP 9.5 in Azure
-*  Provider Accounts
-*  to the AWS Cost report
-*  for new Azure regions
+* <<Unterstützung von Cloud Volumes ONTAP 9.5 in Azure>>
+* <<Accounts Von Cloud-Providern>>
+* <<Verbesserungen am AWS Kostenbericht>>
+* <<Unterstützung für neue Azure Regionen>>
 
 
 

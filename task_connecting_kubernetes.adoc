@@ -21,8 +21,9 @@ Bei der Implementierung von Kubernetes-Clustern mit dem https://cloud.netapp.com
 
 
 
-=== Netzwerk-Konnektivität prüfen
+=== image:number1.png["Nummer 1"] Netzwerk-Konnektivität prüfen
 
+[role="quick-margin-list"]
 . Zwischen Cloud Manager und den Kubernetes-Clustern und den Cloud Volumes ONTAP-Clustern muss eine Netzwerkverbindung verfügbar sein.
 . Bei der Installation von Trident ist eine ausgehende Internetverbindung erforderlich, um auf die folgenden Endpunkte zuzugreifen:
 +
@@ -35,7 +36,7 @@ Cloud Manager installiert Trident auf einem Kubernetes-Cluster, wenn Sie eine Ar
 
 
 
-=== Kubernetes-Konfigurationsdateien in Cloud Manager hochladen
+=== image:number2.png["Nummer 2"] Kubernetes-Konfigurationsdateien in Cloud Manager hochladen
 
 [role="quick-margin-para"]
 Für jeden Kubernetes-Cluster muss der Cloud Manager Administrator eine Konfigurationsdatei (kubeconfig) im YAML-Format hochladen. Nach dem Hochladen der Datei überprüft Cloud Manager die Verbindung zum Cluster und speichert eine verschlüsselte Kopie der kubeconfig-Datei.
@@ -48,7 +49,7 @@ image:screenshot_kubernetes_setup.gif["sdf"]
 
 
 
-=== Verbinden Sie Ihre Arbeitsumgebungen mit Kubernetes-Clustern
+=== image:number3.png["Nummer 3"] Verbinden Sie Ihre Arbeitsumgebungen mit Kubernetes-Clustern
 
 [role="quick-margin-para"]
 Klicken Sie in der Arbeitsumgebung auf das Kubernetes-Symbol und folgen Sie den Aufforderungen. Sie können verschiedene Cluster mit verschiedenen Cloud Volumes ONTAP Systemen und mehreren Clustern mit demselben Cloud Volumes ONTAP System verbinden.
@@ -61,11 +62,12 @@ image:screenshot_kubernetes_connect.gif["sdf"]
 
 
 
-=== Starten Sie die Bereitstellung persistenter Volumes
+=== image:number4.png["Nummer 4"] Starten Sie die Bereitstellung persistenter Volumes
 
 [role="quick-margin-para"]
 Persistente Volumes können über native Kubernetes-Schnittstellen und -Konstrukte angefordert und gemanagt werden. Cloud Manager erstellt zwei Kubernetes-Storage-Klassen, die für die Provisionierung von persistenten Volumes genutzt werden können:
 
+[role="quick-margin-list"]
 * *netapp-File*: Zur Anbindung persistenter Volumes an Cloud Volumes ONTAP-Systeme mit einem Node
 * *netapp-file-redundant*: Zur Anbindung persistenter Volumes an Cloud Volumes ONTAP HA-Paare
 
@@ -73,6 +75,7 @@ Persistente Volumes können über native Kubernetes-Schnittstellen und -Konstruk
 [role="quick-margin-para"]
 Cloud Manager konfiguriert Trident standardmäßig für die Verwendung folgender Bereitstellungsoptionen:
 
+[role="quick-margin-list"]
 * Thin Volumes
 * Die standardmäßige Snapshot-Richtlinie
 * Verzeichnis für zugängliche Snapshots

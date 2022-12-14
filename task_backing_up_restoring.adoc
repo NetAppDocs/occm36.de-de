@@ -44,4 +44,5 @@ Durch die Wiederherstellung von Cloud Manager aus einem Backup werden vorhandene
 . Wählen Sie das Backup aus.
 
 
+.Ergebnis
 Cloud Manager stellt die Datenbank aus der Sicherungsdatei wieder her.

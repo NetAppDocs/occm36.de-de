@@ -19,6 +19,7 @@ summary: NetApp Volume Encryption ist eine softwarebasierte Technologie zur Vers
 [role="lead"]
 NetApp Volume Encryption (NVE) ist eine softwarebasierte Technologie, mit der Daten im Ruhezustand um ein Volume gleichzeitig verschlüsselt werden. Daten, Snapshot Kopien und Metadaten sind verschlüsselt. Der Zugriff auf die Daten erfolgt über einen eindeutigen XTS-AES-256-Schlüssel, einen pro Volume.
 
+.Über diese Aufgabe
 Derzeit unterstützt Cloud Volumes ONTAP NetApp Volume Encryption mit einem externen Verschlüsselungsmanagement Server. Ein Onboard Key Manager wird nicht unterstützt.
 
 Sie müssen NetApp Volume Encryption über die ONTAP CLI einrichten. Die Verschlüsselung für bestimmte Volumes kann dann entweder über die CLI oder mit System Manager aktiviert werden. Cloud Manager unterstützt NetApp Volume Encryption von seiner Benutzeroberfläche und seinen APIs nicht.

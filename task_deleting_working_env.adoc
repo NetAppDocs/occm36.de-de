@@ -16,6 +16,7 @@ summary: Am besten löschen Sie Cloud Volumes ONTAP Systeme aus Cloud Manager un
 [role="lead"]
 Am besten löschen Sie Cloud Volumes ONTAP Systeme aus Cloud Manager und nicht aus AWS oder Azure. Wenn Sie beispielsweise eine lizenzierte Cloud Volumes ONTAP Instanz von AWS beenden, können Sie den Lizenzschlüssel nicht für eine andere Instanz verwenden. Sie müssen die Arbeitsumgebung aus Cloud Manager löschen, um die Lizenz freizugeben.
 
+.Über diese Aufgabe
 Wenn Sie eine Arbeitsumgebung löschen, beendet Cloud Manager Instanzen, löscht Festplatten und Snapshots.
 
 

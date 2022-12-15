@@ -1758,7 +1758,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 04:20:53 +0000">11/17/2022</time>
+    <time datetime="2022-12-14 18:02:48 +0000">12/14/2022</time>
     
   
 
@@ -1787,10 +1787,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>permissions when providing AWS keys</p>
+<p><a href="#gewähren-von-berechtigungen-bei-der-bereitstellung-von-aws-schlüsseln">Gewähren von Berechtigungen bei der Bereitstellung von AWS Schlüsseln</a></p>
 </li>
 <li>
-<p>permissions by assuming IAM roles in other accounts</p>
+<p><a href="#gewährung-von-berechtigungen-durch-annahme-von-iam-rollen-in-anderen-konten">Gewährung von Berechtigungen durch Annahme von IAM-Rollen in anderen Konten</a></p>
 </li>
 </ul>
 </div>
@@ -1827,7 +1827,8 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Das Konto verfügt nun über die erforderlichen Berechtigungen.  AWS accounts to Cloud Manager,Sie können es jetzt zu Cloud Manager hinzufügen.</p>
+<div class="title">Ergebnis</div>
+<p>Das Konto verfügt nun über die erforderlichen Berechtigungen. <a href="#hinzufügen-von-aws-konten-zu-cloud-manager">Sie können es jetzt zu Cloud Manager hinzufügen</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1888,7 +1889,8 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Das Konto verfügt nun über die erforderlichen Berechtigungen.  AWS accounts to Cloud Manager,Sie können es jetzt zu Cloud Manager hinzufügen.</p>
+<div class="title">Ergebnis</div>
+<p>Das Konto verfügt nun über die erforderlichen Berechtigungen. <a href="#hinzufügen-von-aws-konten-zu-cloud-manager">Sie können es jetzt zu Cloud Manager hinzufügen</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1914,6 +1916,7 @@
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnis</div>
 <p>Sie können jetzt auf der Seite Details und Anmeldeinformationen zu einem anderen Konto wechseln, wenn Sie eine neue Arbeitsumgebung erstellen:</p>
 </div>
 <div class="paragraph">
@@ -1931,10 +1934,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Azure permissions using a service principal</p>
+<p><a href="#azure-berechtigungen-über-einen-service-principal-gewähren">Azure-Berechtigungen über einen Service-Principal gewähren</a></p>
 </li>
 <li>
-<p>Azure accounts to Cloud Manager</p>
+<p><a href="#hinzufügen-von-azure-konten-zu-cloud-manager">Hinzufügen von Azure-Konten zu Cloud Manager</a></p>
 </li>
 </ul>
 </div>
@@ -1944,6 +1947,7 @@
 <p>Cloud Manager benötigt Berechtigungen zum Ausführen von Aktionen in Azure. Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie einen Service-Principal in Azure Active Directory erstellen und einrichten, sowie die für Cloud Manager erforderlichen Azure Zugangsdaten erhalten.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>In der folgenden Abbildung wird dargestellt, wie Cloud Manager Berechtigungen zum Ausführen von Vorgängen in Azure erhält. Ein Service-Prinzipalobjekt, das an ein oder mehrere Azure Subscriptions gebunden ist, stellt Cloud Manager in Azure Active Directory dar und wird einer benutzerdefinierten Rolle zugewiesen, die die erforderlichen Berechtigungen zulässt.</p>
 </div>
 <div class="paragraph">
@@ -1965,13 +1969,13 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 <div class="title">Schritte</div>
 <ol class="arabic">
 <li>
-<p>a custom role with the required Cloud Manager permissions,Erstellen einer benutzerdefinierten Rolle mit den erforderlichen Cloud Manager-Berechtigungen.</p>
+<p><a href="#erstellen-einer-benutzerdefinierten-rolle-mit-den-erforderlichen-cloud-manager-berechtigungen">Erstellen einer benutzerdefinierten Rolle mit den erforderlichen Cloud Manager-Berechtigungen</a>.</p>
 </li>
 <li>
-<p>an Active Directory service principal,Erstellen eines Active Directory-Dienstprinzipals.</p>
+<p><a href="#erstellen-eines-active-directory-dienstprinzipals">Erstellen eines Active Directory-Dienstprinzipals</a>.</p>
 </li>
 <li>
-<p>the Cloud Manager Operator role to the service principal,Weisen Sie der Service-Principal die benutzerdefinierte Cloud Manager-Rolle zu.</p>
+<p><a href="#zuweisen-der-rolle-cloud-manager-operator-zum-serviceprinzipal">Weisen Sie der Service-Principal die benutzerdefinierte Cloud Manager-Rolle zu</a>.</p>
 </li>
 </ol>
 </div>
@@ -2015,6 +2019,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnis</div>
 <p>Sie sollten nun eine benutzerdefinierte Rolle namens OnCommand Cloud Manager Operator haben.</p>
 </div>
 </div>
@@ -2024,6 +2029,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 <p>Sie müssen einen Active Directory-Dienstprinzipal erstellen, damit Cloud Manager sich mit Azure Active Directory authentifizieren kann.</p>
 </div>
 <div class="paragraph">
+<div class="title">Bevor Sie beginnen</div>
 <p>Sie müssen über die entsprechenden Berechtigungen in Azure verfügen, um eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen. Weitere Informationen finden Sie unter <a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/" target="_blank" rel="noopener">"Microsoft Azure-Dokumentation: Erstellen Sie mithilfe eines Portals eine Active Directory-Applikation und einen Service-Principal, die auf Ressourcen zugreifen können"</a>.</p>
 </div>
 <div class="olist arabic">
@@ -2129,6 +2135,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnis</div>
 <p>Sie sollten nun über einen Active Directory-Dienstprinzipal verfügen und die Anwendungs-ID, den Anwendungsschlüssel und die Active Directory-Mandanten-ID kopiert haben. Sie müssen diese Informationen in Cloud Manager eingeben, wenn Sie ein Cloud-Provider-Konto hinzufügen.</p>
 </div>
 </div>
@@ -2138,6 +2145,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 <p>Sie müssen den Dienstprinzipal an ein oder mehrere Azure Subscriptions binden und ihm die Rolle "Cloud Manager Operator" zuweisen, damit Cloud Manager über Berechtigungen in Azure verfügt.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Wenn Sie Cloud Volumes ONTAP aus mehreren Azure Subscriptions bereitstellen möchten, müssen Sie den Service-Prinzipal an jedes dieser Subscriptions binden. Mit Cloud Manager können Sie das Abonnement auswählen, das Sie bei der Implementierung von Cloud Volumes ONTAP verwenden möchten.</p>
 </div>
 <div class="olist arabic">
@@ -2164,6 +2172,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnis</div>
 <p>Der Dienstprinzipal für Cloud Manager verfügt jetzt über die erforderlichen Azure Berechtigungen.</p>
 </div>
 </div>
@@ -2191,6 +2200,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnis</div>
 <p>Sie können jetzt auf der Seite Details und Anmeldeinformationen zu einem anderen Konto wechseln, wenn Sie eine neue Arbeitsumgebung erstellen:</p>
 </div>
 <div class="paragraph">
@@ -2206,6 +2216,7 @@ Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auftreten,
 <p>Mit Cloud Manager können Sie das Azure Konto und das Abonnement auswählen, in dem Sie Cloud Volumes ONTAP implementieren möchten. Sie können kein anderes Azure-Abonnement für das verwaltete Identitätsprofil auswählen, es sei denn, Sie verknüpfen das <a href="https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview" target="_blank" rel="noopener">"Verwaltete Identität"</a> Mit diesen Abonnements.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Eine verwaltete Identität ist die erste <a href="concept_accounts_and_permissions.html">"Konto eines Cloud-Providers"</a> Wenn Sie Cloud Manager über NetApp Cloud Central implementieren. Bei der Implementierung von Cloud Manager erstellte Cloud Central die Rolle "OnCommand Cloud Manager Operator" und wies sie der virtuellen Cloud Manager-Maschine zu.</p>
 </div>
 <div class="olist arabic">
@@ -2264,6 +2275,7 @@ OnCommand Cloud Manager Operator ist der im angegebene Standardname <a href="htt
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnis</div>
 <p>Wenn Sie eine neue Arbeitsumgebung erstellen, sollten Sie nun über mehrere Azure-Abonnements für das verwaltete Identitätsprofil verfügen.</p>
 </div>
 <div class="paragraph">

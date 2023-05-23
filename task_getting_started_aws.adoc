@@ -37,7 +37,7 @@ Ein VPC-Endpunkt ist erforderlich, wenn Sie kalte Daten von Cloud Volumes ONTAP 
 === image:number2.png["Nummer 2"] Abonnieren Sie Cloud Volumes ONTAP über den AWS Marketplace
 
 [role="quick-margin-para"]
-Abonnieren von https://aws.amazon.com/marketplace/search/results?page=1&searchTerms=netapp+cloud+volumes+ontap["AWS Marketplace"^] Ist zur Annahme der Softwarebedingungen erforderlich. Sie sollten sich nur über Marketplace anmelden. Starten von Cloud Volumes ONTAP von überall aus, Cloud Manager wird jedoch nicht unterstützt.
+Abonnieren von https://["AWS Marketplace"^] Ist zur Annahme der Softwarebedingungen erforderlich. Sie sollten sich nur über Marketplace anmelden. Starten von Cloud Volumes ONTAP von überall aus, Cloud Manager wird jedoch nicht unterstützt.
 
 
 
@@ -47,7 +47,7 @@ Abonnieren von https://aws.amazon.com/marketplace/search/results?page=1&searchTe
 Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein AWS-Konto verwenden, das über die Berechtigung zum Bereitstellen der Instanz verfügt.
 
 [role="quick-margin-list"]
-. Gehen Sie zur AWS IAM-Konsole und erstellen Sie eine Richtlinie durch Kopieren und Einfügen der Inhalte des https://mysupport.netapp.com/cloudontap/iampolicies["NetApp Cloud Central-Richtlinie für AWS"^].
+. Gehen Sie zur AWS IAM-Konsole und erstellen Sie eine Richtlinie durch Kopieren und Einfügen der Inhalte des https://["NetApp Cloud Central-Richtlinie für AWS"^].
 . Hängen Sie die Richtlinie an den IAM-Benutzer an.
 
 
@@ -56,7 +56,7 @@ Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ei
 === image:number4.png["Nummer 4"] Starten Sie Cloud Manager über NetApp Cloud Central
 
 [role="quick-margin-para"]
-Cloud Manager Software ist für die Implementierung und das Management von Cloud Volumes ONTAP erforderlich. Es dauert nur ein paar Minuten, um eine Cloud Manager Instanz von zu starten https://cloud.netapp.com["Cloud Central"^].
+Cloud Manager Software ist für die Implementierung und das Management von Cloud Volumes ONTAP erforderlich. Es dauert nur ein paar Minuten, um eine Cloud Manager Instanz von zu starten https://["Cloud Central"^].
 
 
 

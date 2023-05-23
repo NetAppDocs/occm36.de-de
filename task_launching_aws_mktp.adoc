@@ -14,7 +14,7 @@ summary: Am besten starten Sie Cloud Manager in AWS mithilfe von NetApp Cloud Ce
 
 
 [role="lead"]
-Am besten sollte Cloud Manager in AWS gestartet werden, indem verwendet wird https://cloud.netapp.com["NetApp Cloud Central"^], Sie können diese jedoch bei Bedarf über den AWS Marketplace starten.
+Am besten sollte Cloud Manager in AWS gestartet werden, indem verwendet wird https://["NetApp Cloud Central"^], Sie können diese jedoch bei Bedarf über den AWS Marketplace starten.
 
 
 TIP: Wenn Sie Cloud Manager über den AWS Marketplace starten, ist Cloud Manager weiterhin in NetApp Cloud Central integriert. link:concept_cloud_central.html["Erfahren Sie mehr über die Integration"].
@@ -27,13 +27,13 @@ In den folgenden Schritten wird beschrieben, wie die Instanz von der EC2-Konsole
 +
 .. Laden Sie die Cloud Manager IAM-Richtlinie von folgendem Speicherort herunter:
 +
-https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Manager: AWS- und Azure Policies"^]
+https://["NetApp OnCommand Cloud Manager: AWS- und Azure Policies"^]
 
 .. Erstellen Sie über die IAM-Konsole Ihre eigene Richtlinie, indem Sie den Text aus der Cloud Manager IAM-Richtlinie kopieren und einfügen.
 .. Erstellen Sie eine IAM-Rolle mit dem Rollentyp Amazon EC2, und hängen Sie die im vorherigen Schritt erstellte Richtlinie an die Rolle an.
 
 
-. Wechseln Sie zum https://aws.amazon.com/marketplace/pp/B018REK8QG["Seite zu Cloud Manager im AWS Marketplace"^].
+. Wechseln Sie zum https://["Seite zu Cloud Manager im AWS Marketplace"^].
 . Klicken Sie Auf *Weiter*.
 . Klicken Sie auf der Registerkarte Benutzerdefinierter Start auf *mit EC2-Konsole* für Ihre Region starten, und wählen Sie dann Ihre Auswahl aus:
 +

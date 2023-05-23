@@ -14,10 +14,10 @@ summary: Sie können sich über einen beliebigen Webbrowser mit Verbindung zum C
 
 
 [role="lead"]
-Sie können sich über einen beliebigen Webbrowser mit Verbindung zum Cloud Manager-System bei Cloud Manager anmelden. Sie sollten sich mit einem anmelden https://cloud.netapp.com["NetApp Cloud Central"^] Benutzerkonto.
+Sie können sich über einen beliebigen Webbrowser mit Verbindung zum Cloud Manager-System bei Cloud Manager anmelden. Sie sollten sich mit einem anmelden https://["NetApp Cloud Central"^] Benutzerkonto.
 
 .Schritte
-. Öffnen Sie einen Webbrowser, und melden Sie sich bei an https://cloud.netapp.com["NetApp Cloud Central"^].
+. Öffnen Sie einen Webbrowser, und melden Sie sich bei an https://["NetApp Cloud Central"^].
 . Klicken Sie auf *Gehe zu Cloud-Datenservices* und wählen Sie *Cloud Volumes ONTAP*.
 . Klicken Sie auf *Gehe zu Cloud Manager* für das Cloud Manager-System, auf das Sie zugreifen möchten.
 +

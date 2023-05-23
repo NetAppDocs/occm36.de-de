@@ -48,7 +48,7 @@ Ein einmaliger Zugriff:: Für selten genutzte Daten, die in einer einzigen Verf�
 Standardzugriff:: Für selten genutzte Daten, die über mehrere Verfügbarkeitszonen hinweg gespeichert werden.
 
 
-Die Zugriffskosten sind höher, wenn Sie auf die Daten zugreifen. Daher müssen Sie dies berücksichtigen, bevor Sie die Tiering Level ändern. Weitere Informationen zu S3-Speicherklassen finden Sie unter https://aws.amazon.com/s3/storage-classes["AWS-Dokumentation"^].
+Die Zugriffskosten sind höher, wenn Sie auf die Daten zugreifen. Daher müssen Sie dies berücksichtigen, bevor Sie die Tiering Level ändern. Weitere Informationen zu S3-Speicherklassen finden Sie unter https://["AWS-Dokumentation"^].
 
 Wenn Sie die Tiering-Ebene ändern, werden inaktive Daten in der Klasse Standard-Speicher gestartet und in die von Ihnen ausgewählte Speicherklasse verschoben, sofern nach 30 Tagen kein Zugriff auf die Daten erfolgt. Weitere Informationen zum Ändern der Tiering-Ebene finden Sie unter link:task_tiering.html["Tiering inaktiver Daten in kostengünstigen Objektspeicher"].
 
@@ -79,7 +79,7 @@ Cloud Volumes ONTAP führt das Tiering inaktiver Daten standardmäßig auf den A
 
 Wenn Sie keinen Zugriff auf inaktive Daten planen, können Sie nach der Implementierung von Cloud Volumes ONTAP die Storage-Kosten senken, indem Sie die Tiering-Ebene eines Systems zum Azure _cool_ Storage Tier ändern. Die coole Tier eignet sich ideal für selten genutzte Daten, die sich mindestens 30 Tage in der Tier befinden.
 
-Die Zugriffskosten sind höher, wenn Sie auf die Daten zugreifen. Daher müssen Sie dies berücksichtigen, bevor Sie die Tiering Level ändern. Weitere Informationen zu Azure Blob Storage-Tiers finden Sie unter https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Azure-Dokumentation"^].
+Die Zugriffskosten sind höher, wenn Sie auf die Daten zugreifen. Daher müssen Sie dies berücksichtigen, bevor Sie die Tiering Level ändern. Weitere Informationen zu Azure Blob Storage-Tiers finden Sie unter https://["Azure-Dokumentation"^].
 
 Wenn Sie das Tiering-Level ändern, beginnen inaktive Daten im Storage-Tier, und verschieben sich in den „kühlen“ Speicher-Tier, sofern nach 30 Tagen kein Zugriff auf die Daten erfolgt. Weitere Informationen zum Ändern der Tiering-Ebene finden Sie unter link:task_tiering.html["Tiering inaktiver Daten in kostengünstigen Objektspeicher"].
 

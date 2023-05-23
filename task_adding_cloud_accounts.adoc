@@ -35,15 +35,15 @@ Wenn Sie Cloud Volumes ONTAP in verschiedenen AWS Konten implementieren möchten
 Wenn Sie Cloud Manager mit AWS Schlüsseln für einen IAM-Benutzer bereitstellen möchten, müssen Sie diesem Benutzer die erforderlichen Berechtigungen erteilen. Die Cloud Manager IAM-Richtlinie definiert die AWS-Aktionen und -Ressourcen, die Cloud Manager verwenden darf.
 
 .Schritte
-. Laden Sie die IAM-Richtlinie von Cloud Manager aus herunter https://mysupport.netapp.com/cloudontap/iampolicies["Seite „Cloud Manager Policies“ aufgeführt"^].
+. Laden Sie die IAM-Richtlinie von Cloud Manager aus herunter https://["Seite „Cloud Manager Policies“ aufgeführt"^].
 . Erstellen Sie über die IAM-Konsole Ihre eigene Richtlinie, indem Sie den Text aus der Cloud Manager IAM-Richtlinie kopieren und einfügen.
 +
-https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AWS Dokumentation: Erstellung von IAM-Richtlinien"^]
+https://["AWS Dokumentation: Erstellung von IAM-Richtlinien"^]
 
 . Hängen Sie die Richtlinie an eine IAM-Rolle oder einen IAM-Benutzer an.
 +
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS Documentation: Erstellung von IAM-Rollen"^]
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS Dokumentation: Hinzufügen und Entfernen von IAM-Richtlinien"^]
+** https://["AWS Documentation: Erstellung von IAM-Rollen"^]
+** https://["AWS Dokumentation: Hinzufügen und Entfernen von IAM-Richtlinien"^]
 
 
 
@@ -64,7 +64,7 @@ Gehen Sie wie folgt vor:
 
 +
 ** Geben Sie die ID des Kontos ein, auf dem sich die Cloud Manager Instanz befindet.
-** Hängen Sie die Cloud Manager IAM-Richtlinie an, die über die erhältlich ist https://mysupport.netapp.com/cloudontap/iampolicies["Seite „Cloud Manager Policies“ aufgeführt"^].
+** Hängen Sie die Cloud Manager IAM-Richtlinie an, die über die erhältlich ist https://["Seite „Cloud Manager Policies“ aufgeführt"^].
 +
 image:screenshot_iam_create_role.gif["Ein Screenshot, der die Seite „Rolle erstellen“ in der AWS IAM-Konsole anzeigt. Unter Select Type of Trusted Entity wird ein anderes AWS Konto ausgewählt."]
 
@@ -151,7 +151,7 @@ NOTE: Die folgenden Schritte verwenden das neue Azure Portal. Wenn Probleme auft
 Eine benutzerdefinierte Rolle ist erforderlich, um Cloud Manager die Berechtigungen zu geben, die er zum Starten und Managen von Cloud Volumes ONTAP in Azure benötigt.
 
 .Schritte
-. Laden Sie die herunter https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure-Richtlinie"^].
+. Laden Sie die herunter https://["Cloud Manager Azure-Richtlinie"^].
 . Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
 +
 Sie sollten die ID für jedes Azure Abonnement hinzufügen, aus dem Benutzer Cloud Volumes ONTAP Systeme erstellen.
@@ -186,7 +186,7 @@ Sie sollten nun eine benutzerdefinierte Rolle namens OnCommand Cloud Manager Ope
 Sie müssen einen Active Directory-Dienstprinzipal erstellen, damit Cloud Manager sich mit Azure Active Directory authentifizieren kann.
 
 .Bevor Sie beginnen
-Sie müssen über die entsprechenden Berechtigungen in Azure verfügen, um eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen. Weitere Informationen finden Sie unter https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/["Microsoft Azure-Dokumentation: Erstellen Sie mithilfe eines Portals eine Active Directory-Applikation und einen Service-Principal, die auf Ressourcen zugreifen können"^].
+Sie müssen über die entsprechenden Berechtigungen in Azure verfügen, um eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen. Weitere Informationen finden Sie unter https://["Microsoft Azure-Dokumentation: Erstellen Sie mithilfe eines Portals eine Active Directory-Applikation und einen Service-Principal, die auf Ressourcen zugreifen können"^].
 
 .Schritte
 . Öffnen Sie über das Azure-Portal den *Azure Active Directory*-Service.
@@ -197,7 +197,7 @@ image:screenshot_azure_ad.gif["Zeigt den Active Directory-Dienst in Microsoft Az
 . Erstellen Sie den Service-Prinzipal:
 +
 .. Klicken Sie auf *Registrierung neuer Anwendungen*.
-.. Geben Sie einen Namen für die Anwendung ein, lassen Sie *Web App / API* ausgewählt, und geben Sie dann eine beliebige URL ein, z. B. http://url[]
+.. Geben Sie einen Namen für die Anwendung ein, lassen Sie *Web App / API* ausgewählt, und geben Sie dann eine beliebige URL ein, z. B. http://[]
 .. Klicken Sie Auf *Erstellen*.
 
 
@@ -292,7 +292,7 @@ image:screenshot_accounts_switch_azure.gif["Ein Screenshot, in dem die Auswahl z
 
 == Verknüpfen weiterer Azure-Abonnements mit einer gemanagten Identität
 
-Mit Cloud Manager können Sie das Azure Konto und das Abonnement auswählen, in dem Sie Cloud Volumes ONTAP implementieren möchten. Sie können kein anderes Azure-Abonnement für das verwaltete Identitätsprofil auswählen, es sei denn, Sie verknüpfen das https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Verwaltete Identität"^] Mit diesen Abonnements.
+Mit Cloud Manager können Sie das Azure Konto und das Abonnement auswählen, in dem Sie Cloud Volumes ONTAP implementieren möchten. Sie können kein anderes Azure-Abonnement für das verwaltete Identitätsprofil auswählen, es sei denn, Sie verknüpfen das https://["Verwaltete Identität"^] Mit diesen Abonnements.
 
 .Über diese Aufgabe
 Eine verwaltete Identität ist die erste link:concept_accounts_and_permissions.html["Konto eines Cloud-Providers"] Wenn Sie Cloud Manager über NetApp Cloud Central implementieren. Bei der Implementierung von Cloud Manager erstellte Cloud Central die Rolle "OnCommand Cloud Manager Operator" und wies sie der virtuellen Cloud Manager-Maschine zu.
@@ -307,7 +307,7 @@ Eine verwaltete Identität ist die erste link:concept_accounts_and_permissions.h
 *** Wählen Sie die Rolle *OnCommand Cloud Manager Operator* aus.
 +
 
-NOTE: OnCommand Cloud Manager Operator ist der im angegebene Standardname https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager-Richtlinie"]. Wenn Sie einen anderen Namen für die Rolle ausgewählt haben, wählen Sie stattdessen diesen Namen aus.
+NOTE: OnCommand Cloud Manager Operator ist der im angegebene Standardname https://["Cloud Manager-Richtlinie"]. Wenn Sie einen anderen Namen für die Rolle ausgewählt haben, wählen Sie stattdessen diesen Namen aus.
 
 *** Weisen Sie einer *virtuellen Maschine* Zugriff zu.
 *** Wählen Sie das Abonnement aus, in dem die virtuelle Cloud Manager-Maschine erstellt wurde.

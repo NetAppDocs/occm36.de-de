@@ -27,7 +27,7 @@ Sie können Cloud Manager in der Cloud oder in Ihrem Netzwerk ausführen. Sie be
 
 image:diagram_cloud_manager_overview.png["Zeigt die Komponenten, die Cloud Manager in Ihrer Hybrid Cloud managen kann: Ein Cloud Volumes ONTAP System, das EBS Storage für EC2 Computing bereitstellt, ein Cloud Volumes ONTAP System, das Azure Storage für virtuelle Maschinen bereitstellt, und Datenreplizierung in einer Hybrid Cloud und einer Multi-Cloud-Umgebung."]
 
-https://www.netapp.com/us/products/data-infrastructure-management/cloud-manager.aspx["Erfahren Sie mehr über Cloud Manager"^]
+https://["Erfahren Sie mehr über Cloud Manager"^]
 
 
 
@@ -47,6 +47,6 @@ Cloud Volumes ONTAP erweitert Enterprise Storage mit den folgenden Hauptfunktion
 
 NOTE: Lizenzen für ONTAP Funktionen sind in Cloud Volumes ONTAP enthalten, mit Ausnahme von NetApp Volume Encryption.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Anzeigen der unterstützten Cloud Volumes ONTAP Konfigurationen"^]
+https://["Anzeigen der unterstützten Cloud Volumes ONTAP Konfigurationen"^]
 
-https://www.netapp.com/us/cloud/ontap-cloud-native-product-details["Erfahren Sie mehr über Cloud Volumes ONTAP"^]
+https://["Erfahren Sie mehr über Cloud Volumes ONTAP"^]

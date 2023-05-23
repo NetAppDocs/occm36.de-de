@@ -26,7 +26,7 @@ Sie können alle Ihre Cloud Volumes ONTAP Systeme über das erste AWS Konto oder
 
 === Über das erste AWS Konto
 
-Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein AWS Konto mit Berechtigungen zum Starten der Cloud Manager Instanz verwenden. Die erforderlichen Berechtigungen werden im aufgeführt https://mysupport.netapp.com/cloudontap/iampolicies["NetApp Cloud Central-Richtlinie für AWS"^].
+Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein AWS Konto mit Berechtigungen zum Starten der Cloud Manager Instanz verwenden. Die erforderlichen Berechtigungen werden im aufgeführt https://["NetApp Cloud Central-Richtlinie für AWS"^].
 
 Wenn Cloud Central die Cloud Manager Instanz in AWS startet, wird eine IAM-Rolle und ein Instanzprofil für die Instanz erstellt. Zudem wird eine Richtlinie angehängt, die Cloud Manager Berechtigungen für die Implementierung und das Management von Cloud Volumes ONTAP in diesem AWS-Konto bereitstellt. link:reference_permissions.html#what-cloud-manager-does-with-aws-permissions["Überprüfen Sie, wie Cloud Manager die Berechtigungen verwendet"].
 
@@ -60,9 +60,9 @@ Sie können alle Ihre Cloud Volumes ONTAP Systeme über das erste Azure Konto od
 
 === Zunächst das Azure-Konto
 
-Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein Azure Konto verwenden, das über Berechtigungen zum Bereitstellen der Virtual Machine von Cloud Manager verfügt. Die erforderlichen Berechtigungen werden im aufgeführt https://mysupport.netapp.com/cloudontap/iampolicies["NetApp Cloud Central-Richtlinie für Azure"^].
+Wenn Sie Cloud Manager über NetApp Cloud Central implementieren, müssen Sie ein Azure Konto verwenden, das über Berechtigungen zum Bereitstellen der Virtual Machine von Cloud Manager verfügt. Die erforderlichen Berechtigungen werden im aufgeführt https://["NetApp Cloud Central-Richtlinie für Azure"^].
 
-Wenn Cloud Central die Virtual Machine Cloud Manager in Azure implementiert, wird damit eine aktiviert https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Vom System zugewiesene verwaltete Identität"^] Erstellt auf der Cloud Manager Virtual Machine eine benutzerdefinierte Rolle und weist sie der Virtual Machine zu. Die Rolle bietet Cloud Manager Berechtigungen für die Implementierung und das Management von Cloud Volumes ONTAP in diesem Azure Abonnement. link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Überprüfen Sie, wie Cloud Manager die Berechtigungen verwendet"].
+Wenn Cloud Central die Virtual Machine Cloud Manager in Azure implementiert, wird damit eine aktiviert https://["Vom System zugewiesene verwaltete Identität"^] Erstellt auf der Cloud Manager Virtual Machine eine benutzerdefinierte Rolle und weist sie der Virtual Machine zu. Die Rolle bietet Cloud Manager Berechtigungen für die Implementierung und das Management von Cloud Volumes ONTAP in diesem Azure Abonnement. link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Überprüfen Sie, wie Cloud Manager die Berechtigungen verwendet"].
 
 image:diagram_permissions_initial_azure.png["Ein Konzept-Image, das Cloud Central zeigt, das Cloud Manager in einem Azure Konto und Abonnement bereitstellt. Eine vom System zugewiesene verwaltete Identität wird aktiviert und der virtuellen Maschine von Cloud Manager eine benutzerdefinierte Rolle zugewiesen."]
 

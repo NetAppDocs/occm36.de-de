@@ -18,4 +18,4 @@ Bekannte Probleme identifizieren Probleme, die Sie daran hindern könnten, diese
 
 In dieser Version von Cloud Manager sind keine Probleme bekannt.
 
-Bekannte Probleme für Cloud Volumes ONTAP finden Sie im https://docs.netapp.com/us-en/cloud-volumes-ontap/["Versionshinweise zu Cloud Volumes ONTAP"^] Und für ONTAP-Software im Allgemeinen https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^].
+Bekannte Probleme für Cloud Volumes ONTAP finden Sie im https://["Versionshinweise zu Cloud Volumes ONTAP"^] Und für ONTAP-Software im Allgemeinen https://["Versionshinweise zu ONTAP"^].

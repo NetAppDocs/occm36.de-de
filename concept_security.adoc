@@ -35,7 +35,7 @@ Sie können NetApp Volume Encryption mit nativer AWS und Azure Verschlüsselung 
 
 NetApp Volume Encryption (NVE) ist eine softwarebasierte Technologie, mit der Daten im Ruhezustand um ein Volume gleichzeitig verschlüsselt werden. Daten, Snapshot Kopien und Metadaten sind verschlüsselt. Der Zugriff auf die Daten erfolgt über einen eindeutigen XTS-AES-256-Schlüssel, einen pro Volume.
 
-Cloud Volumes ONTAP unterstützt NetApp Volume Encryption mit einem externen Verschlüsselungsmanagement Server. Ein Onboard Key Manager wird nicht unterstützt. Die unterstützten Schlüsselmanager finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Unter der *Key Manager*-Lösung.
+Cloud Volumes ONTAP unterstützt NetApp Volume Encryption mit einem externen Verschlüsselungsmanagement Server. Ein Onboard Key Manager wird nicht unterstützt. Die unterstützten Schlüsselmanager finden Sie im http://["NetApp Interoperabilitäts-Matrix-Tool"^] Unter der *Key Manager*-Lösung.
 
 Sie können die NetApp Volume Encryption auf einem neuen oder vorhandenen Volume mithilfe von CLI oder System Manager aktivieren. Cloud Manager unterstützt NetApp Volume Encryption nicht. Anweisungen hierzu finden Sie unter link:task_encrypting_volumes.html["Verschlüsseln von Volumes mit NetApp Volume Encryption"].
 
@@ -43,7 +43,7 @@ Sie können die NetApp Volume Encryption auf einem neuen oder vorhandenen Volume
 
 === AWS Key Management Service
 
-Wenn Sie ein Cloud Volumes ONTAP System in AWS starten, können Sie die Datenverschlüsselung über das aktivieren http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS KMS (Key Management Service)"^]. Cloud Manager fordert Datenschlüssel mit einem Customer Master Key (CMK) an.
+Wenn Sie ein Cloud Volumes ONTAP System in AWS starten, können Sie die Datenverschlüsselung über das aktivieren http://["AWS KMS (Key Management Service)"^]. Cloud Manager fordert Datenschlüssel mit einem Customer Master Key (CMK) an.
 
 Wenn Sie diese Verschlüsselungsoption verwenden möchten, müssen Sie sicherstellen, dass AWS KMS ordnungsgemäß eingerichtet ist. Weitere Informationen finden Sie unter link:task_setting_up_kms.html["Einrichten des AWS KMS"].
 
@@ -51,7 +51,7 @@ Wenn Sie diese Verschlüsselungsoption verwenden möchten, müssen Sie sicherste
 
 === Azure Storage Service Encryption
 
-https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/["Azure Storage Service Encryption"^] Für Daten im Ruhezustand ist Cloud Volumes ONTAP-Daten in Azure standardmäßig aktiviert. Es ist keine Einrichtung erforderlich.
+https://["Azure Storage Service Encryption"^] Für Daten im Ruhezustand ist Cloud Volumes ONTAP-Daten in Azure standardmäßig aktiviert. Es ist keine Einrichtung erforderlich.
 
 
 NOTE: Vom Kunden gemanagte Schlüssel werden mit Cloud Volumes ONTAP nicht unterstützt.
@@ -64,9 +64,9 @@ Sie können integrierte Virenschutzfunktionen auf ONTAP Systemen verwenden, um D
 
 ONTAP Virus Scanning, genannt _Vscan_, kombiniert erstklassige Antivirensoftware von Drittanbietern mit ONTAP-Funktionen, die Ihnen die Flexibilität geben, die Sie benötigen, um zu kontrollieren, welche Dateien gescannt werden und wann.
 
-Informationen zu den von Vscan unterstützten Herstellern, Software und Versionen finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitätsmatrix"^].
+Informationen zu den von Vscan unterstützten Herstellern, Software und Versionen finden Sie im http://["NetApp Interoperabilitätsmatrix"^].
 
-Informationen zum Konfigurieren und Managen der Antivirenfunktionen auf ONTAP-Systemen finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html["ONTAP 9 Antivirus Configuration Guide"^].
+Informationen zum Konfigurieren und Managen der Antivirenfunktionen auf ONTAP-Systemen finden Sie im http://["ONTAP 9 Antivirus Configuration Guide"^].
 
 
 

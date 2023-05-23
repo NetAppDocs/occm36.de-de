@@ -14,7 +14,7 @@ summary: NetApp Cloud Central bietet einen zentralen Standort für den Zugriff a
 
 
 [role="lead"]
-https://cloud.netapp.com["NetApp Cloud Central"^] Zentraler Standort zum Zugriff auf NetApp Cloud Data Services und Management Mit diesen Services können Sie kritische Applikationen in der Cloud ausführen, automatisierte DR-Standorte erstellen, Ihre SaaS-Daten sichern und Daten effektiv über mehrere Clouds hinweg migrieren und steuern.
+https://["NetApp Cloud Central"^] Zentraler Standort zum Zugriff auf NetApp Cloud Data Services und Management Mit diesen Services können Sie kritische Applikationen in der Cloud ausführen, automatisierte DR-Standorte erstellen, Ihre SaaS-Daten sichern und Daten effektiv über mehrere Clouds hinweg migrieren und steuern.
 
 Die Integration von Cloud Manager in NetApp Cloud Central bietet verschiedene Vorteile, darunter eine vereinfachte Implementierung, ein zentraler Speicherort zum Anzeigen und Managen mehrerer Cloud Manager-Systeme und eine zentralisierte Benutzerauthentifizierung.
 

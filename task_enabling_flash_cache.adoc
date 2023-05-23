@@ -29,6 +29,6 @@ NOTE: Cloud Volumes ONTAP unterstützt das Neustarten des Cache nicht, wenn ein 
 
 . Deaktivieren Sie die Komprimierung für alle Volumes.
 +
-Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. Beim Erstellen eines Volumes aus Cloud Manager kann keine Storage-Effizienz gewählt werden. Alternativ können Sie ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
+Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. Beim Erstellen eines Volumes aus Cloud Manager kann keine Storage-Effizienz gewählt werden. Alternativ können Sie ein Volume erstellen und dann http://["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
 
 

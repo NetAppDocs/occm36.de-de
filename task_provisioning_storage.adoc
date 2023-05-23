@@ -177,6 +177,6 @@ In diesen Schritten wird die Verwendung von System Manager für Version 9.3 und 
 . Klicken Sie auf *Erstellen* und folgen Sie den Aufforderungen zur Erstellung der LUN.
 . Stellen Sie von Ihren Hosts eine Verbindung zur LUN her.
 +
-Anweisungen hierzu finden Sie im http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Host Utilities-Dokumentation"^] Für Ihr Betriebssystem.
+Anweisungen hierzu finden Sie im http://["Host Utilities-Dokumentation"^] Für Ihr Betriebssystem.
 
 

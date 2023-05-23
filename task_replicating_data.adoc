@@ -104,7 +104,7 @@ Wenn Sie benutzerdefinierte Richtlinien erstellen, müssen die durch diese Richt
 
 Bevor Sie Daten replizieren können, sollten Sie sicherstellen, dass sowohl für Cloud Volumes ONTAP Systeme als auch für ONTAP Cluster spezifische Anforderungen erfüllt sind.
 
-Versionsanforderungen:: Sie sollten überprüfen, ob die Quell- und Ziel-Volumes kompatible ONTAP Versionen ausführen, bevor Sie Daten replizieren. Weitere Informationen finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-dap/home.html["Data Protection Power Guide"^].
+Versionsanforderungen:: Sie sollten überprüfen, ob die Quell- und Ziel-Volumes kompatible ONTAP Versionen ausführen, bevor Sie Daten replizieren. Weitere Informationen finden Sie im http://["Data Protection Power Guide"^].
 Spezifische Anforderungen für Cloud Volumes ONTAP::
 +
 --
@@ -236,7 +236,7 @@ Stellt eine unterbrochene Beziehung zwischen Volumes wieder her und setzt die Da
 
 IMPORTANT: Wenn Sie die Volumes erneut synchronisieren, werden die Inhalte auf dem Ziel-Volume durch die Inhalte auf dem Quell-Volume überschrieben.
 
-Informationen zur Neusynchronisierung, die die Daten vom Ziel-Volume zum Quell-Volume neu synchronisiert, finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["ONTAP 9 Express Guide für die Disaster Recovery von Volumes"^].
+Informationen zur Neusynchronisierung, die die Daten vom Ziel-Volume zum Quell-Volume neu synchronisiert, finden Sie im http://["ONTAP 9 Express Guide für die Disaster Recovery von Volumes"^].
 
 
 

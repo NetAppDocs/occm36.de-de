@@ -48,7 +48,7 @@ Sie können vorhandene Volumes managen, wenn sich Ihre Storage-Anforderungen än
 
 Bei diesem Prozess wird ein FlexClone Volume erstellt. Ein FlexClone Volume ist eine beschreibbare Point-in-Time-Kopie, die platzsparend ist, da es einen geringen Speicherplatz für Metadaten verbraucht und dann nur noch zusätzlichen Speicherplatz verbraucht, wenn Daten geändert oder hinzugefügt werden.
 
-Weitere Informationen zu FlexClone Volumes finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
+Weitere Informationen zu FlexClone Volumes finden Sie im http://["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
 
 
 
@@ -280,7 +280,7 @@ Weitere Informationen finden Sie unter link:task_replicating_data.html#managing-
 
 . Konfigurieren Sie das Volume für den Datenzugriff.
 +
-Informationen über die Konfiguration eines Ziel-Volume für den Datenzugriff finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["ONTAP 9 Express Guide für die Disaster Recovery von Volumes"^].
+Informationen über die Konfiguration eines Ziel-Volume für den Datenzugriff finden Sie unter http://["ONTAP 9 Express Guide für die Disaster Recovery von Volumes"^].
 
 . Löschen Sie das ursprüngliche Volume.
 +
@@ -321,6 +321,6 @@ Weitere Informationen finden Sie unter link:task_provisioning_storage.html#creat
 . Verwenden Sie System Manager oder die CLI, um die Volumes in das Aggregat zu verschieben.
 . In den meisten Fällen können Sie mit System Manager Volumes verschieben.
 +
-Anweisungen hierzu finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["ONTAP 9 Volume Move Express Guide"^].
+Anweisungen hierzu finden Sie im http://["ONTAP 9 Volume Move Express Guide"^].
 
 

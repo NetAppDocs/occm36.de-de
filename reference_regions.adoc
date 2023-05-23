@@ -16,4 +16,4 @@ summary: Cloud Manager und Cloud Volumes ONTAP werden in einer Reihe von AWS-Reg
 [role="lead"]
 Cloud Manager und Cloud Volumes ONTAP werden in einer Reihe von AWS-Regionen und Microsoft Azure Regionen unterstützt.
 
-https://cloud.netapp.com/cloud-volumes-global-regions["Klicken Sie hier, um die Liste der unterstützten Regionen anzuzeigen"^].
+https://["Klicken Sie hier, um die Liste der unterstützten Regionen anzuzeigen"^].

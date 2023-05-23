@@ -22,9 +22,9 @@ Wenn Sie Cloud Volumes ONTAP implementieren, können Sie ein vorkonfiguriertes S
 
 Cloud Volumes ONTAP ist in AWS und Azure in zwei Preisoptionen verfügbar: "Pay-as-you-go" und "Bring Your Own License" (Byol). Für Pay-as-you-go können Sie zwischen drei Lizenzen wählen: Explore, Standard oder Premium. Jede Lizenz bietet verschiedene Kapazitäts- und Computing-Optionen.
 
-* https://["Unterstützte Konfigurationen für Cloud Volumes ONTAP 9.5"^]
-* https://["Unterstützte Konfigurationen für Cloud Volumes ONTAP 9.4"^]
-* https://["Unterstützte Konfigurationen für ONTAP Cloud 9.3"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Unterstützte Konfigurationen für Cloud Volumes ONTAP 9.5"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_94.html["Unterstützte Konfigurationen für Cloud Volumes ONTAP 9.4"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_93.html["Unterstützte Konfigurationen für ONTAP Cloud 9.3"^]
 
 
 
@@ -33,9 +33,9 @@ Cloud Volumes ONTAP ist in AWS und Azure in zwei Preisoptionen verfügbar: "Pay-
 
 Die Rohkapazitätsgrenze für ein Cloud Volumes ONTAP System ist an die Lizenz gebunden. Zusätzliche Beschränkungen wirken sich auf die Größe von Aggregaten und Volumes aus. Sie sollten sich dieser Grenzen bei der Planung Ihrer Konfiguration bewusst sein.
 
-* https://["Speicherplatzgrenzen für Cloud Volumes ONTAP 9.5"^]
-* https://["Storage-Limits für Cloud Volumes ONTAP 9.4"^]
-* https://["Storage-Limits für ONTAP Cloud 9.3"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_storage_limits_95.html["Speicherplatzgrenzen für Cloud Volumes ONTAP 9.5"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_storage_limits_94.html["Storage-Limits für Cloud Volumes ONTAP 9.4"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_storage_limits_93.html["Storage-Limits für ONTAP Cloud 9.3"^]
 
 
 
@@ -51,13 +51,13 @@ Instanztyp::
 * Wenn mehrere Benutzer gleichzeitig auf das System schreiben, wählen Sie einen Instanztyp aus, der über genügend CPUs verfügt, um die Anforderungen zu verwalten.
 * Wenn Sie eine Anwendung haben, die hauptsächlich liest, dann wählen Sie ein System mit genügend RAM.
 +
-https://["AWS Dokumentation: Amazon EC2 Instanztypen"^]
-https://["AWS Dokumentation: Für Amazon EBS optimierte Instanzen"^]
+https://aws.amazon.com/ec2/instance-types/["AWS Dokumentation: Amazon EC2 Instanztypen"^]
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html["AWS Dokumentation: Für Amazon EBS optimierte Instanzen"^]
 
 
 
 --
-EBS-Festplattentyp:: Allgemeine SSDs sind der am häufigsten verwendete Festplattentyp für Cloud Volumes ONTAP. Weitere Informationen zu den Anwendungsfällen für EBS-Festplatten finden Sie unter http://["AWS Dokumentation: EBS Volume-Typen"^].
+EBS-Festplattentyp:: Allgemeine SSDs sind der am häufigsten verwendete Festplattentyp für Cloud Volumes ONTAP. Weitere Informationen zu den Anwendungsfällen für EBS-Festplatten finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
 EBS-Festplattengröße:: Sie müssen beim Start eines Cloud Volumes ONTAP Systems die ursprüngliche Festplattengröße auswählen. Danach können Sie link:concept_storage_management.html["Cloud Manager managt die Kapazität eines Systems für Sie"], Aber wenn Sie wollen link:task_provisioning_storage.html#creating-aggregates["Erstellen Sie Aggregate selbst"], Verachten Sie auf folgende Punkte:
 +
 --
@@ -66,7 +66,7 @@ EBS-Festplattengröße:: Sie müssen beim Start eines Cloud Volumes ONTAP System
 * Am Ende sollten Sie die Festplattengröße wählen, die Ihnen die _dauerhafte Performance_ bietet, die Sie benötigen.
 * Selbst wenn Sie größere Festplatten wählen (z. B. sechs 4-TB-Festplatten), erhalten Sie möglicherweise nicht alle IOPS, da die EC2-Instanz ihr Bandbreitenlimit erreichen kann.
 +
-Weitere Informationen zur Performance der EBS Festplatten finden Sie in http://["AWS Dokumentation: EBS Volume-Typen"^].
+Weitere Informationen zur Performance der EBS Festplatten finden Sie in http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
 
 
 
@@ -82,11 +82,11 @@ video::GELcXmOuYPw[youtube,width=848,height=480]
 
 Mit der Dimensionierung Ihres Cloud Volumes ONTAP Systems können Sie die Anforderungen an Performance und Kapazität erfüllen. Bei der Auswahl von VM-Typ, Festplattentyp und Festplattengröße sind einige wichtige Punkte zu beachten:
 
-Typ der virtuellen Maschine:: Sehen Sie sich die unterstützten Typen von Virtual Machines in an http://["Versionshinweise zu Cloud Volumes ONTAP"^] Und überprüfen Sie anschließend Details zu jedem unterstützten VM-Typ. Beachten Sie, dass jeder VM-Typ eine bestimmte Anzahl an Datenfestplatten unterstützt.
+Typ der virtuellen Maschine:: Sehen Sie sich die unterstützten Typen von Virtual Machines in an http://docs.netapp.com/cloud-volumes-ontap/us-en/index.html["Versionshinweise zu Cloud Volumes ONTAP"^] Und überprüfen Sie anschließend Details zu jedem unterstützten VM-Typ. Beachten Sie, dass jeder VM-Typ eine bestimmte Anzahl an Datenfestplatten unterstützt.
 +
 --
-* https://["Azure-Dokumentation: Allgemeine Größe virtueller Maschinen"^]
-* https://["Azure-Dokumentation: Für den Speicher optimierte Größen virtueller Maschinen"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general#dsv2-series["Azure-Dokumentation: Allgemeine Größe virtueller Maschinen"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15["Azure-Dokumentation: Für den Speicher optimierte Größen virtueller Maschinen"^]
 
 
 --
@@ -99,7 +99,7 @@ HA-Systeme verwenden Premium-Blobs auf Seite. In der Zwischenzeit können System
 * _Standard SSD Managed Disks_ bieten konsistente Performance für Workloads, die niedrige IOPS erfordern.
 * _Standard HDD Managed Disks_ sind eine gute Wahl, wenn Sie keine hohen IOPS benötigen und Ihre Kosten senken möchten.
 +
-Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter https://["Microsoft Azure-Dokumentation: Einführung in Microsoft Azure Storage"^].
+Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter https://azure.microsoft.com/documentation/articles/storage-introduction/["Microsoft Azure-Dokumentation: Einführung in Microsoft Azure Storage"^].
 
 
 
@@ -118,8 +118,8 @@ Es gibt keine Performance-Unterschiede zwischen den Festplattengrößen für Sta
 
 Unter Azure finden Sie IOPS und Durchsatz nach Festplattengröße:
 
-* https://["Microsoft Azure: Preisgestaltung für Managed Disks"^]
-* https://["Microsoft Azure: Page Blobs Pricing"^]
+* https://azure.microsoft.com/en-us/pricing/details/managed-disks/["Microsoft Azure: Preisgestaltung für Managed Disks"^]
+* https://azure.microsoft.com/en-us/pricing/details/storage/page-blobs/["Microsoft Azure: Page Blobs Pricing"^]
 
 
 --

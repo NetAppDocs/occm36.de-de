@@ -20,7 +20,7 @@ summary: Sie können Benutzerkonten in Cloud Manager ändern, indem Sie den Bena
 Sie können Benutzerkonten in Cloud Manager ändern, indem Sie den Benachrichtigungsbericht aktivieren und deaktivieren.
 
 .Über diese Aufgabe
-Kennwort und Benutzerinformationen müssen in geändert werden https://["NetApp Cloud Central"^].
+Kennwort und Benutzerinformationen müssen in geändert werden https://cloud.netapp.com["NetApp Cloud Central"^].
 
 .Schritte
 . Klicken Sie oben rechts in der Cloud Manager-Konsole auf das Benutzersymbol und wählen Sie dann *Benutzer anzeigen* aus.

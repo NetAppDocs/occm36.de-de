@@ -37,7 +37,7 @@ Sie können die Arbeitsumgebung auswählen, in der die Nachricht angezeigt werde
 Wenn Sie die Lizenz nicht rechtzeitig erneuern, wird das Cloud Volumes ONTAP System heruntergefahren. Wenn Sie ihn neu starten, fährt er sich wieder herunter.
 
 
-NOTE: Cloud Volumes ONTAP kann Sie auch per E-Mail, SNMP Traphost oder Syslog-Server über EMS (Event Management System)-Ereignisbenachrichtigungen benachrichtigen. Anweisungen hierzu finden Sie im http://["ONTAP 9 EMS Configuration Express Guide"^].
+NOTE: Cloud Volumes ONTAP kann Sie auch per E-Mail, SNMP Traphost oder Syslog-Server über EMS (Event Management System)-Ereignisbenachrichtigungen benachrichtigen. Anweisungen hierzu finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["ONTAP 9 EMS Configuration Express Guide"^].
 
 [discrete]
 === Lizenzerneuerung

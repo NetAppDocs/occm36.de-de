@@ -57,7 +57,7 @@ Sie sollten die Festplatte auswählen, die Ihren Anforderungen hinsichtlich Perf
 ** Kalte Festplatten sind für Backups oder selten genutzte Daten gedacht, da die Performance sehr gering ist. Wie bei Festplatten mit Durchsatzoptimierung wird die Performance in Bezug auf den Durchsatz definiert.
 
 
-Weitere Informationen finden Sie unter http://["AWS Dokumentation: EBS Volume-Typen"^].
+Weitere Informationen finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
 
 |===
 +
@@ -86,7 +86,7 @@ Sie sollten die Festplatte auswählen, die Ihren Anforderungen hinsichtlich Perf
 ** Durchsatzoptimierte HDD-Festplatten eignen sich für Workloads, auf die häufig zugegriffen wird und die einen schnellen und konsistenten Durchsatz erfordern.
 
 
-Weitere Informationen finden Sie unter http://["AWS Dokumentation: EBS Volume-Typen"^].
+Weitere Informationen finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
 
 
 
@@ -99,7 +99,7 @@ Weitere Informationen finden Sie unter http://["AWS Dokumentation: EBS Volume-Ty
 | Floating-IP | Die IP-Adressen müssen für alle VPCs in der Region außerhalb des CIDR-Blocks liegen. 
 
 
-| Routentabelle | Wenn Sie mehr als eine Routentabelle haben, ist es sehr wichtig, die richtigen Routentabellen auszuwählen. Andernfalls haben einige Clients möglicherweise keinen Zugriff auf das HA-Paar. Weitere Informationen finden Sie unter  http://["AWS Documentation: Routingtabellen"^]. 
+| Routentabelle | Wenn Sie mehr als eine Routentabelle haben, ist es sehr wichtig, die richtigen Routentabellen auszuwählen. Andernfalls haben einige Clients möglicherweise keinen Zugriff auf das HA-Paar. Weitere Informationen finden Sie unter  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS Documentation: Routingtabellen"^]. 
 |===
 +
 Die folgende Abbildung zeigt die Seite Nodes and Mediator. Jede Instanz befindet sich in einer separaten Verfügbarkeitszone.

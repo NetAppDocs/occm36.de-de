@@ -20,7 +20,7 @@ Sehen Sie sich das folgende Video an und erfahren Sie, wie Sie NetApp Support Si
 
 video::V2fLTyztqYQ[youtube,width=848,height=480]
 .Schritte
-. Wenn Sie noch keinen NetApp Support Site Account haben, http://["Eine anmeldung"^].
+. Wenn Sie noch keinen NetApp Support Site Account haben, http://now.netapp.com/newuser/["Eine anmeldung"^].
 . Klicken Sie oben rechts in der Cloud Manager-Konsole auf die Dropdown-Liste Task und wählen Sie dann *Kontoeinstellungen* aus.
 . Klicken Sie auf *Neues Konto hinzufügen* und wählen Sie *NetApp Support Site* aus.
 . Geben Sie einen Namen für das Konto an, und geben Sie dann den Benutzernamen und das Kennwort ein.

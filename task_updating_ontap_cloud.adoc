@@ -77,7 +77,7 @@ Upgrades von HA-Paaren sind unterbrechungsfrei. Mit einem unterbrechungsfreien U
 
 Die ONTAP Version, auf die Sie aktualisieren oder herunterstufen können, variiert abhängig von der Version von ONTAP, die derzeit auf Ihrem System ausgeführt wird.
 
-Informationen zu Versionsanforderungen finden Sie unter http://["ONTAP 9 Dokumentation: Anforderungen für Cluster-Updates"^].
+Informationen zu Versionsanforderungen finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html["ONTAP 9 Dokumentation: Anforderungen für Cluster-Updates"^].
 
 
 
@@ -172,7 +172,7 @@ Sie können das Cloud Volumes ONTAP Software-Image auf einem HTTP- oder FTP-Serv
 
 NOTE: Die vordefinierte Sicherheitsgruppe Cloud Volumes ONTAP ermöglicht standardmäßig ausgehende HTTP- und FTP-Verbindungen.
 
-. Beziehen Sie das Software-Image von https://["Die NetApp Support Site"^].
+. Beziehen Sie das Software-Image von https://mysupport.netapp.com/products/p/cloud_ontap.html["Die NetApp Support Site"^].
 . Kopieren Sie das Software-Image in das Verzeichnis auf dem HTTP- oder FTP-Server, von dem die Datei bereitgestellt wird.
 . Klicken Sie in der Arbeitsumgebung des Cloud Managers auf das Menü-Symbol und dann auf *Erweitert > Cloud Volumes ONTAP aktualisieren*.
 . Wählen Sie auf der Seite Aktualisierungssoftware *Wählen Sie ein Bild aus einer URL* aus, geben Sie die URL ein und klicken Sie dann auf *Bild ändern*.

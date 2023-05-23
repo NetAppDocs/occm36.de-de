@@ -50,7 +50,7 @@ Einige der Felder auf dieser Seite sind selbsterklärend. In der folgenden Tabel
 | Name der Arbeitsumgebung | Cloud Manager verwendet den Namen der Arbeitsumgebung, um sowohl das Cloud Volumes ONTAP System als auch die Amazon EC2 Instanz zu benennen. Der Name wird auch als Präfix für die vordefinierte Sicherheitsgruppe verwendet, wenn Sie diese Option auswählen. 
 
 
-| Tags hinzufügen | AWS-Tags sind Metadaten für Ihre AWS-Ressourcen. Cloud Manager fügt die Tags der Cloud Volumes ONTAP Instanz und jeder mit der Instanz verknüpften AWS Ressource hinzu. Sie können bis zu vier Tags aus der Benutzeroberfläche hinzufügen, wenn Sie eine Arbeitsumgebung erstellen. Nach der Erstellung können Sie weitere hinzufügen. Beachten Sie, dass die API Sie beim Erstellen einer Arbeitsumgebung nicht auf vier Tags beschränkt. Informationen zu Tags finden Sie unter https://["AWS Dokumentation: Tagging der Amazon EC2 Ressourcen"^]. 
+| Tags hinzufügen | AWS-Tags sind Metadaten für Ihre AWS-Ressourcen. Cloud Manager fügt die Tags der Cloud Volumes ONTAP Instanz und jeder mit der Instanz verknüpften AWS Ressource hinzu. Sie können bis zu vier Tags aus der Benutzeroberfläche hinzufügen, wenn Sie eine Arbeitsumgebung erstellen. Nach der Erstellung können Sie weitere hinzufügen. Beachten Sie, dass die API Sie beim Erstellen einer Arbeitsumgebung nicht auf vier Tags beschränkt. Informationen zu Tags finden Sie unter https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS Dokumentation: Tagging der Amazon EC2 Ressourcen"^]. 
 
 
 | Anmeldedaten | Dies sind die Anmeldedaten für das Cloud Volumes ONTAP Cluster-Administratorkonto. Sie können diese Anmeldedaten verwenden, um über OnCommand System Manager oder seine CLI eine Verbindung zu Cloud Volumes ONTAP herzustellen. 
@@ -89,7 +89,7 @@ Wenn Sie eines der Pakete auswählen, müssen Sie nur ein Volume angeben und dan
 
 . Auf der Seite IAM-Rolle sollten Sie die Standardoption beibehalten, damit Cloud Manager die Rolle für Sie erstellt.
 +
-Wenn Sie Ihre eigene Richtlinie verwenden möchten, muss diese erfüllen http://["Richtlinienanforderungen für Cloud Volumes ONTAP-Nodes"^].
+Wenn Sie Ihre eigene Richtlinie verwenden möchten, muss diese erfüllen http://mysupport.netapp.com/cloudontap/support/iampolicies["Richtlinienanforderungen für Cloud Volumes ONTAP-Nodes"^].
 
 . Ändern Sie auf der Seite Lizenzierung die Cloud Volumes ONTAP-Version nach Bedarf, wählen Sie eine Lizenz, einen Instanztyp, die Instanzenfähigkeit aus, und klicken Sie dann auf *Weiter*.
 +
@@ -192,7 +192,7 @@ Cloud Manager startet die Cloud Volumes ONTAP Instanz. Sie können den Fortschri
 
 Wenn beim Starten der Cloud Volumes ONTAP Instanz Probleme auftreten, lesen Sie die Fehlermeldung. Sie können auch die Arbeitsumgebung auswählen und auf Umgebung neu erstellen klicken.
 
-Weitere Hilfe finden Sie unter https://["NetApp Cloud Volumes ONTAP Support"^].
+Weitere Hilfe finden Sie unter https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP Support"^].
 
 .Nachdem Sie fertig sind
 * Wenn Sie eine CIFS-Freigabe bereitgestellt haben, erteilen Sie Benutzern oder Gruppen Berechtigungen für die Dateien und Ordner, und überprüfen Sie, ob diese Benutzer auf die Freigabe zugreifen und eine Datei erstellen können.
@@ -236,7 +236,7 @@ Einige der Felder auf dieser Seite sind selbsterklärend. In der folgenden Tabel
 | Name der Arbeitsumgebung | Cloud Manager verwendet den Namen der Arbeitsumgebung, um sowohl das Cloud Volumes ONTAP System als auch die Amazon EC2 Instanz zu benennen. Der Name wird auch als Präfix für die vordefinierte Sicherheitsgruppe verwendet, wenn Sie diese Option auswählen. 
 
 
-| Tags hinzufügen | AWS-Tags sind Metadaten für Ihre AWS-Ressourcen. Cloud Manager fügt die Tags der Cloud Volumes ONTAP Instanz und jeder mit der Instanz verknüpften AWS Ressource hinzu. Informationen zu Tags finden Sie unter https://["AWS Dokumentation: Tagging der Amazon EC2 Ressourcen"^]. 
+| Tags hinzufügen | AWS-Tags sind Metadaten für Ihre AWS-Ressourcen. Cloud Manager fügt die Tags der Cloud Volumes ONTAP Instanz und jeder mit der Instanz verknüpften AWS Ressource hinzu. Informationen zu Tags finden Sie unter https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS Dokumentation: Tagging der Amazon EC2 Ressourcen"^]. 
 
 
 | Anmeldedaten | Dies sind die Anmeldedaten für das Cloud Volumes ONTAP Cluster-Administratorkonto. Sie können diese Anmeldedaten verwenden, um über OnCommand System Manager oder seine CLI eine Verbindung zu Cloud Volumes ONTAP herzustellen. 
@@ -263,7 +263,7 @@ Die IP-Adressen müssen für alle VPCs in der Region außerhalb des CIDR-Blocks 
 
 . Wenn Sie mehrere AZS ausgewählt haben, wählen Sie die Routentabellen aus, die Routen zu den schwimmenden IP-Adressen enthalten sollen, und klicken Sie dann auf *Weiter*.
 +
-Wenn Sie mehr als eine Routentabelle haben, ist es sehr wichtig, die richtigen Routentabellen auszuwählen. Andernfalls haben einige Clients möglicherweise keinen Zugriff auf das Cloud Volumes ONTAP HA-Paar. Weitere Informationen zu Routingtabellen finden Sie unter http://["AWS Documentation: Routingtabellen"^].
+Wenn Sie mehr als eine Routentabelle haben, ist es sehr wichtig, die richtigen Routentabellen auszuwählen. Andernfalls haben einige Clients möglicherweise keinen Zugriff auf das Cloud Volumes ONTAP HA-Paar. Weitere Informationen zu Routingtabellen finden Sie unter http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS Documentation: Routingtabellen"^].
 
 . Wählen Sie auf der Seite Datenverschlüsselung keine Datenverschlüsselung oder AWS-verwaltete Verschlüsselung aus.
 +
@@ -288,7 +288,7 @@ Wenn Sie eines der Pakete auswählen, müssen Sie nur ein Volume angeben und dan
 
 . Auf der Seite IAM-Rolle sollten Sie die Standardoption beibehalten, damit Cloud Manager die Rollen für Sie erstellt.
 +
-Wenn Sie Ihre eigene Richtlinie verwenden möchten, muss diese erfüllen http://["Richtlinienanforderungen für Cloud Volumes ONTAP-Nodes und den HA-Mediator"^].
+Wenn Sie Ihre eigene Richtlinie verwenden möchten, muss diese erfüllen http://mysupport.netapp.com/cloudontap/support/iampolicies["Richtlinienanforderungen für Cloud Volumes ONTAP-Nodes und den HA-Mediator"^].
 
 . Ändern Sie auf der Seite Lizenzierung die Cloud Volumes ONTAP-Version nach Bedarf, wählen Sie eine Lizenz, einen Instanztyp, die Instanzenfähigkeit aus, und klicken Sie dann auf *Weiter*.
 +
@@ -388,7 +388,7 @@ Cloud Manager startet das Paar Cloud Volumes ONTAP HA. Sie können den Fortschri
 
 Wenn beim Starten des HA-Paars Probleme auftreten, überprüfen Sie die Fehlermeldung. Sie können auch die Arbeitsumgebung auswählen und auf Umgebung neu erstellen klicken.
 
-Weitere Hilfe finden Sie unter https://["NetApp Cloud Volumes ONTAP Support"^].
+Weitere Hilfe finden Sie unter https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP Support"^].
 
 .Nachdem Sie fertig sind
 * Wenn Sie eine CIFS-Freigabe bereitgestellt haben, erteilen Sie Benutzern oder Gruppen Berechtigungen für die Dateien und Ordner, und überprüfen Sie, ob diese Benutzer auf die Freigabe zugreifen und eine Datei erstellen können.

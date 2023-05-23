@@ -23,7 +23,7 @@ Möglicherweise müssen Sie die Konfiguration von Cloud Volumes ONTAP Instanzen 
 Wenn Cloud Manager keine Byol Lizenzdatei von NetApp erhalten kann, können Sie die Datei selbst beziehen und die Datei dann manuell in Cloud Manager hochladen, damit die Lizenz auf dem Cloud Volumes ONTAP System installiert werden kann.
 
 .Schritte
-. Wechseln Sie zum https://["NetApp Lizenzdatei-Generator"^] Und loggen Sie sich mit Ihren Anmeldedaten für die NetApp Support Site ein.
+. Wechseln Sie zum https://register.netapp.com/register/getlicensefile["NetApp Lizenzdatei-Generator"^] Und loggen Sie sich mit Ihren Anmeldedaten für die NetApp Support Site ein.
 . Geben Sie Ihr Passwort ein, wählen Sie Ihr Produkt aus (entweder *NetApp Cloud Volumes ONTAP BYOL für AWS*, *NetApp Cloud Volumes ONTAP BYOL für Azure* oder *NetApp Cloud Volumes ONTAP BYOL HA für AWS*), geben Sie die Seriennummer ein, bestätigen Sie, dass Sie die Datenschutzrichtlinie gelesen und akzeptiert haben, und klicken Sie dann auf *Absenden*.
 +
 *Beispiel*

@@ -50,7 +50,7 @@ In der folgenden Tabelle werden Felder beschrieben, für die Sie möglicherweise
 | Name der Ressourcengruppe | Wenn Sie *Standard verwenden* deaktivieren, können Sie den Namen einer neuen Ressourcengruppe eingeben. Wenn Sie eine vorhandene Ressourcengruppe verwenden möchten, müssen Sie die API verwenden. 
 
 
-| Tags | Tags sind Metadaten für Ihre Azure Ressourcen. Cloud Manager fügt die Tags dem Cloud Volumes ONTAP System und jeder Azure Ressource hinzu, die dem System zugeordnet ist. Sie können bis zu vier Tags aus der Benutzeroberfläche hinzufügen, wenn Sie eine Arbeitsumgebung erstellen. Nach der Erstellung können Sie weitere hinzufügen. Beachten Sie, dass die API Sie beim Erstellen einer Arbeitsumgebung nicht auf vier Tags beschränkt. Informationen zu Tags finden Sie unter https://["Microsoft Azure-Dokumentation: Verwenden von Tags zur Organisation Ihrer Azure-Ressourcen"^]. 
+| Tags | Tags sind Metadaten für Ihre Azure Ressourcen. Cloud Manager fügt die Tags dem Cloud Volumes ONTAP System und jeder Azure Ressource hinzu, die dem System zugeordnet ist. Sie können bis zu vier Tags aus der Benutzeroberfläche hinzufügen, wenn Sie eine Arbeitsumgebung erstellen. Nach der Erstellung können Sie weitere hinzufügen. Beachten Sie, dass die API Sie beim Erstellen einer Arbeitsumgebung nicht auf vier Tags beschränkt. Informationen zu Tags finden Sie unter https://azure.microsoft.com/documentation/articles/resource-group-using-tags/["Microsoft Azure-Dokumentation: Verwenden von Tags zur Organisation Ihrer Azure-Ressourcen"^]. 
 
 
 | Anmeldedaten | Dies sind die Anmeldedaten für das Cloud Volumes ONTAP Cluster-Administratorkonto. Sie können diese Anmeldedaten verwenden, um über OnCommand System Manager oder seine CLI eine Verbindung zu Cloud Volumes ONTAP herzustellen. 
@@ -177,7 +177,7 @@ Cloud Manager implementiert das Cloud Volumes ONTAP System. Sie können den Fort
 
 Wenn Sie Probleme bei der Implementierung des Cloud Volumes ONTAP Systems haben, lesen Sie die Fehlermeldung. Sie können auch die Arbeitsumgebung auswählen und auf *Umgebung neu erstellen* klicken.
 
-Weitere Hilfe finden Sie unter https://["NetApp Cloud Volumes ONTAP Support"^].
+Weitere Hilfe finden Sie unter https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP Support"^].
 
 .Nachdem Sie fertig sind
 * Wenn Sie eine CIFS-Freigabe bereitgestellt haben, erteilen Sie Benutzern oder Gruppen Berechtigungen für die Dateien und Ordner, und überprüfen Sie, ob diese Benutzer auf die Freigabe zugreifen und eine Datei erstellen können.

@@ -50,11 +50,11 @@ Sie können das Daten-Tiering aktivieren, wenn Sie bestimmte Konfigurationen und
 
 == Anforderungen für Tiering von Daten in AWS
 
-Sie müssen sicherstellen, dass Cloud Volumes ONTAP eine Verbindung zu S3 hat. Die beste Möglichkeit, diese Verbindung bereitzustellen, besteht darin, einen VPC-Endpunkt für den S3-Dienst zu erstellen. Anweisungen hierzu finden Sie unter https://["AWS Dokumentation: Erstellen eines Gateway-Endpunkts"^].
+Sie müssen sicherstellen, dass Cloud Volumes ONTAP eine Verbindung zu S3 hat. Die beste Möglichkeit, diese Verbindung bereitzustellen, besteht darin, einen VPC-Endpunkt für den S3-Dienst zu erstellen. Anweisungen hierzu finden Sie unter https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS Dokumentation: Erstellen eines Gateway-Endpunkts"^].
 
 Wenn Sie den VPC-Endpunkt erstellen, wählen Sie die Region, den VPC und die Routing-Tabelle aus, die der Cloud Volumes ONTAP Instanz entspricht. Sie müssen auch die Sicherheitsgruppe ändern, um eine ausgehende HTTPS-Regel hinzuzufügen, die Datenverkehr zum S3-Endpunkt ermöglicht. Andernfalls kann Cloud Volumes ONTAP keine Verbindung zum S3-Service herstellen.
 
-Informationen zu Problemen finden Sie unter https://["AWS Support Knowledge Center: Warum kann ich mich nicht über einen Gateway VPC Endpunkt mit einem S3-Bucket verbinden?"^].
+Informationen zu Problemen finden Sie unter https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Warum kann ich mich nicht über einen Gateway VPC Endpunkt mit einem S3-Bucket verbinden?"^].
 
 
 
@@ -67,7 +67,7 @@ Sie müssen keine Verbindung zwischen der Performance-Ebene und der Kapazitätse
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-Diese Berechtigungen sind in der neuesten enthalten https://["Cloud Manager-Richtlinie"].
+Diese Berechtigungen sind in der neuesten enthalten https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager-Richtlinie"].
 
 
 

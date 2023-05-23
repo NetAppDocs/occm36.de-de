@@ -15,9 +15,9 @@ summary: Cloud Manager kann die Implementierung von NetApp Trident auf Kubernete
 
 
 [role="lead"]
-Cloud Manager kann die Implementierung von automatisieren https://["NetApp Trident"^] Auf Kubernetes-Clustern zur Verwendung von Cloud Volumes ONTAP als persistenten Storage für Container Erste Schritte umfassen einige Schritte.
+Cloud Manager kann die Implementierung von automatisieren https://netapp-trident.readthedocs.io/en/stable-v18.10/introduction.html["NetApp Trident"^] Auf Kubernetes-Clustern zur Verwendung von Cloud Volumes ONTAP als persistenten Storage für Container Erste Schritte umfassen einige Schritte.
 
-Bei der Implementierung von Kubernetes-Clustern mit dem https://["NetApp Kubernetes Service"^], Cloud Manager kann die Cluster automatisch aus Ihrem NetApp Cloud Central Konto erkennen. Wenn das der Fall ist, überspringen Sie die ersten beiden Schritte und beginnen Sie mit Schritt 3.
+Bei der Implementierung von Kubernetes-Clustern mit dem https://cloud.netapp.com/kubernetes-service["NetApp Kubernetes Service"^], Cloud Manager kann die Cluster automatisch aus Ihrem NetApp Cloud Central Konto erkennen. Wenn das der Fall ist, überspringen Sie die ersten beiden Schritte und beginnen Sie mit Schritt 3.
 
 
 
@@ -82,7 +82,7 @@ Cloud Manager konfiguriert Trident standardmäßig für die Verwendung folgender
 
 
 [role="quick-margin-para"]
-https://["Erfahren Sie mehr über die Bereitstellung Ihres ersten Volumes mit Trident für Kubernetes"^]
+https://netapp-trident.readthedocs.io/["Erfahren Sie mehr über die Bereitstellung Ihres ersten Volumes mit Trident für Kubernetes"^]
 
 .Was sind die Dreizack_Trident Volumes?
 ****

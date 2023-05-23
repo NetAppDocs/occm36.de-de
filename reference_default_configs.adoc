@@ -79,7 +79,7 @@ NOTE: Aufgrund der EC2-Anforderungen ist das LIF-Failover für Cloud Volumes ONT
 
 
 * Cloud Volumes ONTAP sendet Konfigurations-Backups über HTTPS an Cloud Manager.
-* Wenn Sie sich bei Cloud Manager anmelden, können Sie über die Backup-Daten darauf zugreifen https://[]
+* Wenn Sie sich bei Cloud Manager anmelden, können Sie über die Backup-Daten darauf zugreifen https://ipaddress/occm/offboxconfig/[]
 * Cloud Manager legt einige Volume-Attribute anders fest als andere Management-Tools (z. B. System Manager oder CLI).
 +
 In der folgenden Tabelle sind die Volume-Attribute aufgeführt, die Cloud Manager anders als die Standardeinstellungen festlegt:

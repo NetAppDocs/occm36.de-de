@@ -23,7 +23,7 @@ Wenn Sie Cloud Manager für die Verwendung eines Proxy-Servers konfigurieren, ve
 
 .Schritte
 . Klicken Sie in der oberen rechten Ecke der Cloud Manager-Konsole auf die Dropdown-Liste Task, und wählen Sie dann *Einstellungen* aus.
-. Geben Sie unter HTTP Proxy den Server mithilfe der Syntax ein http://[]Geben Sie einen Benutzernamen und ein Passwort an, wenn eine grundlegende Authentifizierung für den Server erforderlich ist, und klicken Sie dann auf *Speichern*.
+. Geben Sie unter HTTP Proxy den Server mithilfe der Syntax ein http://_address:port_[]Geben Sie einen Benutzernamen und ein Passwort an, wenn eine grundlegende Authentifizierung für den Server erforderlich ist, und klicken Sie dann auf *Speichern*.
 +
 
 NOTE: Cloud Manager unterstützt keine Kennwörter, die das Zeichen @ enthalten.

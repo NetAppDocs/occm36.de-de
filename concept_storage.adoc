@@ -48,11 +48,11 @@ Die Unterschiede zwischen den EBS-Festplattentypen unterscheiden sich auf hohem 
 
 NOTE: Festplatten mit kalten Daten werden von HA-Konfigurationen und Daten-Tiering nicht unterstützt.
 
-Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter http://["AWS Dokumentation: EBS Volume-Typen"^].
+Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS Dokumentation: EBS Volume-Typen"^].
 
 link:task_planning_your_config.html#sizing-your-system-in-aws["Lesen Sie, wie Sie Festplattentypen und Festplattengrößen für Ihre Systeme in AWS auswählen"].
 
-https://["Prüfen der Storage-Limits für Cloud Volumes ONTAP"].
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Prüfen der Storage-Limits für Cloud Volumes ONTAP"].
 
 
 
@@ -78,8 +78,8 @@ Sie können eine gemanagte Festplatte mit Azure Blob Storage für kombinieren li
 HA-Paare:: HA-Paare verwenden Premium Page Blobs, die eine maximale Festplattengröße von 8 TB haben.
 
 
-Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter https://["Microsoft Azure-Dokumentation: Einführung in Microsoft Azure Storage"^].
+Weitere Details zu den Anwendungsfällen für diese Festplatten finden Sie unter https://azure.microsoft.com/documentation/articles/storage-introduction/["Microsoft Azure-Dokumentation: Einführung in Microsoft Azure Storage"^].
 
 link:task_planning_your_config.html#sizing-your-system-in-azure["Erfahren Sie, wie Sie Festplattentypen und Festplattengrößen für Ihre Systeme in Azure auswählen"].
 
-https://["Prüfen der Storage-Limits für Cloud Volumes ONTAP"].
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Prüfen der Storage-Limits für Cloud Volumes ONTAP"].

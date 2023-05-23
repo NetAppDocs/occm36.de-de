@@ -84,7 +84,7 @@ VPC-übergreifende Datenkommunikation ist kein Problem, da iSCSI keine Floating-
 Für iSCSI verwendet Cloud Volumes ONTAP Multipath I/O (MPIO) und Asymmetric Logical Unit Access (ALUA), um das Pfad-Failover zwischen den Aktiv- und Nicht-optimierten Pfaden zu managen.
 
 
-NOTE: Informationen darüber, welche spezifischen Host-Konfigurationen ALUA unterstützen, finden Sie im http://["NetApp Interoperabilitäts-Matrix-Tool"^] Sowie das Installations- und Setup-Handbuch für Host Utilities für Ihr Host-Betriebssystem.
+NOTE: Informationen darüber, welche spezifischen Host-Konfigurationen ALUA unterstützen, finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Sowie das Installations- und Setup-Handbuch für Host Utilities für Ihr Host-Betriebssystem.
 
 
 
@@ -107,7 +107,7 @@ Sie können einfach die richtige IP-Adresse aus Cloud Manager ermitteln, indem S
 Durch die Implementierung einer HA-Konfiguration in einer einzelnen Verfügbarkeitszone (AZ) kann eine hohe Verfügbarkeit Ihrer Daten sichergestellt werden, wenn eine Instanz, auf der ein Cloud Volumes ONTAP Node ausgeführt wird, ausfällt. Alle Daten sind nativ von außerhalb des VPC zugänglich.
 
 
-NOTE: Cloud Manager erstellt eine https://["AWS Spread-Platzierungsgruppe"^] Und startet die beiden HA-Nodes in dieser Platzierungsgruppe. Die Platzierungsgruppe verringert das Risiko gleichzeitiger Ausfälle, indem sie die Instanzen auf unterschiedliche zugrunde liegende Hardware verteilt. Diese Funktion verbessert die Redundanz aus Sicht des Computing und nicht aus Sicht des Festplattenausfalls.
+NOTE: Cloud Manager erstellt eine https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["AWS Spread-Platzierungsgruppe"^] Und startet die beiden HA-Nodes in dieser Platzierungsgruppe. Die Platzierungsgruppe verringert das Risiko gleichzeitiger Ausfälle, indem sie die Instanzen auf unterschiedliche zugrunde liegende Hardware verteilt. Diese Funktion verbessert die Redundanz aus Sicht des Computing und nicht aus Sicht des Festplattenausfalls.
 
 
 
@@ -126,7 +126,7 @@ image:diagram_single_az.png["Konzeptionelles Image, das eine ONTAP HA-Konfigurat
 Für iSCSI verwendet Cloud Volumes ONTAP Multipath I/O (MPIO) und Asymmetric Logical Unit Access (ALUA), um das Pfad-Failover zwischen den Aktiv- und Nicht-optimierten Pfaden zu managen.
 
 
-NOTE: Informationen darüber, welche spezifischen Host-Konfigurationen ALUA unterstützen, finden Sie im http://["NetApp Interoperabilitäts-Matrix-Tool"^] Sowie das Installations- und Setup-Handbuch für Host Utilities für Ihr Host-Betriebssystem.
+NOTE: Informationen darüber, welche spezifischen Host-Konfigurationen ALUA unterstützen, finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Sowie das Installations- und Setup-Handbuch für Host Utilities für Ihr Host-Betriebssystem.
 
 Bei NAS-Konfigurationen können die Daten-IP-Adressen zwischen HA-Nodes migriert werden, wenn Fehler auftreten. Dadurch wird der Client-Zugriff auf Storage gewährleistet.
 

@@ -39,9 +39,9 @@ Wenn Sie eine Meldung erhalten, dass die Installation des awscli fehlgeschlagen 
 
 
 . Prüfen link:reference_cloud_mgr_reqs.html["Anforderungen an den Cloud Manager Host"].
-. Laden Sie die Software von herunter http://["NetApp Support Website"^], Und dann kopieren Sie es auf den Linux-Host.
+. Laden Sie die Software von herunter http://mysupport.netapp.com/NOW/cgi-bin/software["NetApp Support Website"^], Und dann kopieren Sie es auf den Linux-Host.
 +
-Informationen zum Verbinden und Kopieren der Datei auf eine EC2-Instanz in AWS finden Sie unter http://["AWS Documentation: Herstellen einer Verbindung zu Ihrer Linux-Instanz mithilfe von SSH"^].
+Informationen zum Verbinden und Kopieren der Datei auf eine EC2-Instanz in AWS finden Sie unter http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html["AWS Documentation: Herstellen einer Verbindung zu Ihrer Linux-Instanz mithilfe von SSH"^].
 
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
 +
@@ -81,13 +81,13 @@ Cloud Manager ist jetzt installiert. Nach Abschluss der Installation wird der Cl
 
 . Öffnen Sie einen Webbrowser, und geben Sie die folgende URL ein:
 +
-https://[]
+https://_ipaddress_:__port__[]
 
 +
 _Ipaddress_ kann abhängig von der Konfiguration des Cloud Manager-Hosts localhost, eine private IP-Adresse oder eine öffentliche IP-Adresse sein. Wenn sich Cloud Manager beispielsweise in der Public Cloud ohne öffentliche IP-Adresse befindet, müssen Sie eine private IP-Adresse von einem Host eingeben, der eine Verbindung zum Cloud Manager-Host hat.
 
 +
-_Port_ ist erforderlich, wenn Sie die Standard-HTTP (80)- oder HTTPS (443)-Ports geändert haben. Wenn beispielsweise der HTTPS-Port in 8443 geändert wurde, würden Sie eingeben https://[]
+_Port_ ist erforderlich, wenn Sie die Standard-HTTP (80)- oder HTTPS (443)-Ports geändert haben. Wenn beispielsweise der HTTPS-Port in 8443 geändert wurde, würden Sie eingeben https://_ipaddress_:8443[]
 
 . Melden Sie sich für ein NetApp Cloud Central Konto an, oder melden Sie sich an, wenn Sie bereits über ein Konto verfügen.
 . Wenn Sie sich anmelden oder anmelden, fügt Cloud Manager Ihr Benutzerkonto automatisch als Administrator für dieses System hinzu.

@@ -19,7 +19,7 @@ Mit OnCommand Cloud Manager implementieren und managen Sie NetApp Cloud Volumes 
 == Entdecken Sie die Neuigkeiten
 
 * link:reference_new_occm.html["Neuerungen in Cloud Manager"]
-* https://["Neuerungen in Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Neuerungen in Cloud Volumes ONTAP"^]
 
 
 
@@ -28,7 +28,7 @@ Mit OnCommand Cloud Manager implementieren und managen Sie NetApp Cloud Volumes 
 
 * link:task_getting_started_aws.html["Erste Schritte in AWS"]
 * link:task_getting_started_azure.html["Erste Schritte in Azure"]
-* https://["Suchen Sie nach unterstützten Konfigurationen für Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Suchen Sie nach unterstützten Konfigurationen für Cloud Volumes ONTAP"^]
 * link:reference_networking_cloud_manager.html["Detaillierte Netzwerkanforderungen für Cloud Manager"]
 * link:reference_networking_aws.html["Detaillierte Netzwerkanforderungen für Cloud Volumes ONTAP für AWS"]
 * link:reference_networking_azure.html["Detaillierte Netzwerkanforderungen für Cloud Volumes ONTAP für Azure"]
@@ -47,7 +47,7 @@ Mit OnCommand Cloud Manager implementieren und managen Sie NetApp Cloud Volumes 
 
 == Treten Sie mit Kollegen in Kontakt, holen Sie sich Hilfe und finden Sie weitere Informationen
 
-* https://["NetApp Community: Cloud Data Services"^]
-* https://["NetApp Cloud Volumes ONTAP Support"^]
+* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["NetApp Community: Cloud Data Services"^]
+* https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP Support"^]
 * link:reference_additional_info.html["Wo Sie Hilfe und weitere Informationen erhalten"]
 

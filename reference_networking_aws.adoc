@@ -42,25 +42,25 @@ Wenn Sie über eine NAT-Instanz verfügen, müssen Sie eine eingehende Sicherhei
 Outbound-Internetzugang für den HA Mediator:: Die HA-Mediatorinstanz muss über eine ausgehende Verbindung zum AWS EC2-Service verfügen, damit sie beim Storage-Failover unterstützt werden kann. Um die Verbindung bereitzustellen, können Sie eine öffentliche IP-Adresse hinzufügen, einen Proxyserver angeben oder eine manuelle Option verwenden.
 +
 --
-Die manuelle Option kann ein NAT-Gateway oder ein VPC-Endpunkt der Schnittstelle vom Ziel-Subnetz zum AWS EC2-Dienst sein. Details zu VPC-Endpunkten finden Sie unter http://["AWS Dokumentation: Interface VPC Endpunkte (AWS PrivateLink)"^].
+Die manuelle Option kann ein NAT-Gateway oder ein VPC-Endpunkt der Schnittstelle vom Ziel-Subnetz zum AWS EC2-Dienst sein. Details zu VPC-Endpunkten finden Sie unter http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-interface.html["AWS Dokumentation: Interface VPC Endpunkte (AWS PrivateLink)"^].
 
 --
 Sicherheitsgruppen:: Sie müssen keine Sicherheitsgruppen erstellen, da Cloud Manager dies für Sie tut. Wenn Sie Ihr eigenes verwenden müssen, lesen Sie link:reference_security_groups.html["Regeln für Sicherheitsgruppen"].
-Verbindung von Cloud Volumes ONTAP zu AWS S3 für Data Tiering:: Wenn Sie EBS als Performance-Tier und AWS S3 als Kapazitäts-Tier verwenden möchten, müssen Sie sicherstellen, dass Cloud Volumes ONTAP eine Verbindung zu S3 hat. Die beste Möglichkeit, diese Verbindung bereitzustellen, besteht darin, einen VPC-Endpunkt für den S3-Dienst zu erstellen. Anweisungen hierzu finden Sie unter https://["AWS Dokumentation: Erstellen eines Gateway-Endpunkts"^].
+Verbindung von Cloud Volumes ONTAP zu AWS S3 für Data Tiering:: Wenn Sie EBS als Performance-Tier und AWS S3 als Kapazitäts-Tier verwenden möchten, müssen Sie sicherstellen, dass Cloud Volumes ONTAP eine Verbindung zu S3 hat. Die beste Möglichkeit, diese Verbindung bereitzustellen, besteht darin, einen VPC-Endpunkt für den S3-Dienst zu erstellen. Anweisungen hierzu finden Sie unter https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS Dokumentation: Erstellen eines Gateway-Endpunkts"^].
 +
 --
 Wenn Sie den VPC-Endpunkt erstellen, wählen Sie die Region, den VPC und die Routing-Tabelle aus, die der Cloud Volumes ONTAP Instanz entspricht. Sie müssen auch die Sicherheitsgruppe ändern, um eine ausgehende HTTPS-Regel hinzuzufügen, die Datenverkehr zum S3-Endpunkt ermöglicht. Andernfalls kann Cloud Volumes ONTAP keine Verbindung zum S3-Service herstellen.
 
-Informationen zu Problemen finden Sie unter https://["AWS Support Knowledge Center: Warum kann ich mich nicht über einen Gateway VPC Endpunkt mit einem S3-Bucket verbinden?"^]
+Informationen zu Problemen finden Sie unter https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Warum kann ich mich nicht über einen Gateway VPC Endpunkt mit einem S3-Bucket verbinden?"^]
 
 --
-Verbindungen zu ONTAP Systemen in anderen Netzwerken:: Um Daten zwischen einem Cloud Volumes ONTAP System in AWS und ONTAP Systemen in anderen Netzwerken zu replizieren, müssen Sie eine VPN-Verbindung zwischen AWS VPC und dem anderen Netzwerk haben, z. B. ein Azure VNet oder Ihr Unternehmensnetzwerk. Anweisungen hierzu finden Sie unter https://["AWS Dokumentation: Einrichten einer AWS VPN-Verbindung"^].
+Verbindungen zu ONTAP Systemen in anderen Netzwerken:: Um Daten zwischen einem Cloud Volumes ONTAP System in AWS und ONTAP Systemen in anderen Netzwerken zu replizieren, müssen Sie eine VPN-Verbindung zwischen AWS VPC und dem anderen Netzwerk haben, z. B. ein Azure VNet oder Ihr Unternehmensnetzwerk. Anweisungen hierzu finden Sie unter https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html["AWS Dokumentation: Einrichten einer AWS VPN-Verbindung"^].
 DNS und Active Directory für CIFS:: Wenn Sie CIFS-Storage bereitstellen möchten, müssen Sie DNS und Active Directory in AWS einrichten oder Ihre lokale Einrichtung auf AWS erweitern.
 +
 --
 Der DNS-Server muss Namensauflösungsdienste für die Active Directory-Umgebung bereitstellen. Sie können DHCP-Optionssätze so konfigurieren, dass sie den Standard-EC2-DNS-Server verwenden, der nicht der von der Active Directory-Umgebung verwendete DNS-Server sein darf.
 
-Anweisungen finden Sie unter https://["AWS Dokumentation: Active Directory Domain Services in der AWS Cloud Quick Start Reference Deployment"^].
+Anweisungen finden Sie unter https://s3.amazonaws.com/quickstart-reference/microsoft/activedirectory/latest/doc/Microsoft_Active_Directory_Quick_Start.pdf["AWS Dokumentation: Active Directory Domain Services in der AWS Cloud Quick Start Reference Deployment"^].
 
 --
 
@@ -102,7 +102,7 @@ Wenn Sie nur eine Routing-Tabelle für die Subnetze in Ihrem VPC (der Hauptroute
 
 Sie können beispielsweise zwei Subnetze haben, die mit verschiedenen Routing-Tabellen verknüpft sind. Wenn Sie Routing-Tabelle A auswählen, jedoch nicht Route-Tabelle B, können Clients in der mit Routing-Tabelle A verknüpften Subnetz auf das HA-Paar zugreifen, die Clients im Subnetz der Routing-Tabelle B können jedoch nicht.
 
-Weitere Informationen zu Routingtabellen finden Sie unter http://["AWS Documentation: Routingtabellen"^].
+Weitere Informationen zu Routingtabellen finden Sie unter http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS Documentation: Routingtabellen"^].
 
 --
 Anbindung an NetApp Management Tools:: Für den Einsatz von NetApp Management Tools mit HA-Konfigurationen in mehreren Verfügbarkeitszonen stehen zwei Verbindungsoptionen zur Verfügung:
@@ -142,7 +142,7 @@ Diese VPC-Konfiguration umfasst öffentliche und private Subnetze, ein Internet-
 
 NOTE: Anstelle eines NAT-Geräts können Sie einen HTTP-Proxy verwenden, um Internetverbindungen bereitzustellen.
 
-Weitere Informationen zu diesem Szenario finden Sie unter http://["AWS Dokumentation: Szenario 2: VPC mit öffentlichen und privaten Subnetzen (NAT)"^].
+Weitere Informationen zu diesem Szenario finden Sie unter http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html["AWS Dokumentation: Szenario 2: VPC mit öffentlichen und privaten Subnetzen (NAT)"^].
 
 Die folgende Grafik zeigt Cloud Manager, der in einem öffentlichen Subnetz und in Einzelknoten-Systemen in einem privaten Subnetz ausgeführt wird:
 
@@ -159,7 +159,7 @@ NOTE: Sie können in dieser Konfiguration auch einen Proxyserver verwenden, um d
 
 Wenn Sie Daten zwischen FAS Systemen in Ihrem Datacenter und Cloud Volumes ONTAP Systemen in AWS replizieren möchten, sollten Sie eine VPN-Verbindung verwenden, damit die Verbindung sicher ist.
 
-Weitere Informationen zu diesem Szenario finden Sie unter http://["AWS Dokumentation: Szenario 4: VPC mit privatem Subnetz und von AWS gemanagtem VPN-Zugriff"^].
+Weitere Informationen zu diesem Szenario finden Sie unter http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario4.html["AWS Dokumentation: Szenario 4: VPC mit privatem Subnetz und von AWS gemanagtem VPN-Zugriff"^].
 
 Die folgende Grafik zeigt Cloud Manager, der in Ihrem Datacenter und in Einzelknotensystemen in einem privaten Subnetz ausgeführt wird:
 

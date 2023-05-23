@@ -29,7 +29,7 @@ image:diagram_transit_gateway.png["Ein Diagramm, das eine HA-Konfiguration in ei
 Die folgenden Schritte veranschaulichen die Einrichtung einer ähnlichen Konfiguration.
 
 .Schritte
-. https://["Erstellen Sie ein Transit-Gateway, und verbinden Sie die VPCs mit dem Gateway"^].
+. https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["Erstellen Sie ein Transit-Gateway, und verbinden Sie die VPCs mit dem Gateway"^].
 . Erstellen Sie Routen in der Routing-Tabelle des Transit-Gateways durch Angabe der Floating-IP-Adressen des HA-Paars.
 +
 Die unverankerten IP-Adressen finden Sie auf der Seite „Informationen zur Arbeitsumgebung“ in Cloud Manager. Hier ein Beispiel:

@@ -16,6 +16,6 @@ summary: Sie können die Performance-Ergebnisse überprüfen, um zu entscheiden,
 [role="lead"]
 Sie können die Performance-Ergebnisse überprüfen, um zu entscheiden, welche Workloads für Cloud Volumes ONTAP geeignet sind.
 
-Informationen zu Cloud Volumes ONTAP für AWS finden Sie unter https://["NetApp Technical Report 4383: Performance Characterization of Cloud Volumes ONTAP in Amazon Web Services with Application Workloads"^].
+Informationen zu Cloud Volumes ONTAP für AWS finden Sie unter https://www.netapp.com/us/media/tr-4383.pdf["NetApp Technical Report 4383: Performance Characterization of Cloud Volumes ONTAP in Amazon Web Services with Application Workloads"^].
 
-Informationen zu Cloud Volumes ONTAP für Microsoft Azure finden Sie unter https://["Technischer Bericht von NetApp 4671: Performance-Charakterisierung von Cloud Volumes ONTAP in Azure mit Applikations-Workloads"^].
+Informationen zu Cloud Volumes ONTAP für Microsoft Azure finden Sie unter https://www.netapp.com/us/media/tr-4671.pdf["Technischer Bericht von NetApp 4671: Performance-Charakterisierung von Cloud Volumes ONTAP in Azure mit Applikations-Workloads"^].

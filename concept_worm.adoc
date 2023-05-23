@@ -37,7 +37,7 @@ image:screenshot_enabling_worm.gif["Zeigt die WORM-Option an, die beim Erstellen
 
 Sie können eine Applikation verwenden, um Dateien über NFS oder CIFS in WORM zu übergeben, oder die ONTAP CLI verwenden, um Dateien automatisch in WORM zu übertragen. Sie können auch eine WORM-Datei verwenden, die Daten speichert, die inkrementell geschrieben werden, z. B. Protokollinformationen.
 
-Nachdem Sie WORM Storage auf einem Cloud Volumes ONTAP System aktiviert haben, müssen Sie die ONTAP CLI für das gesamte Management von WORM Storage verwenden. Anweisungen finden Sie unter http://["ONTAP-Dokumentation"^].
+Nachdem Sie WORM Storage auf einem Cloud Volumes ONTAP System aktiviert haben, müssen Sie die ONTAP CLI für das gesamte Management von WORM Storage verwenden. Anweisungen finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-arch-con/home.html["ONTAP-Dokumentation"^].
 
 
 NOTE: Cloud Volumes ONTAP Unterstützung für WORM Storage entspricht dem SnapLock Enterprise Modus.

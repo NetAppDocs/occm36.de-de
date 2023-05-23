@@ -43,7 +43,7 @@ link:media/c2s.pdf["Quick Start Guide für die AWS Commercial Cloud Services-Umg
 
 === Unterstützung von 6-TB-Festplatten in AWS
 
-Sie können nun eine EBS-Festplattenkapazität von 6 TB mit Cloud Volumes ONTAP für AWS auswählen. Mit der kürzlich https://["Gesteigerte Performance von General Purpose SSDs"^], Eine 6-TB-Festplatte ist jetzt die beste Wahl für maximale Leistung.
+Sie können nun eine EBS-Festplattenkapazität von 6 TB mit Cloud Volumes ONTAP für AWS auswählen. Mit der kürzlich https://aws.amazon.com/about-aws/whats-new/2018/12/amazon-ebs-increases-performance-of-general-purpose-ssd-gp2-volumes/["Gesteigerte Performance von General Purpose SSDs"^], Eine 6-TB-Festplatte ist jetzt die beste Wahl für maximale Leistung.
 
 Diese Änderung wird unterstützt durch Cloud Volumes ONTAP 9.5, 9.4 und 9.3.
 
@@ -63,7 +63,7 @@ Standard-SSD-gemanagte Festplatten werden jetzt von Single-Node-Systemen in Azur
 
 Diese Änderung wird unterstützt durch Cloud Volumes ONTAP 9.5, 9.4 und 9.3.
 
-https://["Erfahren Sie mehr über Standard-SSDs"^].
+https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-standard-ssd-disks-for-azure-virtual-machine-workloads/["Erfahren Sie mehr über Standard-SSDs"^].
 
 
 
@@ -164,7 +164,7 @@ link:task_adding_nss_accounts.html["Erfahren Sie, wie Sie NetApp Support Site Ko
 
 Ein HA-Paar in mehreren AWS Availability Zones verwendet _Floating IP-Adressen_ für NAS-Datenzugriff und für Managementschnittstellen. Bis jetzt ist der Zugriff auf die fließenden IP-Adressen nicht über außerhalb der VPC möglich, wo sich das HA-Paar befindet.
 
-Wir haben überprüft, dass Sie ein verwenden können https://["AWS Transit-Gateway"^] Um den Zugriff auf die unverankerten IP-Adressen von außerhalb der VPC zu ermöglichen. Das bedeutet, dass NetApp Management-Tools und NAS-Clients, die sich außerhalb der VPC befinden, auf die fließenden IPs zugreifen und von automatischem Failover profitieren können.
+Wir haben überprüft, dass Sie ein verwenden können https://aws.amazon.com/transit-gateway/["AWS Transit-Gateway"^] Um den Zugriff auf die unverankerten IP-Adressen von außerhalb der VPC zu ermöglichen. Das bedeutet, dass NetApp Management-Tools und NAS-Clients, die sich außerhalb der VPC befinden, auf die fließenden IPs zugreifen und von automatischem Failover profitieren können.
 
 link:task_setting_up_transit_gateway.html["Erfahren Sie, wie Sie ein AWS Transit-Gateway für HA-Paare in mehreren Verfügbarkeitszonen einrichten"].
 
@@ -200,7 +200,7 @@ link:api.html["OnCommand Cloud Manager API - Entwickler-Handbuch"^]
 
 Cloud Manager wurde aktualisiert und unterstützt so die Patch-Version 9.5 P1 für Cloud Volumes ONTAP. Mit diesem Patch-Release sind HA-Paare in Azure nun allgemein verfügbar (GA).
 
-Siehe https://["Versionshinweise zu Cloud Volumes ONTAP 9.5"] Weitere Details, einschließlich wichtiger Informationen zur Unterstützung von Azure Region für HA-Paare
+Siehe https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Versionshinweise zu Cloud Volumes ONTAP 9.5"] Weitere Details, einschließlich wichtiger Informationen zur Unterstützung von Azure Region für HA-Paare
 
 
 
@@ -217,7 +217,7 @@ Cloud Manager 3.6.4 umfasst die folgenden Verbesserungen:
 
 === Von AWS gemanagte Verschlüsselung mit einem Schlüssel von einem anderen Konto
 
-Wenn Sie ein Cloud Volumes ONTAP System in AWS starten, können Sie es jetzt aktivieren http://["Von AWS gemanagte Verschlüsselung"^] Verwenden eines Kunden-Master Key (CMK) von einem anderen AWS-Benutzerkonto.
+Wenn Sie ein Cloud Volumes ONTAP System in AWS starten, können Sie es jetzt aktivieren http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["Von AWS gemanagte Verschlüsselung"^] Verwenden eines Kunden-Master Key (CMK) von einem anderen AWS-Benutzerkonto.
 
 Die folgenden Bilder zeigen, wie die Option beim Erstellen einer neuen Arbeitsumgebung ausgewählt wird:
 
@@ -261,7 +261,7 @@ Cloud Manager 3.6.3 umfasst die folgenden Verbesserungen:
 
 === Unterstützung für Cloud Volumes ONTAP 9.5 GA
 
-Cloud Manager unterstützt jetzt die allgemein verfügbare Version von Cloud Volumes ONTAP 9.5. Dies schließt auch die Unterstützung der M5- und R5-Instanzen in AWS ein. Weitere Informationen zur Version 9.5 finden Sie im https://["Versionshinweise zu Cloud Volumes ONTAP 9.5"^].
+Cloud Manager unterstützt jetzt die allgemein verfügbare Version von Cloud Volumes ONTAP 9.5. Dies schließt auch die Unterstützung der M5- und R5-Instanzen in AWS ein. Weitere Informationen zur Version 9.5 finden Sie im https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Versionshinweise zu Cloud Volumes ONTAP 9.5"^].
 
 
 
@@ -269,9 +269,9 @@ Cloud Manager unterstützt jetzt die allgemein verfügbare Version von Cloud Vol
 
 Die Systemkapazitätsgrenze für Cloud Volumes ONTAP Premium und BYOL beträgt jetzt 368 TB für alle Konfigurationen: Single Node und HA in AWS und Azure. Diese Änderung gilt für Cloud Volumes ONTAP 9.5, 9.4 und 9.3 (nur AWS mit 9.3).
 
-Bei einigen Konfigurationen verhindern Festplattenlimits, dass Sie durch die Nutzung von Festplatten allein das Kapazitätslimit von 368 TB erreichen. In diesen Fällen erreichen Sie das Kapazitätslimit von 368 TB um https://["tiering inaktiver Daten in Objektspeicher"^]. Ein Single-Node-System in Azure könnte beispielsweise eine festplattenbasierte Kapazität von 252 TB aufweisen, sodass bis zu 116 TB inaktiver Daten im Azure Blob Storage genutzt werden können.
+Bei einigen Konfigurationen verhindern Festplattenlimits, dass Sie durch die Nutzung von Festplatten allein das Kapazitätslimit von 368 TB erreichen. In diesen Fällen erreichen Sie das Kapazitätslimit von 368 TB um https://docs.netapp.com/us-en/occm/concept_data_tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Ein Single-Node-System in Azure könnte beispielsweise eine festplattenbasierte Kapazität von 252 TB aufweisen, sodass bis zu 116 TB inaktiver Daten im Azure Blob Storage genutzt werden können.
 
-Weitere Informationen zu Festplattenlimits finden Sie unter Storage-Limits im https://["Versionshinweise zu Cloud Volumes ONTAP"^].
+Weitere Informationen zu Festplattenlimits finden Sie unter Storage-Limits im https://docs.netapp.com/us-en/cloud-volumes-ontap/["Versionshinweise zu Cloud Volumes ONTAP"^].
 
 
 
@@ -289,7 +289,7 @@ Dies wird zusätzlich zur Unterstützung für die Region AWS GovCloud (USA-West)
 
 
 
-https://["Eine vollständige Liste der unterstützten Regionen ist verfügbar"^].
+https://cloud.netapp.com/cloud-volumes-global-regions["Eine vollständige Liste der unterstützten Regionen ist verfügbar"^].
 
 
 
@@ -339,7 +339,7 @@ Cloud Manager 3.6.2 umfasst neue Funktionen und Verbesserungen.
 
 === AWS Spread Placement Group für Cloud Volumes ONTAP HA in einer einzelnen Verfügbarkeitszone
 
-Wenn Sie Cloud Volumes ONTAP HA in einer einzelnen AWS Verfügbarkeitszone implementieren, erstellt Cloud Manager jetzt eine https://["AWS Spread-Platzierungsgruppe"^] Und startet die beiden HA-Nodes in dieser Platzierungsgruppe. Die Platzierungsgruppe verringert das Risiko gleichzeitiger Ausfälle, indem sie die Instanzen auf unterschiedliche zugrunde liegende Hardware verteilt.
+Wenn Sie Cloud Volumes ONTAP HA in einer einzelnen AWS Verfügbarkeitszone implementieren, erstellt Cloud Manager jetzt eine https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["AWS Spread-Platzierungsgruppe"^] Und startet die beiden HA-Nodes in dieser Platzierungsgruppe. Die Platzierungsgruppe verringert das Risiko gleichzeitiger Ausfälle, indem sie die Instanzen auf unterschiedliche zugrunde liegende Hardware verteilt.
 
 
 NOTE: Diese Funktion verbessert die Redundanz aus Sicht des Computing und nicht aus Sicht des Festplattenausfalls.
@@ -351,7 +351,7 @@ Cloud Manager erfordert neue Berechtigungen für diese Funktion. Vergewissern Si
 "ec2:CreatePlacementGroup",
 "ec2:DeletePlacementGroup"
 ----
-Die gesamte Liste der erforderlichen Berechtigungen finden Sie im https://["Aktuelle AWS Richtlinie für Cloud Manager"^].
+Die gesamte Liste der erforderlichen Berechtigungen finden Sie im https://s3.amazonaws.com/occm-sample-policies/Policy_for_Cloud_Manager_3.6.2.json["Aktuelle AWS Richtlinie für Cloud Manager"^].
 
 
 
@@ -417,7 +417,7 @@ Cloud Manager 3.6.1 umfasst neue Funktionen und Verbesserungen.
 
 Cloud Manager unterstützt jetzt die Version Cloud Volumes ONTAP 9.5 in Microsoft Azure, die eine Vorschau auf HA-Paare enthält. Sie können eine Vorschaulizenz für ein Azure HA-Paar anfordern. Senden Sie dazu eine eMail an ng-Cloud-Volume-ONTAP-preview@netapp.com.
 
-Weitere Informationen zur Version 9.5 finden Sie im https://["Versionshinweise zu Cloud Volumes ONTAP 9.5"^].
+Weitere Informationen zur Version 9.5 finden Sie im https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Versionshinweise zu Cloud Volumes ONTAP 9.5"^].
 
 
 
@@ -443,7 +443,7 @@ Cloud Manager erfordert neue Azure Berechtigungen für die wichtigsten Funktione
 "Microsoft.Storage/storageAccounts/delete",
 "Microsoft.Storage/usages/read",
 ----
-Die gesamte Liste der erforderlichen Berechtigungen finden Sie im https://["Aktuelle Azure-Richtlinie für Cloud Manager"^].
+Die gesamte Liste der erforderlichen Berechtigungen finden Sie im https://s3.amazonaws.com/occm-sample-policies/Policy_for_cloud_Manager_Azure_3.6.1.json["Aktuelle Azure-Richtlinie für Cloud Manager"^].
 
 link:reference_permissions.html["So verwendet Cloud Manager diese Berechtigungen"].
 
@@ -488,7 +488,7 @@ Cloud Manager benötigt keinen Zugriff mehr auf die Rechnungsberichte, die Sie i
 "ce:GetTags"
 ----
 +
-Diese Aktionen sind in den letzten enthalten https://["Von NetApp bereitgestellte Richtlinie"^]. Neue Systeme, die von NetApp Cloud Central implementiert werden, enthalten automatisch diese Berechtigungen.
+Diese Aktionen sind in den letzten enthalten https://s3.amazonaws.com/occm-sample-policies/Policy_for_Cloud_Manager_3.6.1.json["Von NetApp bereitgestellte Richtlinie"^]. Neue Systeme, die von NetApp Cloud Central implementiert werden, enthalten automatisch diese Berechtigungen.
 
 
 
@@ -510,6 +510,6 @@ Cloud Manager 3.6 enthält eine neue Funktion.
 
 === Verwendung von Cloud Volumes ONTAP als persistenter Storage für einen Kubernetes-Cluster
 
-Cloud Manager kann die Implementierung von jetzt automatisieren https://["NetApp Trident"^] In einem einzelnen Kubernetes-Cluster können Sie Cloud Volumes ONTAP als persistenten Storage für Container verwenden. So können Benutzer persistente Volumes über native Kubernetes-Schnittstellen und -Konstrukte anfordern und managen und gleichzeitig die erweiterten Datenmanagement-Funktionen von ONTAP nutzen, ohne etwas darüber wissen zu müssen.
+Cloud Manager kann die Implementierung von jetzt automatisieren https://netapp-trident.readthedocs.io/en/stable-v18.10/introduction.html["NetApp Trident"^] In einem einzelnen Kubernetes-Cluster können Sie Cloud Volumes ONTAP als persistenten Storage für Container verwenden. So können Benutzer persistente Volumes über native Kubernetes-Schnittstellen und -Konstrukte anfordern und managen und gleichzeitig die erweiterten Datenmanagement-Funktionen von ONTAP nutzen, ohne etwas darüber wissen zu müssen.
 
 link:task_connecting_kubernetes.html["Verbinden Sie Cloud Volumes ONTAP Systeme mit einem Kubernetes Cluster"]

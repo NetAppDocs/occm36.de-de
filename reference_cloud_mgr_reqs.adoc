@@ -36,7 +36,7 @@ Cloud Manager wird auf englischsprachigen Versionen dieser Betriebssysteme unter
 
 
 --
-Hypervisor:: Ein Bare Metal- oder gehosteter Hypervisor, der für die Ausführung von CentOS oder Red hat Enterprise Linux zertifiziert isthttps://["Red hat Solution: Welche Hypervisoren sind für die Ausführung von Red hat Enterprise Linux zertifiziert?"^]
+Hypervisor:: Ein Bare Metal- oder gehosteter Hypervisor, der für die Ausführung von CentOS oder Red hat Enterprise Linux zertifiziert isthttps://access.redhat.com/certified-hypervisors["Red hat Solution: Welche Hypervisoren sind für die Ausführung von Red hat Enterprise Linux zertifiziert?"^]
 CPU:: 2,27 GHz oder höher mit zwei Cores
 RAM:: 4 GB
 Freier Speicherplatz:: 50 GB

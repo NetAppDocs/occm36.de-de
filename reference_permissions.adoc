@@ -14,7 +14,7 @@ summary: Cloud Manager benötigt Berechtigungen, um Aktionen in AWS und Azure in
 
 
 [role="lead"]
-Cloud Manager benötigt Berechtigungen, um Aktionen in AWS und Azure in Ihrem Namen auszuführen. Diese Berechtigungen sind in enthalten https://["Die von NetApp bereitgestellten Richtlinien"^]. Sie möchten vielleicht wissen, was Cloud Manager mit diesen Berechtigungen macht.
+Cloud Manager benötigt Berechtigungen, um Aktionen in AWS und Azure in Ihrem Namen auszuführen. Diese Berechtigungen sind in enthalten https://mysupport.netapp.com/info/web/ECMP11022837.html["Die von NetApp bereitgestellten Richtlinien"^]. Sie möchten vielleicht wissen, was Cloud Manager mit diesen Berechtigungen macht.
 
 
 

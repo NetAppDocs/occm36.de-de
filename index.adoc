@@ -16,6 +16,14 @@ Mit OnCommand Cloud Manager implementieren und managen Sie NetApp Cloud Volumes 
 
 
 
+== BlueXP
+
+NetApp BlueXP erweitert und verbessert die über Cloud Manager bereitgestellten Funktionen.
+
+https://docs.netapp.com/us-en/bluexp-family/["Rufen Sie die BlueXP Dokumentation auf"^]
+
+
+
 == Entdecken Sie die Neuigkeiten
 
 * link:reference_new_occm.html["Neuerungen in Cloud Manager"]

@@ -1,0 +1,3117 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head class="at-element-marker">
+  <title>Neues in Cloud Manager 3.6</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Neues in Cloud Manager 3.6" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/de-de/occm36/reference_new_occm.html" />
+	<meta property="og:description" content="OnCommand Cloud Manager führt in der Regel jeden Monat eine neue Version ein, um Ihnen neue Funktionen, Verbesserungen und Bugfixes zu bieten." />
+  <meta property="og:image" content="https://docs.netapp.com/de-de/occm36/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta http-equiv="nss-product" content="OnCommand Cloud Manager"/><meta name="description" content="OnCommand Cloud Manager führt in der Regel jeden Monat eine neue Version ein, um Ihnen neue Funktionen, Verbesserungen und Bugfixes zu bieten.">
+  <meta name="keywords" content=" what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes"><!-- Icons -->
+  <link rel="icon" href="/de-de/occm36/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/de-de/occm36/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/de-de/occm36/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/de-de/occm36/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/de-de/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/occm36/reference_new_occm.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/occm36/reference_new_occm.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/de-de/occm36/js/na-search.js'></script><script src='/de-de/occm36/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/de-de/occm36/js/custom-dropdown.js'></script>
+  <script src='/de-de/occm36/js/FileSaver.min.js'></script>
+  <script src='/de-de/occm36/js/jszip-utils.min.js'></script>
+  <script src='/de-de/occm36/js/jszip.min.js'></script><script src='/de-de/occm36/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/de-de/occm36/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/de/index.aspx">
+                <image id="ie-header-logo" src="/de-de/occm36/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/de/support-and-training/documentation/">Dokumente</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/de-de/occm36/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">Deutsch</span>
+                    <img src="/de-de/occm36/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/de-de/occm36/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/de-de/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/occm36/reference_new_occm.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/de-de/occm36/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">NetApp Komplettlösung</span>
+                    <img src="/de-de/occm36/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/de-de/occm36/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/de/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Support</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/de/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/de-de/occm36/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/de-de/occm36/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">Gesamte Dokumentation</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/de-de/occm36/">-->
+      Cloud Manager 3.6
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/de-de/occm36/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/de-de/occm36/search.html" 
+        data-type="widget"
+        data-placeholder="Dokumentation durchsuchen"
+        data-no-results-found="Keine Ergebnisse gefunden für {query}"
+        data-did-you-mean="Suchen Sie nach {suggestion}."
+        data-no-results-found-did-you-mean="Es wurden keine Ergebnisse für {query} gefunden. Meinten Sie {suggestion}?"
+        data-results-found="{hitCount} Ergebnisse gefunden"
+        data-error-message="Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+        data-error-reset="Suche zurücksetzen"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dokumentation zu Cloud Manager 3.6"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/de-de/occm36/index.html">
+        Dokumentation zu Cloud Manager 3.6
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Versionshinweise"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Versionshinweise</div>-->
+         Versionshinweise
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Cloud Manager</div>-->
+         Cloud Manager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Was ist neu"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_new_occm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_new_occm.html">
+        Was ist neu
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bekannte Probleme"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_issues.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_issues.html">
+        Bekannte Probleme
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bekannte Einschränkungen"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_limitations.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_limitations.html">
+        Bekannte Einschränkungen
+      </a></li></ul></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/cloud-volumes-ontap/" 
+    ><a class="ie-sidebar-menuitem-2 " href="https://docs.netapp.com/us-en/cloud-volumes-ontap/">
+        Cloud Volumes ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Konzepte"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Konzepte</div>-->
+         Konzepte
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Produktübersicht"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_overview.html">
+        Produktübersicht
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Cloud Central"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_cloud_central.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_cloud_central.html">
+        NetApp Cloud Central
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Konten und Berechtigungen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_accounts_and_permissions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_accounts_and_permissions.html">
+        Konten und Berechtigungen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Storage</div>-->
+         Storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/concept_storage.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Daten-Tiering"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_data_tiering.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/concept_data_tiering.html">
+        Daten-Tiering
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage-Management"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_storage_management.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/concept_storage_management.html">
+        Storage-Management
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="WORM-Storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_worm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/concept_worm.html">
+        WORM-Storage
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hochverfügbarkeitspaare"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Hochverfügbarkeitspaare</div>-->
+         Hochverfügbarkeitspaare
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA-Paare in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_ha.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/concept_ha.html">
+        HA-Paare in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA-Paare in Azure"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_ha_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/concept_ha_azure.html">
+        HA-Paare in Azure
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bewertung"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_evaluating.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_evaluating.html">
+        Bewertung
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Lizenzierung"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_licensing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_licensing.html">
+        Lizenzierung
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicherheit"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_security.html">
+        Sicherheit
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Leistung"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/concept_performance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/concept_performance.html">
+        Leistung
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erste Schritte"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Erste Schritte</div>-->
+         Erste Schritte
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementierungsübersicht"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_deployment_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_deployment_overview.html">
+        Implementierungsübersicht
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erste Schritte in AWS"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_getting_started_aws.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_getting_started_aws.html">
+        Erste Schritte in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erste Schritte in Azure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_getting_started_azure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_getting_started_azure.html">
+        Erste Schritte in Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Einrichten von Cloud Manager"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Einrichten von Cloud Manager</div>-->
+         Einrichten von Cloud Manager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hinzufügen von Konten für Cloud-Provider"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_adding_cloud_accounts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_adding_cloud_accounts.html">
+        Hinzufügen von Konten für Cloud-Provider
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Konten der NetApp Support Site werden hinzugefügt"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_adding_nss_accounts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_adding_nss_accounts.html">
+        Konten der NetApp Support Site werden hinzugefügt
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installieren eines HTTPS-Zertifikats"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_installing_https_cert.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_installing_https_cert.html">
+        Installieren eines HTTPS-Zertifikats
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Benutzer und Mandanten einrichten"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_setting_up_users_tenants.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_setting_up_users_tenants.html">
+        Benutzer und Mandanten einrichten
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Einrichten des AWS KMS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_setting_up_kms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_setting_up_kms.html">
+        Einrichten des AWS KMS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Netzwerkanforderungen"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Netzwerkanforderungen</div>-->
+         Netzwerkanforderungen
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_networking_cloud_manager.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_networking_cloud_manager.html">
+        Cloud Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP für AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_networking_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_networking_aws.html">
+        Cloud Volumes ONTAP für AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Einrichten eines AWS Transit Gateway"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_setting_up_transit_gateway.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_setting_up_transit_gateway.html">
+        Einrichten eines AWS Transit Gateway
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP für Azure"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_networking_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_networking_azure.html">
+        Cloud Volumes ONTAP für Azure
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Zusätzliche Bereitstellungsoptionen"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Zusätzliche Bereitstellungsoptionen</div>-->
+         Zusätzliche Bereitstellungsoptionen
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Anforderungen an den Cloud Manager Host"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_cloud_mgr_reqs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/reference_cloud_mgr_reqs.html">
+        Anforderungen an den Cloud Manager Host
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installieren von Cloud Manager auf einem Linux-Host"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_installing_linux.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_installing_linux.html">
+        Installieren von Cloud Manager auf einem Linux-Host
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bereitstellung von Cloud Manager über den AWS Marketplace"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_launching_aws_mktp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_launching_aws_mktp.html">
+        Bereitstellung von Cloud Manager über den AWS Marketplace
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bereitstellung von Cloud Manager über Azure Marketplace"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_launching_azure_mktp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_launching_azure_mktp.html">
+        Bereitstellung von Cloud Manager über Azure Marketplace
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementieren von Cloud Manager in einer Azure Gov-Region"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_installing_azure_gov.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_installing_azure_gov.html">
+        Implementieren von Cloud Manager in einer Azure Gov-Region
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager in Azure Deutschland implementieren"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_installing_azure_germany.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_installing_azure_germany.html">
+        Cloud Manager in Azure Deutschland implementieren
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erste Schritte in der AWS C2S Umgebung"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/media/c2s.pdf" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/media/c2s.pdf">
+        Erste Schritte in der AWS C2S Umgebung
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementierung von Cloud Volumes ONTAP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Implementierung von Cloud Volumes ONTAP</div>-->
+         Implementierung von Cloud Volumes ONTAP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bevor Sie beginnen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_before.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_before.html">
+        Bevor Sie beginnen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Anmelden bei Cloud Manager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_logging_in.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_logging_in.html">
+        Anmelden bei Cloud Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Planung Ihrer Konfiguration"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_planning_your_config.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_planning_your_config.html">
+        Planung Ihrer Konfiguration
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aktivierung von Flash Cache für Cloud Volumes ONTAP in AWS"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_enabling_flash_cache.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_enabling_flash_cache.html">
+        Aktivierung von Flash Cache für Cloud Volumes ONTAP in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Starten von Cloud Volumes ONTAP in AWS"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_deploying_otc_aws.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_deploying_otc_aws.html">
+        Starten von Cloud Volumes ONTAP in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Starten von Cloud Volumes ONTAP in Azure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_deploying_otc_azure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_deploying_otc_azure.html">
+        Starten von Cloud Volumes ONTAP in Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registrieren von Pay-as-you-go-Systemen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_registering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_registering.html">
+        Registrieren von Pay-as-you-go-Systemen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Einrichten von Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_setting_up_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_setting_up_ontap_cloud.html">
+        Einrichten von Cloud Volumes ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage-Bereitstellung"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Storage-Bereitstellung</div>-->
+         Storage-Bereitstellung
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erstellen von Volumes, Aggregaten und LUNs"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_provisioning_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_provisioning_storage.html">
+        Erstellen von Volumes, Aggregaten und LUNs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tiering inaktiver Daten in Objektspeicher"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_tiering.html">
+        Tiering inaktiver Daten in Objektspeicher
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verwendung von Cloud Volumes ONTAP als persistenter Storage"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_connecting_kubernetes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_connecting_kubernetes.html">
+        Verwendung von Cloud Volumes ONTAP als persistenter Storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verschlüsseln von Volumes mit NetApp Volume Encryption"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_encrypting_volumes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_encrypting_volumes.html">
+        Verschlüsseln von Volumes mit NetApp Volume Encryption
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Management von vorhandenem Storage"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_managing_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_managing_storage.html">
+        Management von vorhandenem Storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bereitstellung von NFS-Volumes über die Volume-Ansicht"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Bereitstellung von NFS-Volumes über die Volume-Ansicht</div>-->
+         Bereitstellung von NFS-Volumes über die Volume-Ansicht
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Wechseln zur Volume-Ansicht"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_changing_volume_view.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_changing_volume_view.html">
+        Wechseln zur Volume-Ansicht
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erstellen und Mounten von NFS-Volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_provisioning_volume_view.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_provisioning_volume_view.html">
+        Erstellen und Mounten von NFS-Volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Managen von NFS-Volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_managing_volume_view.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/de-de/occm36/task_managing_volume_view.html">
+        Managen von NFS-Volumes
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Datenmanagement in einer Hybrid Cloud"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Datenmanagement in einer Hybrid Cloud</div>-->
+         Datenmanagement in einer Hybrid Cloud
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Erkennung und Management von ONTAP Clustern"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_discovering_ontap.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_discovering_ontap.html">
+        Erkennung und Management von ONTAP Clustern
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replizierung von Daten in die und aus der Cloud"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_replicating_data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_replicating_data.html">
+        Replizierung von Daten in die und aus der Cloud
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Daten werden mit AWS S3 synchronisiert"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_syncing_s3.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_syncing_s3.html">
+        Daten werden mit AWS S3 synchronisiert
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Administration von Cloud Volumes ONTAP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Administration von Cloud Volumes ONTAP</div>-->
+         Administration von Cloud Volumes ONTAP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verbindung zu Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_connecting_to_otc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_connecting_to_otc.html">
+        Verbindung zu Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Software wird aktualisiert"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_updating_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_updating_ontap_cloud.html">
+        Software wird aktualisiert
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ändern der Systemkonfigurationen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_modifying_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_modifying_ontap_cloud.html">
+        Ändern der Systemkonfigurationen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Anhalten und Starten von Systemen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_managing_state.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_managing_state.html">
+        Anhalten und Starten von Systemen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überwachung der AWS-Kosten"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_monitoring_costs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_monitoring_costs.html">
+        Überwachung der AWS-Kosten
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verbesserung des Ransomware-Schutzes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_protecting_ransomware.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_protecting_ransomware.html">
+        Verbesserung des Ransomware-Schutzes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hinzufügen vorhandener Systeme"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_adding_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_adding_ontap_cloud.html">
+        Hinzufügen vorhandener Systeme
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Löschen von Systemen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_deleting_working_env.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_deleting_working_env.html">
+        Löschen von Systemen
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Administration von Cloud Manager"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Administration von Cloud Manager</div>-->
+         Administration von Cloud Manager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager wird aktualisiert"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_updating_cloud_manager.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_updating_cloud_manager.html">
+        Cloud Manager wird aktualisiert
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sichern und Wiederherstellen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_backing_up_restoring.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_backing_up_restoring.html">
+        Sichern und Wiederherstellen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Entfernen von Arbeitsumgebungen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_removing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_removing.html">
+        Entfernen von Arbeitsumgebungen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bearbeiten von Benutzerkonten"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_editing_users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_editing_users.html">
+        Bearbeiten von Benutzerkonten
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Proxy-Einstellungen werden konfiguriert"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_configuring_proxy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_configuring_proxy.html">
+        Proxy-Einstellungen werden konfiguriert
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HTTPS-Zertifikat wird erneuert"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_renewing_cert.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_renewing_cert.html">
+        HTTPS-Zertifikat wird erneuert
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager wird deinstalliert"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/task_uninstalling.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/task_uninstalling.html">
+        Cloud Manager wird deinstalliert
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="APIs und Automatisierung"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> APIs und Automatisierung</div>-->
+         APIs und Automatisierung
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="API-Entwicklerhandbuch"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/occm/api.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="https://docs.netapp.com/us-en/occm/api.html">
+        API-Entwicklerhandbuch
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Automationsbeispiele"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_infrastructure_as_code.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_infrastructure_as_code.html">
+        Automationsbeispiele
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Referenz"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/de-de/occm36/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/de-de/occm36/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Referenz</div>-->
+         Referenz
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Häufig gestellte Fragen zur Integration von Cloud Central"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_integration_faq.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_integration_faq.html">
+        Häufig gestellte Fragen zur Integration von Cloud Central
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Unterstützte Konfigurationen für Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html">
+        Unterstützte Konfigurationen für Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Unterstützte Regionen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="https://cloud.netapp.com/cloud-volumes-global-regions" 
+    ><a class="ie-sidebar-menuitem-2 " href="https://cloud.netapp.com/cloud-volumes-global-regions">
+        Unterstützte Regionen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicherheitsgruppenregeln für AWS"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_security_groups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_security_groups.html">
+        Sicherheitsgruppenregeln für AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicherheitsgruppenregeln für Azure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_security_groups_azure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_security_groups_azure.html">
+        Sicherheitsgruppenregeln für Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Berechtigungen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_permissions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_permissions.html">
+        Berechtigungen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Standardkonfigurationen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_default_configs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_default_configs.html">
+        Standardkonfigurationen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Benutzerrollen"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_user_roles.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_user_roles.html">
+        Benutzerrollen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Weiterführende Links"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_additional_info.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/de-de/occm36/reference_additional_info.html">
+        Weiterführende Links
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rechtliche Hinweise"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference_new_occm.html" 
+      dale-entry-url="/reference_legal_notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/de-de/occm36/reference_legal_notices.html">
+        Rechtliche Hinweise
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/de-de/occm36"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/de-de/occm36"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      
+  <div class="ie-info-disclaimer" id="downlevel-banner">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/de-de/occm36/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span>Eine neuere Version dieses Produkts ist erhältlich.</span><br>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div>
+<div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/de-de/occm36/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> Die deutsche Sprachversion wurde als Serviceleistung für Sie durch maschinelle Übersetzung erstellt. Bei eventuellen Unstimmigkeiten hat die englische Sprachversion Vorrang. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Neues in Cloud Manager 3.6</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-05-23 08:17:32 +0000">05/23/2023</time>
+        
+    
+    
+        <span>Beitragende
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/de-de/occm36/images/discuss-sm.svg" alt="" class="github-icon" />Änderungen vorschlagen</span>
+        <img src="/de-de/occm36/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/de-de/occm36/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/occm36.de-de/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/de-de/occm36/reference_new_occm.html&page-title=Neues in Cloud Manager 3.6" class="page-nav-contribute-link" role="button">Dokumentationsänderungen anfordern</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/occm36/blob/main/reference_new_occm.adoc" class="page-nav-contribute-link" role="button">Diese Seite bearbeiten</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >So können Sie beitragen</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>PDFs<img src="/de-de/occm36/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/de-de/occm36/pdfs/fullsite-sidebar/Cloud_Manager_und_Cloud_Volumes_ONTAP_Dokumentation.pdf" >
+                    <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>PDF dieser Dokumentationssite</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Versionshinweise.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Versionshinweise
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Cloud_Manager.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Cloud Manager
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Konzepte.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Konzepte
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Storage.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Storage
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Hochverfügbarkeitspaare.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Hochverfügbarkeitspaare
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Erste_Schritte.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Erste Schritte
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Einrichten_von_Cloud_Manager.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Einrichten von Cloud Manager
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Netzwerkanforderungen.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Netzwerkanforderungen
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Zusätzliche_Bereitstellungsoptionen.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Zusätzliche Bereitstellungsoptionen
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Implementierung_von_Cloud_Volumes_ONTAP.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Implementierung von Cloud Volumes ONTAP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Storage_Bereitstellung.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Storage-Bereitstellung
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Bereitstellung_von_NFS_Volumes_über_die_Volume_Ansicht.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Bereitstellung von NFS-Volumes über die Volume-Ansicht
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Datenmanagement_in_einer_Hybrid_Cloud.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Datenmanagement in einer Hybrid Cloud
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Administration_von_Cloud_Volumes_ONTAP.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Administration von Cloud Volumes ONTAP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Administration_von_Cloud_Manager.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Administration von Cloud Manager
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/APIs_und_Automatisierung.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            APIs und Automatisierung
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/de-de/occm36/pdfs/sidebar/Referenz.pdf" 
+            
+          >
+            <img src="/de-de/occm36/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Referenz
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/de-de/occm36/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Sammlung separater PDF-Dokumente<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>OnCommand Cloud Manager führt in der Regel jeden Monat eine neue Version ein, um Ihnen neue Funktionen, Verbesserungen und Bugfixes zu bieten.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/tip.svg" alt="Tipp">
+</td>
+<td class="content">
+Suchen Sie nach einer früheren Version?<a href="https://docs.netapp.com/us-en/occm35/reference_new_occm.html" target="_blank" rel="noopener">"Neuerungen in 3.5"</a><br>
+<a href="https://docs.netapp.com/us-en/occm34/reference_new_occm.html" target="_blank" rel="noopener">"Neuerungen in 3.4"</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unterstützung-für-die-aws-c2s-umgebung-2-mai-2019">Unterstützung für die AWS C2S-Umgebung (2. Mai 2019)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Volumes ONTAP 9.5 und Cloud Manager 3.6.4 stehen jetzt den USA zur Verfügung Intelligence Community (IC) über die AWS Commercial Cloud Services Umgebung (C2S) Sie können HA-Paare und Single-Node-Systeme in C2S implementieren.</p>
+</div>
+<div class="paragraph">
+<p><a href="media/c2s.pdf" target="_blank" rel="noopener">"Quick Start Guide für die AWS Commercial Cloud Services-Umgebung"</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-6-1-mai-2019">Cloud Manager 3.6.6 (1. Mai 2019)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#unterstützung-von-6-tb-festplatten-in-aws">Unterstützung von 6-TB-Festplatten in AWS</a></p>
+</li>
+<li>
+<p><a href="#unterstützung-neuer-festplattengrößen-mit-single-node-systemen-in-azure">Unterstützung neuer Festplattengrößen mit Single-Node-Systemen in Azure</a></p>
+</li>
+<li>
+<p><a href="#unterstützung-von-standard-ssds-mit-single-node-systemen-in-azure">Unterstützung von Standard-SSDs mit Single-Node-Systemen in Azure</a></p>
+</li>
+<li>
+<p><a href="#Automatische Erkennung von Kubernetes-Clustern">die mit dem NetApp Kubernetes Service erstellt wurden</a></p>
+</li>
+<li>
+<p><a href="#möglichkeit-zum-konfigurieren-eines-ntp-servers">Möglichkeit zum Konfigurieren eines NTP-Servers</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-von-6-tb-festplatten-in-aws">Unterstützung von 6-TB-Festplatten in AWS</h3>
+<div class="paragraph">
+<p>Sie können nun eine EBS-Festplattenkapazität von 6 TB mit Cloud Volumes ONTAP für AWS auswählen. Mit der kürzlich <a href="https://aws.amazon.com/about-aws/whats-new/2018/12/amazon-ebs-increases-performance-of-general-purpose-ssd-gp2-volumes/" target="_blank" rel="noopener">"Gesteigerte Performance von General Purpose SSDs"</a>, Eine 6-TB-Festplatte ist jetzt die beste Wahl für maximale Leistung.</p>
+</div>
+<div class="paragraph">
+<p>Diese Änderung wird unterstützt durch Cloud Volumes ONTAP 9.5, 9.4 und 9.3.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-neuer-festplattengrößen-mit-single-node-systemen-in-azure">Unterstützung neuer Festplattengrößen mit Single-Node-Systemen in Azure</h3>
+<div class="paragraph">
+<p>In Azure können Sie nun 8-TB-, 16-TB- und 32-TB-Festplatten mit Single-Node-Systemen verwenden. Die höhere Festplattengröße ermöglicht bei Nutzung der Premium- oder BYOL-Lizenzen das Erreichen von bis zu 368 TB Systemkapazität ohne Festplatten.</p>
+</div>
+<div class="paragraph">
+<p>Diese Änderung wird unterstützt durch Cloud Volumes ONTAP 9.5, 9.4 und 9.3.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-von-standard-ssds-mit-single-node-systemen-in-azure">Unterstützung von Standard-SSDs mit Single-Node-Systemen in Azure</h3>
+<div class="paragraph">
+<p>Standard-SSD-gemanagte Festplatten werden jetzt von Single-Node-Systemen in Azure unterstützt. Diese Festplatten bieten eine Performance-Stufe zwischen Premium SSDs und Standard HDDs.</p>
+</div>
+<div class="paragraph">
+<p>Diese Änderung wird unterstützt durch Cloud Volumes ONTAP 9.5, 9.4 und 9.3.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-standard-ssd-disks-for-azure-virtual-machine-workloads/" target="_blank" rel="noopener">"Erfahren Sie mehr über Standard-SSDs"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="automatische-erkennung-von-kubernetes-clustern-die-mit-dem-netapp-kubernetes-service-erstellt-wurden">Automatische Erkennung von Kubernetes-Clustern, die mit dem NetApp Kubernetes Service erstellt wurden</h3>
+<div class="paragraph">
+<p>Cloud Manager erkennt jetzt automatisch die Kubernetes-Cluster, die Sie mit dem NetApp Kubernetes Service implementieren. Dadurch können Sie die Kubernetes-Cluster mit Ihren Cloud Volumes ONTAP-Systemen verbinden, sodass sie als persistenter Storage für Ihre Container verwendet werden können.</p>
+</div>
+<div class="paragraph">
+<p>Das folgende Bild zeigt ein automatisch ermittelte Kubernetes-Cluster. Über den Link „Go to NKS“ gelangen Sie direkt zum NetApp Kubernetes Service.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_kubernetes_nks.gif" alt="In diesem Screenshot ist ein Kubernetes Cluster auf der Seite zu Kubernetes Clusters von Cloud Manager dargestellt."></span></p>
+</div>
+<div class="paragraph">
+<p><a href="task_connecting_kubernetes.html">"Verbinden Sie Ihre Arbeitsumgebungen mit Kubernetes-Clustern"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="möglichkeit-zum-konfigurieren-eines-ntp-servers">Möglichkeit zum Konfigurieren eines NTP-Servers</h3>
+<div class="paragraph">
+<p>Sie können Cloud Volumes ONTAP jetzt für die Verwendung eines NTP-Servers (Network Time Protocol) konfigurieren. Durch das Festlegen eines NTP-Servers wird die Zeit zwischen den Systemen im Netzwerk synchronisiert, wodurch Probleme aufgrund von Zeitunterschieden vermieden werden können.</p>
+</div>
+<div class="paragraph">
+<p>Geben Sie beim Einrichten eines CIFS-Servers einen NTP-Server mithilfe der Cloud Manager-API oder von der Benutzeroberfläche an:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Der <a href="api.html" target="_blank" rel="noopener">"Cloud Manager APIs"</a> Aktivieren Sie, um eine beliebige Adresse für den NTP-Server anzugeben. Hier ist die API für ein Single-Node-System in AWS:</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ntp_server_api.gif" alt="Ein Screenshot der Swagger-Schnittstelle, die den NTP-API-Aufruf anzeigt."></span></p>
+</div>
+</li>
+<li>
+<p>Beim Konfigurieren eines CIFS-Servers können Sie über die Cloud Manager-Benutzeroberfläche einen NTP-Server angeben, der die Active Directory-Domäne verwendet. Wenn Sie eine andere Adresse verwenden müssen, sollten Sie die API verwenden.</p>
+<div class="paragraph">
+<p>Das folgende Bild zeigt das NTP-Server-Feld, das beim Einrichten von CIFS verfügbar ist.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_configure_cifs.gif" alt="Ein Screenshot, der den Bildschirm CIFS Setup zeigt, in dem das NTP Server-Feld aufgeführt ist."></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-5-2-april-2019">Cloud Manager 3.6.5 (2. April 2019)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 3.6.5 umfasst die folgenden Verbesserungen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#kubernetes-verbesserungen">Kubernetes-Verbesserungen</a></p>
+</li>
+<li>
+<p><a href="#konten-der-netapp-support-site-werden-jetzt-auf-systemebene-verwaltet">Konten der NetApp Support Site werden jetzt auf Systemebene verwaltet</a></p>
+</li>
+<li>
+<p><a href="#aws-transit-gateways-können-den-zugriff-auf-fließende-ip-adressen-ermöglichen">AWS Transit-Gateways können den Zugriff auf fließende IP-Adressen ermöglichen</a></p>
+</li>
+<li>
+<p><a href="#azure-ressourcengruppen-sind-jetzt-gesperrt">Azure-Ressourcengruppen sind jetzt gesperrt</a></p>
+</li>
+<li>
+<p><a href="#nfs-4-und-nfs-4-1-sind-nun-standardmäßig-aktiviert">NFS 4 und NFS 4.1 sind nun standardmäßig aktiviert</a></p>
+</li>
+<li>
+<p><a href="#eine-neue-api-ermöglicht-das-löschen-von-ontap-snapshot-kopien">Eine neue API ermöglicht das Löschen von ONTAP Snapshot Kopien</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="kubernetes-verbesserungen">Kubernetes-Verbesserungen</h3>
+<div class="paragraph">
+<p>Wir haben einige Verbesserungen vorgenommen, die die Verwendung von Cloud Volumes ONTAP als persistenten Storage für Container vereinfachen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sie können Cloud Manager nun mehrere Kubernetes-Cluster hinzufügen.</p>
+<div class="paragraph">
+<p>So können Sie verschiedene Cluster mit verschiedenen Cloud Volumes ONTAP Systemen und mehreren Clustern mit demselben Cloud Volumes ONTAP System verbinden.</p>
+</div>
+</li>
+<li>
+<p>Wenn Sie ein Cluster verbinden, können Sie nun Cloud Volumes ONTAP als Standard-Storage-Klasse für das Kubernetes Cluster festlegen.</p>
+<div class="paragraph">
+<p>Wenn ein Benutzer ein persistentes Volume erstellt, kann der Kubernetes-Cluster Cloud Volumes ONTAP standardmäßig als Back-End-Storage verwenden:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_storage_class.gif" alt="Dieser Screenshot zeigt die Option „Default Storage class“, die verfügbar ist, wenn ein Kubernetes Cluster mit einem Cloud Volumes ONTAP System verbunden wird."></span></p>
+</div>
+</li>
+<li>
+<p>Wir haben geändert, wie Cloud Manager die Kubernetes-Storage-Klassen benennt, um leichter erkennbar zu sein:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>netapp-File</strong>: Zur Anbindung eines Persistent Volumes an ein Single-Node Cloud Volumes ONTAP System</p>
+</li>
+<li>
+<p><strong>netapp-dateiredundant</strong>: Zur Anbindung eines persistenten Volumes an ein Cloud Volumes ONTAP HA-Paar</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Die Version von NetApp Trident, die von Cloud Manager installiert wird, wurde auf die neueste Version aktualisiert.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="task_connecting_kubernetes.html">"Lesen Sie, wie Sie Cloud Volumes ONTAP als persistenten Storage für Kubernetes verwenden"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="konten-der-netapp-support-site-werden-jetzt-auf-systemebene-verwaltet">Konten der NetApp Support Site werden jetzt auf Systemebene verwaltet</h3>
+<div class="paragraph">
+<p>Es ist jetzt einfacher, NetApp Support Site Konten in Cloud Manager zu managen.</p>
+</div>
+<div class="paragraph">
+<p>In vorherigen Versionen mussten Sie ein NetApp Support Site Konto mit einem bestimmten Mandanten verknüpfen. Die Konten werden jetzt auf Systemebene wie bei Cloud Manager gemanagt, an derselben Stelle, an der Sie Cloud-Provider-Konten verwalten. Durch diese Änderung können Sie bei der Registrierung Ihrer Cloud Volumes ONTAP Systeme zwischen mehreren NetApp Support Site Accounts wählen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_accounts.gif" alt="Ein Screenshot, in dem die Option „Neues Konto hinzufügen“ angezeigt wird, die auf der Seite „Kontoeinstellungen“ verfügbar ist."></span></p>
+</div>
+<div class="paragraph">
+<p>Wenn Sie eine neue Arbeitsumgebung erstellen, wählen Sie einfach den NetApp Support Site Account aus, um das Cloud Volumes ONTAP System zu registrieren mit:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_accounts_select_nss.gif" alt="Ein Screenshot, der die Option zum Auswählen eines NetApp Support Site Kontos aus dem Assistenten zur Erstellung einer Arbeitsumgebung zeigt"></span></p>
+</div>
+<div class="paragraph">
+<p>Wenn Cloud Manager auf 3.6 aktualisiert 5 wird, werden automatisch Konten der NetApp Support-Website für Sie hinzugefügt, wenn Sie zuvor Mandanten mit einem Konto verknüpft hatten.</p>
+</div>
+<div class="paragraph">
+<p><a href="task_adding_nss_accounts.html">"Erfahren Sie, wie Sie NetApp Support Site Konten in Cloud Manager hinzufügen"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="aws-transit-gateways-können-den-zugriff-auf-fließende-ip-adressen-ermöglichen">AWS Transit-Gateways können den Zugriff auf fließende IP-Adressen ermöglichen</h3>
+<div class="paragraph">
+<p>Ein HA-Paar in mehreren AWS Availability Zones verwendet <em>Floating IP-Adressen</em> für NAS-Datenzugriff und für Managementschnittstellen. Bis jetzt ist der Zugriff auf die fließenden IP-Adressen nicht über außerhalb der VPC möglich, wo sich das HA-Paar befindet.</p>
+</div>
+<div class="paragraph">
+<p>Wir haben überprüft, dass Sie ein verwenden können <a href="https://aws.amazon.com/transit-gateway/" target="_blank" rel="noopener">"AWS Transit-Gateway"</a> Um den Zugriff auf die unverankerten IP-Adressen von außerhalb der VPC zu ermöglichen. Das bedeutet, dass NetApp Management-Tools und NAS-Clients, die sich außerhalb der VPC befinden, auf die fließenden IPs zugreifen und von automatischem Failover profitieren können.</p>
+</div>
+<div class="paragraph">
+<p><a href="task_setting_up_transit_gateway.html">"Erfahren Sie, wie Sie ein AWS Transit-Gateway für HA-Paare in mehreren Verfügbarkeitszonen einrichten"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="azure-ressourcengruppen-sind-jetzt-gesperrt">Azure-Ressourcengruppen sind jetzt gesperrt</h3>
+<div class="paragraph">
+<p>Cloud Manager sperrt jetzt Cloud Volumes ONTAP-Ressourcengruppen in Azure, wenn sie erstellt werden. Durch das Sperren von Ressourcengruppen können Benutzer nicht versehentlich kritische Ressourcen löschen oder ändern.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="nfs-4-und-nfs-4-1-sind-nun-standardmäßig-aktiviert">NFS 4 und NFS 4.1 sind nun standardmäßig aktiviert</h3>
+<div class="paragraph">
+<p>Cloud Manager ermöglicht jetzt alle neu erstellten Cloud Volumes ONTAP Systeme die Protokolle NFS 4 und NFS 4.1. Diese Änderung spart Zeit, da Sie diese Protokolle nicht mehr manuell aktivieren müssen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="eine-neue-api-ermöglicht-das-löschen-von-ontap-snapshot-kopien">Eine neue API ermöglicht das Löschen von ONTAP Snapshot Kopien</h3>
+<div class="paragraph">
+<p>Sie können jetzt Snapshot-Kopien von Lese-Schreib-Volumes mithilfe eines Cloud Manager-API-Aufrufs löschen.</p>
+</div>
+<div class="paragraph">
+<p>Das folgende Beispiel zeigt die API-Aufruf für ein HA-System in AWS:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_delete_snapshot_api.gif" alt="Ein Screenshot, der den API-Aufruf ZUM LÖSCHEN von Cloud Manager zeigt: /Aws/ha/Volumes/{workingEnvironment Id}/{svmName}/{volumeName}/Snapshot"></span></p>
+</div>
+<div class="paragraph">
+<p>Ähnliche API-Aufrufe sind für Single-Node-Systeme in AWS sowie für Single-Node- und HA-Systeme in Azure verfügbar.</p>
+</div>
+<div class="paragraph">
+<p><a href="api.html" target="_blank" rel="noopener">"OnCommand Cloud Manager API - Entwickler-Handbuch"</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-zu-cloud-manager-3-6-4-18-märz-2019">Update zu Cloud Manager 3.6.4 (18. März 2019)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager wurde aktualisiert und unterstützt so die Patch-Version 9.5 P1 für Cloud Volumes ONTAP. Mit diesem Patch-Release sind HA-Paare in Azure nun allgemein verfügbar (GA).</p>
+</div>
+<div class="paragraph">
+<p>Siehe <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html">"Versionshinweise zu Cloud Volumes ONTAP 9.5"</a> Weitere Details, einschließlich wichtiger Informationen zur Unterstützung von Azure Region für HA-Paare</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-4-3-märz-2019">Cloud Manager 3.6.4 (3. März 2019)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 3.6.4 umfasst die folgenden Verbesserungen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#von-aws-gemanagte-verschlüsselung-mit-einem-schlüssel-von-einem-anderen-konto">Von AWS gemanagte Verschlüsselung mit einem Schlüssel von einem anderen Konto</a></p>
+</li>
+<li>
+<p><a href="#wiederherstellung-ausgefallener-festplatten">Wiederherstellung ausgefallener Festplatten</a></p>
+</li>
+<li>
+<p><a href="#Azure Storage-Konten für HTTPS aktiviert">wenn Daten-Tiering zu Blob Containern erfolgt</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="von-aws-gemanagte-verschlüsselung-mit-einem-schlüssel-von-einem-anderen-konto">Von AWS gemanagte Verschlüsselung mit einem Schlüssel von einem anderen Konto</h3>
+<div class="paragraph">
+<p>Wenn Sie ein Cloud Volumes ONTAP System in AWS starten, können Sie es jetzt aktivieren <a href="http://docs.aws.amazon.com/kms/latest/developerguide/overview.html" target="_blank" rel="noopener">"Von AWS gemanagte Verschlüsselung"</a> Verwenden eines Kunden-Master Key (CMK) von einem anderen AWS-Benutzerkonto.</p>
+</div>
+<div class="paragraph">
+<p>Die folgenden Bilder zeigen, wie die Option beim Erstellen einer neuen Arbeitsumgebung ausgewählt wird:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_aws_encryption_cmk.gif" alt="Bild"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="concept_security.html">"Erfahren Sie mehr über unterstützte Verschlüsselungstechnologien"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wiederherstellung-ausgefallener-festplatten">Wiederherstellung ausgefallener Festplatten</h3>
+<div class="paragraph">
+<p>Cloud Manager versucht jetzt, ausgefallene Festplatten aus Cloud Volumes ONTAP Systemen wiederherzustellen. Erfolgreiche Versuche werden in E-Mail-Benachrichtigungsberichten festgehalten. Hier sehen Sie eine Beispielbenachrichtigung:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_notification_failed_disk.png" alt="Ein Screenshot, der eine Nachricht aus dem täglichen Benachrichtigungsbericht anzeigt. Die Meldung gibt an, dass Cloud Manager eine ausgefallene Festplatte erfolgreich wiederhergestellt hat."></span></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/tip.svg" alt="Tipp">
+</td>
+<td class="content">
+Sie können Benachrichtigungsberichte aktivieren, indem Sie Ihr Benutzerkonto bearbeiten.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="azure-storage-konten-für-https-aktiviert-wenn-daten-tiering-zu-blob-containern-erfolgt">Azure Storage-Konten für HTTPS aktiviert, wenn Daten-Tiering zu Blob Containern erfolgt</h3>
+<div class="paragraph">
+<p>Wenn Sie ein Cloud Volumes ONTAP System für das Tiering inaktiver Daten zu einem Azure Blob Container einrichten, erstellt Cloud Manager ein Azure Storage-Konto für diesen Container. Ab diesem Release ermöglicht Cloud Manager jetzt neue Speicherkonten mit sicherem Transfer (HTTPS). Vorhandene Speicherkonten verwenden weiterhin HTTP.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-3-4-februar-2019">Cloud Manager 3.6.3 (4. Februar 2019)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 3.6.3 umfasst die folgenden Verbesserungen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#unterstützung-für-cloud-volumes-ontap-9-5-ga">Unterstützung für Cloud Volumes ONTAP 9.5 GA</a></p>
+</li>
+<li>
+<p><a href="#368-tb-kapazitätsgrenze-für-alle-premium-und-byol-konfigurationen">368 TB Kapazitätsgrenze für alle Premium- und BYOL-Konfigurationen</a></p>
+</li>
+<li>
+<p><a href="#unterstützung-für-neue-aws-regionen">Unterstützung für neue AWS Regionen</a></p>
+</li>
+<li>
+<p><a href="#unterstützung-für-intelligentes-s3-tiering">Unterstützung für intelligentes S3-Tiering</a></p>
+</li>
+<li>
+<p><a href="#Möglichkeit">Daten-Tiering auf dem ursprünglichen Aggregat zu deaktivieren</a></p>
+</li>
+<li>
+<p><a href="#empfohlener-ec2-instanztyp-jetzt-t3-medium-für-cloud-manager">Empfohlener EC2-Instanztyp jetzt t3.Medium für Cloud Manager</a></p>
+</li>
+<li>
+<p><a href="#verschiebung-geplanter-abschaltungen-während-der-datenübertragung">Verschiebung geplanter Abschaltungen während der Datenübertragung</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-für-cloud-volumes-ontap-9-5-ga">Unterstützung für Cloud Volumes ONTAP 9.5 GA</h3>
+<div class="paragraph">
+<p>Cloud Manager unterstützt jetzt die allgemein verfügbare Version von Cloud Volumes ONTAP 9.5. Dies schließt auch die Unterstützung der M5- und R5-Instanzen in AWS ein. Weitere Informationen zur Version 9.5 finden Sie im <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html" target="_blank" rel="noopener">"Versionshinweise zu Cloud Volumes ONTAP 9.5"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="368-tb-kapazitätsgrenze-für-alle-premium-und-byol-konfigurationen">368 TB Kapazitätsgrenze für alle Premium- und BYOL-Konfigurationen</h3>
+<div class="paragraph">
+<p>Die Systemkapazitätsgrenze für Cloud Volumes ONTAP Premium und BYOL beträgt jetzt 368 TB für alle Konfigurationen: Single Node und HA in AWS und Azure. Diese Änderung gilt für Cloud Volumes ONTAP 9.5, 9.4 und 9.3 (nur AWS mit 9.3).</p>
+</div>
+<div class="paragraph">
+<p>Bei einigen Konfigurationen verhindern Festplattenlimits, dass Sie durch die Nutzung von Festplatten allein das Kapazitätslimit von 368 TB erreichen. In diesen Fällen erreichen Sie das Kapazitätslimit von 368 TB um <a href="https://docs.netapp.com/us-en/occm/concept_data_tiering.html" target="_blank" rel="noopener">"tiering inaktiver Daten in Objektspeicher"</a>. Ein Single-Node-System in Azure könnte beispielsweise eine festplattenbasierte Kapazität von 252 TB aufweisen, sodass bis zu 116 TB inaktiver Daten im Azure Blob Storage genutzt werden können.</p>
+</div>
+<div class="paragraph">
+<p>Weitere Informationen zu Festplattenlimits finden Sie unter Storage-Limits im <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/" target="_blank" rel="noopener">"Versionshinweise zu Cloud Volumes ONTAP"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-für-neue-aws-regionen">Unterstützung für neue AWS Regionen</h3>
+<div class="paragraph">
+<p>Cloud Manager und Cloud Volumes ONTAP werden jetzt in folgenden AWS Regionen unterstützt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Europa (Stockholm)</p>
+<div class="paragraph">
+<p>Systeme mit einzelnen Nodes sind nur verfügbar. HA-Paare werden derzeit nicht unterstützt.</p>
+</div>
+</li>
+<li>
+<p>GovCloud (Osten der USA)</p>
+<div class="paragraph">
+<p>Dies wird zusätzlich zur Unterstützung für die Region AWS GovCloud (USA-West) angeboten.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">"Eine vollständige Liste der unterstützten Regionen ist verfügbar"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-für-intelligentes-s3-tiering">Unterstützung für intelligentes S3-Tiering</h3>
+<div class="paragraph">
+<p>Wenn Sie Daten-Tiering in AWS aktivieren, führt Cloud Volumes ONTAP standardmäßig inaktive Daten auf die S3 Standard-Storage-Klasse aus. Sie können nun die Tiering-Stufe in die Klasse <em>Intelligent Tiering</em> Storage ändern. Diese Storage-Klasse optimiert Storage-Kosten, indem Daten bei sich ändernden Datenzugriffsmustern zwischen zwei Tiers verschoben werden. Eine Ebene ist für häufigen Zugriff und die andere für unregelmäßigen Zugriff.</p>
+</div>
+<div class="paragraph">
+<p>Wie in vorherigen Versionen können Sie auch die Standard-infrequent Access Tier und die one Zone-infrequent Access Tier verwenden.</p>
+</div>
+<div class="paragraph">
+<p><a href="concept_data_tiering.html">"Weitere Informationen zum Daten-Tiering"</a> Und <a href="task_tiering.html#changing-the-tiering-level">"Erfahren Sie, wie Sie die Storage-Klasse ändern"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="möglichkeit-daten-tiering-auf-dem-ursprünglichen-aggregat-zu-deaktivieren">Möglichkeit, Daten-Tiering auf dem ursprünglichen Aggregat zu deaktivieren</h3>
+<div class="paragraph">
+<p>In vorherigen Versionen aktivierte Cloud Manager das Daten-Tiering automatisch auf dem ersten Cloud Volumes ONTAP Aggregat. Sie können jetzt entscheiden, das Daten-Tiering auf diesem ersten Aggregat zu deaktivieren. (Sie können das Daten-Tiering auch bei nachfolgenden Aggregaten aktivieren oder deaktivieren.)</p>
+</div>
+<div class="paragraph">
+<p>Diese neue Option ist bei der Auswahl der zugrunde liegenden Storage-Ressourcen verfügbar. Die folgende Abbildung zeigt ein Beispiel zum Starten eines Systems in AWS:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_s3_tiering_initial_aggr.gif" alt="Ein Screenshot, der die Option S3 Tiering Edit bei der Auswahl eines zugrunde liegenden Datenträgers zeigt."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="empfohlener-ec2-instanztyp-jetzt-t3-medium-für-cloud-manager">Empfohlener EC2-Instanztyp jetzt t3.Medium für Cloud Manager</h3>
+<div class="paragraph">
+<p>Der Instanztyp für Cloud Manager ist jetzt t3.Medium, wenn Cloud Manager in AWS über NetApp Cloud Central bereitgestellt wird. Es ist auch der empfohlene Instanztyp in AWS Marketplace. Somit wird der Support in den neuesten AWS Regionen ermöglicht und die Instanzkosten sinken. Der empfohlene Instanztyp war vorher t2.Medium, der noch unterstützt wird.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="verschiebung-geplanter-abschaltungen-während-der-datenübertragung">Verschiebung geplanter Abschaltungen während der Datenübertragung</h3>
+<div class="paragraph">
+<p>Wenn Sie ein automatisches Herunterfahren des Cloud Volumes ONTAP Systems geplant haben, verschiebt Cloud Manager jetzt das Herunterfahren, wenn ein aktiver Datentransfer stattfinden soll. Cloud Manager schaltet das System nach Abschluss der Übertragung aus.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-2-2-jan-2019">Cloud Manager 3.6.2 (2. Jan. 2019)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 3.6.2 umfasst neue Funktionen und Verbesserungen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#aws-spread-placement-group-für-cloud-volumes-ontap-ha-in-einer-einzelnen-verfügbarkeitszone">AWS Spread Placement Group für Cloud Volumes ONTAP HA in einer einzelnen Verfügbarkeitszone</a></p>
+</li>
+<li>
+<p><a href="#schutz-durch-ransomware">Schutz durch Ransomware</a></p>
+</li>
+<li>
+<p><a href="#neue-datenreplizierungsrichtlinien">Neue Datenreplizierungsrichtlinien</a></p>
+</li>
+<li>
+<p><a href="#volume-zugriffssteuerung-für-kubernetes">Volume-Zugriffssteuerung für Kubernetes</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="aws-spread-placement-group-für-cloud-volumes-ontap-ha-in-einer-einzelnen-verfügbarkeitszone">AWS Spread Placement Group für Cloud Volumes ONTAP HA in einer einzelnen Verfügbarkeitszone</h3>
+<div class="paragraph">
+<p>Wenn Sie Cloud Volumes ONTAP HA in einer einzelnen AWS Verfügbarkeitszone implementieren, erstellt Cloud Manager jetzt eine <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html" target="_blank" rel="noopener">"AWS Spread-Platzierungsgruppe"</a> Und startet die beiden HA-Nodes in dieser Platzierungsgruppe. Die Platzierungsgruppe verringert das Risiko gleichzeitiger Ausfälle, indem sie die Instanzen auf unterschiedliche zugrunde liegende Hardware verteilt.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/note.svg" alt="Hinweis">
+</td>
+<td class="content">
+Diese Funktion verbessert die Redundanz aus Sicht des Computing und nicht aus Sicht des Festplattenausfalls.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cloud Manager erfordert neue Berechtigungen für diese Funktion. Vergewissern Sie sich, dass die IAM-Richtlinie, die Cloud Manager über Berechtigungen verfügt, die folgenden Aktionen umfasst:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"ec2:CreatePlacementGroup",
+"ec2:DeletePlacementGroup"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Die gesamte Liste der erforderlichen Berechtigungen finden Sie im <a href="https://s3.amazonaws.com/occm-sample-policies/Policy_for_Cloud_Manager_3.6.2.json" target="_blank" rel="noopener">"Aktuelle AWS Richtlinie für Cloud Manager"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="schutz-durch-ransomware">Schutz durch Ransomware</h3>
+<div class="paragraph">
+<p>Ransomware-Angriffe können das Unternehmen Zeit, Ressourcen und Image-Schäden kosten. Cloud Manager ermöglicht Ihnen nun die Implementierung der NetApp Lösung für Ransomware, die mit effektiven Tools für Transparenz, Erkennung und Korrektur ausgestattet ist.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Manager ermittelt Volumes, die nicht durch eine Snapshot-Richtlinie geschützt sind, und ermöglicht Ihnen die Aktivierung der Standard-Snapshot-Richtlinie für diese Volumes.</p>
+<div class="paragraph">
+<p>Snapshot Kopien sind schreibgeschützt, der Ransomware-Beschädigungen verhindert. Sie können außerdem die Granularität nutzen, um Images einer einzelnen Dateikopie oder einer kompletten Disaster-Recovery-Lösung zu erstellen.</p>
+</div>
+</li>
+<li>
+<p>Cloud Manager ermöglicht es Ihnen auch, gängige Ransomware-Dateiendungen durch die Unterstützung der ONTAP FPolicy Lösung zu blockieren.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_protection.gif" alt="Ein Screenshot, der die Ransomware-Schutz-Seite zeigt, die aus einer Arbeitsumgebung verfügbar ist. Der Bildschirm zeigt die Anzahl der Volumes ohne Snapshot-Richtlinie und die Fähigkeit, Ransomware-Dateierweiterungen zu blockieren."></span></p>
+</div>
+<div class="paragraph">
+<p><a href="task_protecting_ransomware.html">"So implementieren Sie die NetApp Lösung für Ransomware"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="neue-datenreplizierungsrichtlinien">Neue Datenreplizierungsrichtlinien</h3>
+<div class="paragraph">
+<p>Cloud Manager enthält fünf neue Datenreplizierungsrichtlinien für die Datensicherung.</p>
+</div>
+<div class="paragraph">
+<p>Durch drei der Richtlinien wird die Disaster Recovery und die langfristige Aufbewahrung von Backups auf demselben Ziel-Volume konfiguriert. Jede Richtlinie bietet eine andere Aufbewahrungsdauer für Backups:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mirror und Backup (7-Jahres-Aufbewahrung)</p>
+</li>
+<li>
+<p>Spiegelung und Backup (7 Jahre Aufbewahrung mit mehr wöchentlichen Backups)</p>
+</li>
+<li>
+<p>Mirror und Backup (1 Jahr Aufbewahrung, monatlich)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die verbleibenden Richtlinien bieten mehr Optionen für die langfristige Aufbewahrung von Backups:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Backup (1-monatige Aufbewahrung)</p>
+</li>
+<li>
+<p>Backup (Aufbewahrung von 1 Woche)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ziehen Sie einfach eine Arbeitsumgebung per Drag-and-Drop, um eine der neuen Richtlinien auszuwählen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="volume-zugriffssteuerung-für-kubernetes">Volume-Zugriffssteuerung für Kubernetes</h3>
+<div class="paragraph">
+<p>Die Exportrichtlinie für Kubernetes-persistente Volumes lässt sich nun konfigurieren. Die Exportrichtlinie kann den Zugriff auf Clients ermöglichen, wenn sich das Kubernetes-Cluster in einem anderen Netzwerk als das Cloud Volumes ONTAP System befindet.</p>
+</div>
+<div class="paragraph">
+<p>Sie können die Exportrichtlinie konfigurieren, wenn Sie eine Arbeitsumgebung mit einem Kubernetes-Cluster verbinden und ein vorhandenes Volume bearbeiten.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-1-4-dezember-2018">Cloud Manager 3.6.1 (4. Dezember 2018)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 3.6.1 umfasst neue Funktionen und Verbesserungen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#unterstützung-von-cloud-volumes-ontap-9-5-in-azure">Unterstützung von Cloud Volumes ONTAP 9.5 in Azure</a></p>
+</li>
+<li>
+<p><a href="#accounts-von-cloud-providern">Accounts Von Cloud-Providern</a></p>
+</li>
+<li>
+<p><a href="#verbesserungen-am-aws-kostenbericht">Verbesserungen am AWS Kostenbericht</a></p>
+</li>
+<li>
+<p><a href="#unterstützung-für-neue-azure-regionen">Unterstützung für neue Azure Regionen</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-von-cloud-volumes-ontap-9-5-in-azure">Unterstützung von Cloud Volumes ONTAP 9.5 in Azure</h3>
+<div class="paragraph">
+<p>Cloud Manager unterstützt jetzt die Version Cloud Volumes ONTAP 9.5 in Microsoft Azure, die eine Vorschau auf HA-Paare enthält. Sie können eine Vorschaulizenz für ein Azure HA-Paar anfordern. Senden Sie dazu eine eMail an <a href="mailto:ng-Cloud-Volume-ONTAP-preview@netapp.com">ng-Cloud-Volume-ONTAP-preview@netapp.com</a>.</p>
+</div>
+<div class="paragraph">
+<p>Weitere Informationen zur Version 9.5 finden Sie im <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html" target="_blank" rel="noopener">"Versionshinweise zu Cloud Volumes ONTAP 9.5"</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="für-cloud-volumes-ontap-9-5-sind-neue-azure-berechtigungen-erforderlich">Für Cloud Volumes ONTAP 9.5 sind neue Azure Berechtigungen erforderlich</h4>
+<div class="paragraph">
+<p>Cloud Manager erfordert neue Azure Berechtigungen für die wichtigsten Funktionen von Cloud Volumes ONTAP 9.5. Um sicherzustellen, dass Cloud Manager Cloud Volumes ONTAP 9.5-Systeme implementieren und managen kann, sollten Sie Ihre Cloud Manager-Richtlinie aktualisieren, indem Sie die folgenden Berechtigungen hinzufügen:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Network/loadBalancers/read",
+"Microsoft.Network/loadBalancers/write",
+"Microsoft.Network/loadBalancers/delete",
+"Microsoft.Network/loadBalancers/backendAddressPools/read",
+"Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+"Microsoft.Network/loadBalancers/frontendIPConfigurations/read",
+"Microsoft.Network/loadBalancers/loadBalancingRules/read",
+"Microsoft.Network/loadBalancers/probes/read",
+"Microsoft.Network/loadBalancers/probes/join/action",
+"Microsoft.Network/routeTables/join/action"
+"Microsoft.Authorization/roleDefinitions/write",
+"Microsoft.Authorization/roleAssignments/write",
+"Microsoft.Web/sites/*"
+"Microsoft.Storage/storageAccounts/delete",
+"Microsoft.Storage/usages/read",</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Die gesamte Liste der erforderlichen Berechtigungen finden Sie im <a href="https://s3.amazonaws.com/occm-sample-policies/Policy_for_cloud_Manager_Azure_3.6.1.json" target="_blank" rel="noopener">"Aktuelle Azure-Richtlinie für Cloud Manager"</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="reference_permissions.html">"So verwendet Cloud Manager diese Berechtigungen"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="accounts-von-cloud-providern">Accounts Von Cloud-Providern</h3>
+<div class="paragraph">
+<p>Es ist jetzt einfacher, mehrere AWS und Azure Konten in Cloud Manager über Cloud-Provider-Konten zu managen.</p>
+</div>
+<div class="paragraph">
+<p>In vorherigen Versionen mussten Sie für jedes Cloud Manager Benutzerkonto Berechtigungen für Cloud-Provider angeben. Die Berechtigungen werden jetzt auf Cloud Manager Systemebene über Cloud Provider Accounts verwaltet.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_provider_accounts.gif" alt="Screenshot zeigt die Seite „Cloud Provider Account Settings“, über die Sie neue AWS und Azure Konten in Cloud Manager hinzufügen können."></span></p>
+</div>
+<div class="paragraph">
+<p>Wenn Sie eine neue Arbeitsumgebung erstellen, wählen Sie einfach das Konto aus, in dem Sie das Cloud Volumes ONTAP-System bereitstellen möchten:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_accounts_select_aws.gif" alt="Ein Screenshot, in dem die Option Konto wechseln auf der Seite Details  Credentials angezeigt wird."></span></p>
+</div>
+<div class="paragraph">
+<p>Beim Upgrade auf 3.6 erstellt Cloud Manager basierend auf der aktuellen Konfiguration automatisch Cloud Provider-Konten für Sie. Wenn Sie Skripts haben, ist die Abwärtskompatibilität vorhanden, sodass nichts unterbrochen wird.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="concept_accounts_and_permissions.html">"Funktionsweise von Cloud-Provider-Konten und -Berechtigungen"</a></p>
+</li>
+<li>
+<p><a href="task_adding_cloud_accounts.html">"Erfahren Sie, wie Sie Cloud Provider Accounts einrichten und zu Cloud Manager hinzufügen"</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="verbesserungen-am-aws-kostenbericht">Verbesserungen am AWS Kostenbericht</h3>
+<div class="paragraph">
+<p>Der AWS Kostenbericht bietet jetzt mehr Informationen und lässt sich einfacher einrichten.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Der Bericht unterteilt die monatlichen Ressourcenkosten, die für den Einsatz von Cloud Volumes ONTAP in AWS anfallen. Sie können die monatlichen Kosten für Computing, EBS Storage (einschließlich EBS Snapshots), S3 Storage und Datentransfers anzeigen.</p>
+</li>
+<li>
+<p>Der Bericht zeigt jetzt Kosteneinsparungen an, wenn Sie inaktive Daten nach S3 verschieben.</p>
+</li>
+<li>
+<p>Wir haben auch vereinfacht, wie Cloud Manager Kostendaten aus AWS holt.</p>
+<div class="paragraph">
+<p>Cloud Manager benötigt keinen Zugriff mehr auf die Rechnungsberichte, die Sie in einem S3-Bucket speichern. Stattdessen verwendet Cloud Manager die Cost Explorer API. Sie müssen lediglich sicherstellen, dass die IAM-Richtlinie, die Cloud Manager über Berechtigungen verfügt, die folgenden Aktionen beinhaltet:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"ce:GetReservationUtilization",
+"ce:GetDimensionValues",
+"ce:GetCostAndUsage",
+"ce:GetTags"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Diese Aktionen sind in den letzten enthalten <a href="https://s3.amazonaws.com/occm-sample-policies/Policy_for_Cloud_Manager_3.6.1.json" target="_blank" rel="noopener">"Von NetApp bereitgestellte Richtlinie"</a>. Neue Systeme, die von NetApp Cloud Central implementiert werden, enthalten automatisch diese Berechtigungen.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cost.gif" alt="Screenshot: Zeigt die Kosten pro Monat für eine Cloud Volumes ONTAP Instanz."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unterstützung-für-neue-azure-regionen">Unterstützung für neue Azure Regionen</h3>
+<div class="paragraph">
+<p>Sie können jetzt Cloud Manager und Cloud Volumes ONTAP in der Region Frankreich Central implementieren.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-6-4-november-2018">Cloud Manager 3.6 (4. November 2018)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 3.6 enthält eine neue Funktion.</p>
+</div>
+<div class="sect2">
+<h3 id="verwendung-von-cloud-volumes-ontap-als-persistenter-storage-für-einen-kubernetes-cluster">Verwendung von Cloud Volumes ONTAP als persistenter Storage für einen Kubernetes-Cluster</h3>
+<div class="paragraph">
+<p>Cloud Manager kann die Implementierung von jetzt automatisieren <a href="https://netapp-trident.readthedocs.io/en/stable-v18.10/introduction.html" target="_blank" rel="noopener">"NetApp Trident"</a> In einem einzelnen Kubernetes-Cluster können Sie Cloud Volumes ONTAP als persistenten Storage für Container verwenden. So können Benutzer persistente Volumes über native Kubernetes-Schnittstellen und -Konstrukte anfordern und managen und gleichzeitig die erweiterten Datenmanagement-Funktionen von ONTAP nutzen, ohne etwas darüber wissen zu müssen.</p>
+</div>
+<div class="paragraph">
+<p><a href="task_connecting_kubernetes.html">"Verbinden Sie Cloud Volumes ONTAP Systeme mit einem Kubernetes Cluster"</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/de-de/occm36/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/de-de/occm36/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">Auf dieser seite</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Nutzungsbedingungen</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Datenschutzrichtlinie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Richtlinie zu Cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie-Einstellungen</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Feedback zu dieser Seite senden</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/de-de/occm36/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/de-de/occm36/js/prism.js'></script>
+      <script type="text/javascript" src='/de-de/occm36/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/de-de/occm36/js/ie-tabbed-blocks.js'></script>
+    <script src='/de-de/occm36/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
